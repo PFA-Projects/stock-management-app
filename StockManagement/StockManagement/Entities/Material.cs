@@ -3,6 +3,7 @@
 using App.Gwin.Attributes;
 using App.Gwin.Entities;
 using App.Gwin.Entities.MultiLanguage;
+using StockManagement.Enumerations;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -66,10 +67,9 @@ namespace StockManagement.Entities
         //
         [EntryForm]
         [DataGrid]
-        [Filter]
-        public enum PhysicalState
-        {
-        };
+
+        public PhysicalStates PhysicalState { get; set; }
+    
         //
         [EntryForm]
         [DataGrid]
@@ -101,12 +101,12 @@ namespace StockManagement.Entities
         [DataGrid]
         [Filter]
         [Relationship(Relation = RelationshipAttribute.Relations.ManyToOne)]
-        public Delivery delivery { get; set; }
+        public Delivery Delivery { get; set; }
 
         [EntryForm]
         [DataGrid]
         [Filter]
         [Relationship(Relation = RelationshipAttribute.Relations.ManyToOne)]
-        public MaterialCategory materialCategory { get; set; }
+        public MaterialCategory MaterialCategory { get; set; }
     }
 }

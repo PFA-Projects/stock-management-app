@@ -1,4 +1,4 @@
-namespace StockManagement.Migrations
+﻿namespace StockManagement.Migrations
 {
     using System;
     using System.Data.Entity;

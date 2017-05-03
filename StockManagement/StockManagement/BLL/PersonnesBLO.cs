@@ -16,7 +16,7 @@ namespace StockManagement.BLL
     /// en : Personnes Management
     /// fr : Gestion des personnes
     /// </summary>
-    public class PersonnesBLO:BaseBLO<Personne>
+    public class PersonnesBLO:BaseBLO<Employee>
     {
         ModelContext db = new ModelContext();
 

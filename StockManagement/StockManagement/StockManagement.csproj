@@ -114,20 +114,20 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Material.resx</DependentUpon>
     </Compile>
-    <Compile Include="Entities\Resources\Personne\Personne.ar.Designer.cs">
-      <DependentUpon>Personne.ar.resx</DependentUpon>
+    <Compile Include="Entities\Resources\Employee\Employee.ar.Designer.cs">
+      <DependentUpon>Employee.ar.resx</DependentUpon>
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
     </Compile>
-    <Compile Include="Entities\Resources\Personne\Personne.fr.Designer.cs">
-      <DependentUpon>Personne.fr.resx</DependentUpon>
+    <Compile Include="Entities\Resources\Employee\Employee.fr.Designer.cs">
+      <DependentUpon>Employee.fr.resx</DependentUpon>
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
     </Compile>
-    <Compile Include="Entities\Resources\Personne\Personne.Designer.cs">
+    <Compile Include="Entities\Resources\Employee\Employee.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Personne.resx</DependentUpon>
+      <DependentUpon>Employee.resx</DependentUpon>
     </Compile>
     <Compile Include="Entities\Resources\Service\Service.fr.Designer.cs">
       <DependentUpon>Service.fr.resx</DependentUpon>
@@ -141,9 +141,14 @@
     </Compile>
     <Compile Include="Entities\Service.cs" />
     <Compile Include="Entities\Societe.cs" />
+    <Compile Include="Enumerations\PhysicalState.cs" />
     <Compile Include="Migrations\201705030010016_Update_table_Material.cs" />
     <Compile Include="Migrations\201705030010016_Update_table_Material.Designer.cs">
       <DependentUpon>201705030010016_Update_table_Material.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201705030831333_UpdateClasses1.cs" />
+    <Compile Include="Migrations\201705030831333_UpdateClasses1.Designer.cs">
+      <DependentUpon>201705030831333_UpdateClasses1.cs</DependentUpon>
     </Compile>
     <Compile Include="Presentations\Menu\FormMenu.cs">
       <SubType>Form</SubType>
@@ -194,17 +199,17 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Material.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="Entities\Resources\Personne\Personne.ar.resx">
+    <EmbeddedResource Include="Entities\Resources\Employee\Employee.ar.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Personne.ar.Designer.cs</LastGenOutput>
+      <LastGenOutput>Employee.ar.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="Entities\Resources\Personne\Personne.fr.resx">
+    <EmbeddedResource Include="Entities\Resources\Employee\Employee.fr.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Personne.fr.Designer.cs</LastGenOutput>
+      <LastGenOutput>Employee.fr.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="Entities\Resources\Personne\Personne.resx">
+    <EmbeddedResource Include="Entities\Resources\Employee\Employee.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Personne.Designer.cs</LastGenOutput>
+      <LastGenOutput>Employee.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Entities\Resources\Service\Service.fr.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -224,6 +229,9 @@
     <EmbeddedResource Include="Migrations\201705030010016_Update_table_Material.resx">
       <DependentUpon>201705030010016_Update_table_Material.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705030831333_UpdateClasses1.resx">
+      <DependentUpon>201705030831333_UpdateClasses1.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Presentations\Menu\FormMenu.resx">
       <DependentUpon>FormMenu.cs</DependentUpon>
     </EmbeddedResource>
@@ -237,6 +245,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <None Include="App.config" />
+    <None Include="Entities\StockManagementClasses.cd" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

@@ -60,7 +60,7 @@ namespace GestionMagasin.GestionMatriel
 
 
             if (categorieComboBox.SelectedItem != null)
-                Matriel.materialCategory = (MaterialCategory)categorieComboBox.SelectedItem;
+                Matriel.MaterialCategory = (MaterialCategory)categorieComboBox.SelectedItem;
 
         }
 
@@ -102,7 +102,7 @@ namespace GestionMagasin.GestionMatriel
 
         
             if (categorieComboBox.SelectedItem != null)
-                Matriel.materialCategory= (MaterialCategory)categorieComboBox.SelectedItem;
+                Matriel.MaterialCategory= (MaterialCategory)categorieComboBox.SelectedItem;
           //  new ServiceMatriel().Ajouter(Matriel);
             EnregistrerClick(this, e);
 
