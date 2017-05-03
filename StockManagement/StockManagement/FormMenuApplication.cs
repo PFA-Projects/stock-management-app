@@ -19,7 +19,7 @@ namespace GenericWinForm.Demo
         private void FormMenuApplication_Load(object sender, EventArgs e)
         {
             User user = null;
-            user  = User.CreateGuestUser();
+           // user  = User.CreateGuestUser();
             user = User.CreateRootUser();
             user.Language = GwinApp.Languages.fr;
 

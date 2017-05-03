@@ -32,7 +32,7 @@ namespace StockManagement.Entities
         [EntryForm]
         [DataGrid]
        // [Filter]
-        public int deliveryReceiptNumber { get; set; }
+        public int DeliveryReceiptNumber { get; set; }
         //Initialize dateTime
         public Delivery()
         {
@@ -45,6 +45,6 @@ namespace StockManagement.Entities
         [DataGrid]
         [Filter]
         [Relationship(Relation = RelationshipAttribute.Relations.ManyToOne)]
-        public Societe societe { get; set; }
+        public Societe Societe { get; set; }
     }
 }

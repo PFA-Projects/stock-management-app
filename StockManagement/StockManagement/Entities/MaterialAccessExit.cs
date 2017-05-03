@@ -17,22 +17,29 @@ namespace StockManagement.Entities
     /// 
     [GwinEntity(Localizable = true, DisplayMember = "Reference")]
     [Menu]
-    public class MaterialAccessExit:BaseEntity
+    public class MaterialInOut:BaseEntity
     {
         [EntryForm]
         [DataGrid]
        // [Filter]
-        public DateTime ExitDate { get; set; }
+        public DateTime OutDate { get; set; }
 
         [EntryForm]
         [DataGrid]
         // [Filter]
-        public DateTime AccessDate { get; set; }
+        public DateTime InDate { get; set; }
 
         [EntryForm]
         [DataGrid]
         // [Filter]
-        public LocalizedString AccessReason { get; set; }
+        public LocalizedString InReason { get; set; }
+
+
+        [EntryForm]
+        [DataGrid]
+        // [Filter]
+        public LocalizedString OutReason { get; set; }
+
 
         [EntryForm]
         [DataGrid]
@@ -40,10 +47,10 @@ namespace StockManagement.Entities
         public LocalizedString Observation { get; set; }
 
         // Initialize DateTime
-        public MaterialAccessExit()
+        public MaterialInOut()
         {
-            AccessDate = DateTime.Now;
-            ExitDate = DateTime.Now;
+            InDate = DateTime.Now;
+            OutDate = DateTime.Now;
         }
 
         // Relations
@@ -51,13 +58,19 @@ namespace StockManagement.Entities
         [DataGrid]
         [Filter]
         [Relationship(Relation = RelationshipAttribute.Relations.ManyToOne)]
-        public Material material { get; set; }
+        public Material Material { get; set; }
         //
         [EntryForm]
         [DataGrid]
         [Filter]
         [Relationship(Relation = RelationshipAttribute.Relations.ManyToOne)]
-        public Location location { get; set; }
+        public Location Location { get; set; }
+
+        /// <summary>
+        /// Out Responsible
+        /// </summary>
+
+        public Employee Employee { get; set; }
 
     }
 }

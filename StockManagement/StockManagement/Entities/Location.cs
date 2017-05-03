@@ -19,10 +19,7 @@ namespace StockManagement.Entities
     [Menu]
     public class Location:BaseEntity
     {
-        [EntryForm]
-        [DataGrid]
-       // [Filter]
-        public LocalizedString Designation { get; set; }
+      
 
         [EntryForm]
         [DataGrid]
@@ -40,6 +37,6 @@ namespace StockManagement.Entities
         [DataGrid]
         [Filter]
         [Relationship(Relation = RelationshipAttribute.Relations.ManyToOne)]
-        public Service service { get; set; }
+        public Service Service { get; set; }
     }
 }

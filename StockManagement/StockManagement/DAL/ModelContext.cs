@@ -17,9 +17,18 @@ namespace StockManagement.DAL
         // 
         // If you wish to target a different database and/or database provider, modify the 'ModelContext' 
         // connection string in the application configuration file.
-        public ModelContext()
-            : base("name=ModelContext")
+
+        //public ModelContext()
+        //    : base("name=ModelContext")
+        //{
+
+        //}
+
+        //(LocalDb)\MSSQLLocalDB
+        public ModelContext() : base(@"data source=(LocalDb)\MSSQLLocalDB;initial catalog=StockManagement;integrated security=True;MultipleActiveResultSets=True;App=EntityFramework")
         {
+            //  Database.SetInitializer<ModelContext>(new CreateDatabaseIfNotExists<ModelContext>());
+
         }
 
         // Add a DbSet for each entity type that you want to include in your model. For more information 
@@ -42,9 +51,9 @@ namespace StockManagement.DAL
         public virtual DbSet<Delivery> Deliveries { get; set; }
         public virtual DbSet<Location> Locations { get; set; }
         public virtual DbSet<Material> Materials { get; set; }
-        public virtual DbSet<MaterialAccessExit> MaterialsAccessexit { get; set; }
+        public virtual DbSet<MaterialInOut> MaterialsAccessexit { get; set; }
         public virtual DbSet<MaterialCategory> MaterialCategories { get; set; }
-        public virtual DbSet<Personne> Personnes { get; set; }
+        public virtual DbSet<Employee> Personnes { get; set; }
         public virtual DbSet<Service> Services { get; set; }
         public virtual DbSet<Societe> Societes { get; set; }
     }
