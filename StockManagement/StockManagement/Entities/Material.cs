@@ -17,76 +17,76 @@ namespace StockManagement.Entities
     /// </summary>
     /// 
     [GwinEntity(Localizable = true, DisplayMember = "InventoryNumber")]
-    [Menu]
+    [Menu(Group ="Materiels")]
     public class Material: BaseEntity
     {
-        [EntryForm]
+        [EntryForm(GroupeBox = "InventoryInformations")]
         [DataGrid]
         [Filter]
         public LocalizedString InventoryNumber { get; set; }
 
-        [EntryForm]
+        [EntryForm(GroupeBox = "InventoryInformations")]
         [DataGrid]
        // [Filter]
         public LocalizedString Designation { get; set; }
 
-        [EntryForm]
+        [EntryForm(GroupeBox = "AcquisitionInformations")]
         [DataGrid]
         [Filter]
         public LocalizedString Mark { get; set; }
 
-        [EntryForm]
+        [EntryForm(GroupeBox = "AcquisitionInformations")]
         [DataGrid]
         //[Filter]
         public LocalizedString Model { get; set; }
 
-        [EntryForm]
+        [EntryForm(GroupeBox = "InventoryInformations")]
         [DataGrid]
        // [Filter]
         public DateTime UpdateServiceDate { get; set; }
 
-        [EntryForm]
+        [EntryForm(GroupeBox = "InventoryInformations")]
         [DataGrid]
         //[Filter]
         public LocalizedString Observation { get; set; }
 
-        [EntryForm]
+        [EntryForm(GroupeBox = "AcquisitionInformations")]
         [DataGrid]
         //[Filter]
         public float AcquisitionValue { get; set; }
 
-        [EntryForm]
+        [EntryForm(GroupeBox = "AcquisitionInformations")]
         [DataGrid]
         //[Filter]
         public string Acquisition { get; set; }
 
-        [EntryForm]
-        [DataGrid]
+        //[EntryForm]
+        //[DataGrid]
         //[Filter]
         public bool AcquisitionValueExist { get; set; }
         //
-        [EntryForm]
+        [EntryForm(GroupeBox = "MaterialSituation")]
         [DataGrid]
 
         public PhysicalStates PhysicalState { get; set; }
-    
+
         //
-        [EntryForm]
+        [EntryForm(GroupeBox = "MaterialSituation")]
         [DataGrid]
         //[Filter]
         public bool StockExistence { get; set; }
 
-        [EntryForm]
+        [EntryForm(GroupeBox = "InventoryInformations")]
         [DataGrid]
         //[Filter]
         public float dimension { get; set; }
 
-        [EntryForm]
+        [EntryForm(GroupeBox = "InventoryInformations")]
         [DataGrid]
         [Filter]
         public string INN_Number { get; set; }
 
-        [EntryForm]
+        [EntryForm(GroupeBox = "InventoryInformations")]
         [DataGrid]
         [Filter]
         public string SerieNumber { get; set; }
@@ -97,13 +97,13 @@ namespace StockManagement.Entities
         }
 
         // Relations
-        [EntryForm]
+        [EntryForm(GroupeBox = "")]
         [DataGrid]
         [Filter]
         [Relationship(Relation = RelationshipAttribute.Relations.ManyToOne)]
         public Delivery Delivery { get; set; }
 
-        [EntryForm]
+        [EntryForm(GroupeBox = "")]
         [DataGrid]
         [Filter]
         [Relationship(Relation = RelationshipAttribute.Relations.ManyToOne)]

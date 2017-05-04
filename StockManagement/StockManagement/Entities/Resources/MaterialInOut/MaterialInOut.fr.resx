@@ -117,67 +117,25 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="Acquisition" xml:space="preserve">
-    <value>Acquisition</value>
+  <data name="InDate" xml:space="preserve">
+    <value>Date d'entree</value>
   </data>
-  <data name="AcquisitionValue" xml:space="preserve">
-    <value>Acquisition Value</value>
-  </data>
-  <data name="AcquisitionValueExist" xml:space="preserve">
-    <value>Acquisition Value Exist</value>
-  </data>
-  <data name="delivery" xml:space="preserve">
-    <value>delivery</value>
-  </data>
-  <data name="Designation" xml:space="preserve">
-    <value>Designation</value>
-  </data>
-  <data name="dimension" xml:space="preserve">
-    <value>dimension</value>
-  </data>
-  <data name="INN_Number" xml:space="preserve">
-    <value>INN Number</value>
-  </data>
-  <data name="InventoryNumber" xml:space="preserve">
-    <value>Inventory Number</value>
-  </data>
-  <data name="Mark" xml:space="preserve">
-    <value>Mark</value>
-  </data>
-  <data name="materialCategory" xml:space="preserve">
-    <value>material Category</value>
-  </data>
-  <data name="Model" xml:space="preserve">
-    <value>Model</value>
+  <data name="InReason" xml:space="preserve">
+    <value>Raison d'entree</value>
   </data>
   <data name="Observation" xml:space="preserve">
     <value>Observation</value>
   </data>
-  <data name="PhysicalState" xml:space="preserve">
-    <value>Physical State</value>
+  <data name="OutDate" xml:space="preserve">
+    <value>Date de sortie</value>
+  </data>
+  <data name="OutReason" xml:space="preserve">
+    <value>Raison de sortie</value>
   </data>
   <data name="PluralName" xml:space="preserve">
-    <value>Materials</value>
+    <value>Entree Sorties Materiels</value>
   </data>
   <data name="SingularName" xml:space="preserve">
-    <value>Material</value>
-  </data>
-  <data name="StockExistence" xml:space="preserve">
-    <value>Stock Existence</value>
-  </data>
-  <data name="UpdateServiceDate" xml:space="preserve">
-    <value>Update Service Date</value>
-  </data>
-  <data name="SerieNumber" xml:space="preserve">
-    <value>Serie Number</value>
-  </data>
-  <data name="AcquisitionInformations" xml:space="preserve">
-    <value>Acquisition Informations</value>
-  </data>
-  <data name="InventoryInformations" xml:space="preserve">
-    <value>Inventory Informations</value>
-  </data>
-  <data name="MaterialSituation" xml:space="preserve">
-    <value>Material Situation</value>
+    <value>Entree Sortie Materiel</value>
   </data>
 </root>

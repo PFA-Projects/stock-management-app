@@ -29,7 +29,7 @@ namespace StockManagement
             // Start Gwin Application with Authentification
             User user = null;
 
-            user = User.CreateRootUser();
+            user = User.CreateRootUser(new ModelContext());
             user.Language = GwinApp.Languages.fr;
             GwinApp.Start(typeof(ModelContext), typeof(BaseBLO<>), null, user);
 
