@@ -7,13 +7,13 @@ namespace StockManagement.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.3-40302")]
-    public sealed partial class Update_Table_MaterielInOut : IMigrationMetadata
+    public sealed partial class Create_data : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(Update_Table_MaterielInOut));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(Create_data));
         
         string IMigrationMetadata.Id
         {
-            get { return "201705032207410_Update_Table_MaterielInOut"; }
+            get { return "201705041120551_Create_data"; }
         }
         
         string IMigrationMetadata.Source

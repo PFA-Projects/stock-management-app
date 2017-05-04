@@ -32,7 +32,7 @@
                         ,
                         new App.Gwin.Entities.Application.ApplicationName
                         {
-                            Reference = "ClubManagementSystem",
+                            Reference = "StockManagementSystem",
                             Name = new App.Gwin.Entities.MultiLanguage.LocalizedString { Arab = "برنامج تدبير المخزون", English = "Stock Management System", French = "Application de gestion de stock" }
                         }
 
@@ -48,10 +48,10 @@
             context.Roles.AddOrUpdate(
                  r => r.Reference
                         ,
-              new Role { Reference = nameof(Role.Roles.Guest), Name = new App.Gwin.Entities.MultiLanguage.LocalizedString() { Current = nameof(Role.Roles.Guest) } },
-              new Role { Reference = nameof(Role.Roles.User), Name = new App.Gwin.Entities.MultiLanguage.LocalizedString() { Current = nameof(Role.Roles.User) } },
-              new Role { Reference = nameof(Role.Roles.Admin), Name = new App.Gwin.Entities.MultiLanguage.LocalizedString() { Current = nameof(Role.Roles.Admin) } },
-              new Role { Reference = nameof(Role.Roles.Root), Name = new App.Gwin.Entities.MultiLanguage.LocalizedString() { Current = nameof(Role.Roles.Root) }, Hidden = true }
+              new Role { Reference = nameof(Role.Roles.Guest), Name = new LocalizedString() { Current = nameof(Role.Roles.Guest) } },
+              new Role { Reference = nameof(Role.Roles.User), Name = new LocalizedString() { Current = nameof(Role.Roles.User) } },
+              new Role { Reference = nameof(Role.Roles.Admin), Name = new LocalizedString() { Current = nameof(Role.Roles.Admin) } },
+              new Role { Reference = nameof(Role.Roles.Root), Name = new LocalizedString() { Current = nameof(Role.Roles.Root) }, Hidden = true }
             );
             // Save Change to Select RoleRoot and RoleGuest
             context.SaveChanges();
@@ -76,17 +76,7 @@
 
             Authorization UserAutorization = new Authorization();
             UserAutorization.BusinessEntity = typeof(User).FullName;
-            RoleRoot.Authorizations.Add(UserAutorization);
-
-
-            //Authorization CityAutorization = new Authorization();
-            //CityAutorization.BusinessEntity = typeof(City).FullName;
-            //RoleRoot.Authorizations.Add(CityAutorization);
-
-
-            //Authorization CountryAutorization = new Authorization();
-            //CountryAutorization.BusinessEntity = typeof(Country).FullName;
-            //RoleRoot.Authorizations.Add(CountryAutorization);
+            RoleAdmin.Authorizations.Add(UserAutorization);
 
             context.SaveChanges();
 
@@ -101,9 +91,9 @@
             context.MenuItemApplications.AddOrUpdate(
                             r => r.Code
                          ,
-                         new MenuItemApplication { Id = 1, Code = "Configuration", Title = new App.Gwin.Entities.MultiLanguage.LocalizedString { Arab = "إعدادات", English = "Configuration", French = "Configuration" } },
-                         new MenuItemApplication { Id = 2, Code = "Admin", Title = new App.Gwin.Entities.MultiLanguage.LocalizedString { Arab = "تدبير البرنامج", English = "Admin", French = "Administration" } },
-                         new MenuItemApplication { Id = 3, Code = "Root", Title = new App.Gwin.Entities.MultiLanguage.LocalizedString { Arab = "مصمم اليرنامج", English = "Application Constructor", French = "Rélisateur de l'application" } }
+                         new MenuItemApplication { Id = 1, Code = "Configuration", Title = new LocalizedString { Arab = "إعدادات", English = "Configuration", French = "Configuration" } },
+                         new MenuItemApplication { Id = 2, Code = "Admin", Title = new LocalizedString { Arab = "تدبير البرنامج", English = "Admin", French = "Administration" } },
+                         new MenuItemApplication { Id = 3, Code = "Root", Title = new LocalizedString { Arab = "مصمم اليرنامج", English = "Application Constructor", French = "Rélisateur de l'application" } }
                        );
 
 
@@ -175,6 +165,26 @@
             RoleAdmin.Authorizations.Add(SocieteAuthorizations);
 
             context.SaveChanges();
+
+
+
+            //
+            // Services Data :
+            // SAA , Bloc , Maternite , Urgence , Consultation , Hospitalisation , Laboratoire , Radio , Administration 
+            context.Services.AddOrUpdate(
+                new Service() { Name = new LocalizedString() { French ="SAA" ,English = "SAA" , Arab ="SAA" } , Description = new LocalizedString() { French= "" , English = "" , Arab = ""} , Observation = new LocalizedString() { French ="" , English = "" , Arab = ""} } , 
+                new Service() {  Name = new LocalizedString() { French ="Bloc" , English ="Bloc" , Arab = "Bloc"} , Observation = new LocalizedString() { French = "" , Arab = "" , English = ""} , Description = new LocalizedString() { French ="" , English="" , Arab =""} } ,
+                new Service() { Name = new LocalizedString() { French = "Maternite", English = "Maternite", Arab = "Maternite" }, Observation = new LocalizedString() { French = "", Arab = "", English = "" }, Description = new LocalizedString() { French = "", English = "", Arab = "" } },
+                new Service() { Name = new LocalizedString() { French = "Urgence", English = "Urgence", Arab = "Urgence" }, Observation = new LocalizedString() { French = "", Arab = "", English = "" }, Description = new LocalizedString() { French = "", English = "", Arab = "" } },
+                new Service() { Name = new LocalizedString() { French = "Consultations", English = "Consultation", Arab = "Consultation" }, Observation = new LocalizedString() { French = "", Arab = "", English = "" }, Description = new LocalizedString() { French = "", English = "", Arab = "" } },
+                new Service() { Name = new LocalizedString() { French = "Hospitalisation", English = "Hospitalisation", Arab = "Hospitalisation" }, Observation = new LocalizedString() { French = "", Arab = "", English = "" }, Description = new LocalizedString() { French = "", English = "", Arab = "" } },
+                new Service() { Name = new LocalizedString() { French = "Laboratoire", English = "Laboratoire", Arab = "Laboratoire" }, Observation = new LocalizedString() { French = "", Arab = "", English = "" }, Description = new LocalizedString() { French = "", English = "", Arab = "" } },
+                new Service() { Name = new LocalizedString() { French = "Radio", English = "Radio", Arab = "Radio" }, Observation = new LocalizedString() { French = "", Arab = "", English = "" }, Description = new LocalizedString() { French = "", English = "", Arab = "" } },
+                new Service() { Name = new LocalizedString() { French = "Administration", English = "Administration", Arab = "Administration" }, Observation = new LocalizedString() { French = "", Arab = "", English = "" }, Description = new LocalizedString() { French = "", English = "", Arab = "" } }
+                );
+            // Locations Data : 
+            // (Service : SAA) : Statistiques , Recouvrement , RDV(Rendez vous) , Caisse 
+            // (Service Administration ) : RH(Resources Humaines) , Comptabilite , Materiel 
 
         }
     }
