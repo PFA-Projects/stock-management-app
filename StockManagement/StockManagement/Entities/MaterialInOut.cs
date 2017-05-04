@@ -54,14 +54,14 @@ namespace StockManagement.Entities
         }
 
         // Relations
-         //[EntryForm]
-        // [DataGrid]
-        // //[Filter]
+        //[EntryForm]
+        //[DataGrid]
+        ////[Filter]
         [Relationship(Relation = RelationshipAttribute.Relations.ManyToOne)]
         public Material Material { get; set; }
         // //
-        // [EntryForm]
-        // [DataGrid]
+        //[EntryForm]
+        //[DataGrid]
         //// [Filter]
         [Relationship(Relation = RelationshipAttribute.Relations.ManyToOne)]
         public Location Location { get; set; }
@@ -70,8 +70,8 @@ namespace StockManagement.Entities
         // /// Out Responsible
         // /// </summary>
 
-        // [EntryForm]
-        // [DataGrid]
+        //[EntryForm]
+        //[DataGrid]
         //// [Filter]
         [Relationship(Relation = RelationshipAttribute.Relations.ManyToOne)]
         public Employee Employee { get; set; }
