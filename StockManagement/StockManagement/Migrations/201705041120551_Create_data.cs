@@ -3,7 +3,7 @@ namespace StockManagement.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class Add_Data : DbMigration
+    public partial class Create_data : DbMigration
     {
         public override void Up()
         {

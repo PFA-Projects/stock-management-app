@@ -209,17 +209,9 @@
     <Compile Include="Entities\Service.cs" />
     <Compile Include="Entities\Societe.cs" />
     <Compile Include="Enumerations\PhysicalState.cs" />
-    <Compile Include="Migrations\201705031138255_Add_Data.cs" />
-    <Compile Include="Migrations\201705031138255_Add_Data.Designer.cs">
-      <DependentUpon>201705031138255_Add_Data.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201705032207410_Update_Table_MaterielInOut.cs" />
-    <Compile Include="Migrations\201705032207410_Update_Table_MaterielInOut.Designer.cs">
-      <DependentUpon>201705032207410_Update_Table_MaterielInOut.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201705032208559_Update_MaterielInOut_Relations.cs" />
-    <Compile Include="Migrations\201705032208559_Update_MaterielInOut_Relations.Designer.cs">
-      <DependentUpon>201705032208559_Update_MaterielInOut_Relations.cs</DependentUpon>
+    <Compile Include="Migrations\201705041120551_Create_data.cs" />
+    <Compile Include="Migrations\201705041120551_Create_data.Designer.cs">
+      <DependentUpon>201705041120551_Create_data.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Presentations\Menu\FormMenu.cs">
@@ -331,14 +323,8 @@
       <LastGenOutput>Societe.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="FormMenuApplication.resx" />
-    <EmbeddedResource Include="Migrations\201705031138255_Add_Data.resx">
-      <DependentUpon>201705031138255_Add_Data.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201705032207410_Update_Table_MaterielInOut.resx">
-      <DependentUpon>201705032207410_Update_Table_MaterielInOut.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201705032208559_Update_MaterielInOut_Relations.resx">
-      <DependentUpon>201705032208559_Update_MaterielInOut_Relations.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201705041120551_Create_data.resx">
+      <DependentUpon>201705041120551_Create_data.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentations\Menu\FormMenu.resx">
       <DependentUpon>FormMenu.cs</DependentUpon>
@@ -364,11 +350,6 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Resources\delete.png" />
-    <Content Include="Resources\edit.png" />
-    <Content Include="Resources\edit_bleu.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
