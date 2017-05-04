@@ -15,7 +15,7 @@ namespace StockManagement.Entities
     /// </summary>
     /// 
     [GwinEntity(Localizable = true, DisplayMember = "Reference")]
-    [Menu]
+    [Menu(Group ="Societe")]
     public class Societe: BaseEntity
     {
         [EntryForm]

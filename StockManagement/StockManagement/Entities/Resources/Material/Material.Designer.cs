@@ -70,6 +70,15 @@ namespace StockManagement.Entities.Resources.Material {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Acquisition Informations.
+        /// </summary>
+        internal static string AcquisitionInformations {
+            get {
+                return ResourceManager.GetString("AcquisitionInformations", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Acquisition Value.
         /// </summary>
         internal static string AcquisitionValue {
@@ -124,6 +133,15 @@ namespace StockManagement.Entities.Resources.Material {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Inventory Informations.
+        /// </summary>
+        internal static string InventoryInformations {
+            get {
+                return ResourceManager.GetString("InventoryInformations", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Inventory Number.
         /// </summary>
         internal static string InventoryNumber {
@@ -147,6 +165,15 @@ namespace StockManagement.Entities.Resources.Material {
         internal static string materialCategory {
             get {
                 return ResourceManager.GetString("materialCategory", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Material Situation.
+        /// </summary>
+        internal static string MaterialSituation {
+            get {
+                return ResourceManager.GetString("MaterialSituation", resourceCulture);
             }
         }
         
@@ -183,6 +210,15 @@ namespace StockManagement.Entities.Resources.Material {
         internal static string PluralName {
             get {
                 return ResourceManager.GetString("PluralName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Serie Number.
+        /// </summary>
+        internal static string SerieNumber {
+            get {
+                return ResourceManager.GetString("SerieNumber", resourceCulture);
             }
         }
         

@@ -16,7 +16,7 @@ namespace StockManagement.Entities
     /// </summary>
     /// 
     [GwinEntity(Localizable = true, DisplayMember = "Name")]
-    [Menu]
+    [Menu(Group = "Societe")]
     public class Location:BaseEntity
     {
       

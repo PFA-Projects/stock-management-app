@@ -16,7 +16,7 @@ namespace StockManagement.Entities
     /// </summary>
     /// 
     [GwinEntity(Localizable = true, DisplayMember = "Reference")]
-    [Menu]
+    [Menu(Group = "Materiels")]
     public class MaterialCategory:BaseEntity
     {
         [EntryForm]

@@ -1,28 +1,61 @@
 ﻿using System;
 using System.Data.Entity;
+using System.Collections.Generic;
+using System.Linq;
+using System.Linq.Expressions;
+using System.Text;
+using System.Threading.Tasks;
+using System.ComponentModel;
+using App.Gwin.Attributes;
+using LinqExtension;
+using System.Reflection;
+using System.Data.Entity.Infrastructure;
+using System.Data.SqlClient;
+using App.Gwin;
+using System.Data.Entity.Validation;
 using App.Gwin.Entities;
+using App.Gwin.Application.Presentation.Messages;
 using App.Gwin.Application.BAL;
+using App;
 using StockManagement.DAL;
 
 namespace StockManagement.BAL
 {
+    /// <summary>
+    /// Version 0.09
+    /// </summary>
+    /// <typeparam name="T"></typeparam>
     public class BaseBLO<T> : GwinBaseBLO<T> ,IGwinBaseBLO where T : BaseEntity
     {
-     
-        #region construcreur
-        public BaseBLO(DbContext context):base(context)
-        {
-            this.Context = (ModelContext) context;
-            if (this.Context == null) this.Context = new ModelContext();
+        private Type typeDbContext;
 
-            this.DbSet = this.Context.Set<T>();
-            this.TypeEntity = typeof(T);
+        #region construcreur
+        public BaseBLO(DbContext context, Type typeDbContext) : base(context, typeDbContext)
+        {
+            // Convertion DBContext to ModelContext
+            this.Context = (ModelContext)context;
+            if (this.Context == null  && typeDbContext == null)
+            {
+                this.Context = new ModelContext();
+                this.DbSet = this.Context.Set<T>();
+            }
         }
-        public BaseBLO() : this(null) { }
+
+
+        public BaseBLO(DbContext context):this(context,null)
+        {
+            
+        }
+        public BaseBLO() : this(null,null) { }
+
+        public BaseBLO(Type typeDbContext):this(null,typeDbContext)
+        {
+           
+        }
         #endregion
 
         #region Context
- 
+
         public override void Dispose()
         {
             if (this.Context != null)

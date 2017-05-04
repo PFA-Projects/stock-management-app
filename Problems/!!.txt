@@ -1,0 +1,2 @@
+* Annotations de Realtion Many To One de  classe MaterielInOut !
+* Traduction de Menu (Voir Capture 1) 
