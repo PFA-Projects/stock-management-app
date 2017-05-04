@@ -34,22 +34,22 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Castle.Core">
-      <HintPath>..\..\packages\Gwin Library\Castle.Core.dll</HintPath>
+      <HintPath>..\packages\Gwin Library\Castle.Core.dll</HintPath>
     </Reference>
     <Reference Include="Castle.Windsor">
-      <HintPath>..\..\packages\Gwin Library\Castle.Windsor.dll</HintPath>
+      <HintPath>..\packages\Gwin Library\Castle.Windsor.dll</HintPath>
     </Reference>
     <Reference Include="EntityFramework">
-      <HintPath>..\..\packages\Gwin Library\EntityFramework.dll</HintPath>
+      <HintPath>..\packages\Gwin Library\EntityFramework.dll</HintPath>
     </Reference>
     <Reference Include="EntityFramework.SqlServer">
-      <HintPath>..\..\packages\Gwin Library\EntityFramework.SqlServer.dll</HintPath>
+      <HintPath>..\packages\Gwin Library\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
     <Reference Include="GwinApp">
-      <HintPath>..\..\packages\Gwin Library\GwinApp.dll</HintPath>
+      <HintPath>..\packages\Gwin Library\GwinApp.dll</HintPath>
     </Reference>
     <Reference Include="LinqKit">
-      <HintPath>..\..\packages\Gwin Library\LinqKit.dll</HintPath>
+      <HintPath>..\packages\Gwin Library\LinqKit.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
