@@ -22,16 +22,9 @@
   </Class>
   <Class Name="StockManagement.Entities.MaterialInOut">
     <Position X="10" Y="0.5" Width="2" />
-    <NestedTypes>
-      <Enum Name="StockManagement.Entities.MaterialInOut.PhysicalState" Collapsed="true">
-        <TypeIdentifier>
-          <NewMemberFileName>Entities\Material.cs</NewMemberFileName>
-        </TypeIdentifier>
-      </Enum>
-    </NestedTypes>
     <TypeIdentifier>
       <HashCode>AEAAAAEAAAQAAAAAAAIQAAABCAAAAAAAAAAAAAAgAAA=</HashCode>
-      <FileName>Entities\MaterialAccessExit.cs</FileName>
+      <FileName>Entities\MaterialInOut.cs</FileName>
       <NewMemberFileName>Entities\Material.cs</NewMemberFileName>
     </TypeIdentifier>
     <ShowAsAssociation>
@@ -51,7 +44,7 @@
     <Position X="6.75" Y="2.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Entities\Personne.cs</FileName>
+      <FileName>Entities\Employee.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="StockManagement.Entities.Service">
