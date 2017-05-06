@@ -2,7 +2,6 @@
 {
     using App.Gwin.Application.BAL;
     using App.Gwin.Entities.Application;
-    using App.Gwin.Entities.ContactInformations;
     using App.Gwin.Entities.MultiLanguage;
     using App.Gwin.Entities.Secrurity.Authentication;
     using App.Gwin.Entities.Secrurity.Autorizations;
@@ -172,8 +171,9 @@
             // Services Data :
             // SAA , Bloc , Maternite , Urgence , Consultation , Hospitalisation , Laboratoire , Radio , Administration 
             context.Services.AddOrUpdate(
-                new Service() { Name = new LocalizedString() { French ="SAA" ,English = "SAA" , Arab ="SAA" } , Description = new LocalizedString() { French= "" , English = "" , Arab = ""} , Observation = new LocalizedString() { French ="" , English = "" , Arab = ""} } , 
-                new Service() {  Name = new LocalizedString() { French ="Bloc" , English ="Bloc" , Arab = "Bloc"} , Observation = new LocalizedString() { French = "" , Arab = "" , English = ""} , Description = new LocalizedString() { French ="" , English="" , Arab =""} } ,
+                s => s.Reference,
+                new Service() { Name = new LocalizedString() { French = "SAA", English = "SAA", Arab = "SAA" }, Description = new LocalizedString() { French = "", English = "", Arab = "" }, Observation = new LocalizedString() { French = "", English = "", Arab = "" } },
+                new Service() { Name = new LocalizedString() { French = "Bloc", English = "Bloc", Arab = "Bloc" }, Observation = new LocalizedString() { French = "", Arab = "", English = "" }, Description = new LocalizedString() { French = "", English = "", Arab = "" } },
                 new Service() { Name = new LocalizedString() { French = "Maternite", English = "Maternite", Arab = "Maternite" }, Observation = new LocalizedString() { French = "", Arab = "", English = "" }, Description = new LocalizedString() { French = "", English = "", Arab = "" } },
                 new Service() { Name = new LocalizedString() { French = "Urgence", English = "Urgence", Arab = "Urgence" }, Observation = new LocalizedString() { French = "", Arab = "", English = "" }, Description = new LocalizedString() { French = "", English = "", Arab = "" } },
                 new Service() { Name = new LocalizedString() { French = "Consultations", English = "Consultation", Arab = "Consultation" }, Observation = new LocalizedString() { French = "", Arab = "", English = "" }, Description = new LocalizedString() { French = "", English = "", Arab = "" } },
@@ -185,7 +185,6 @@
             // Locations Data : 
             // (Service : SAA) : Statistiques , Recouvrement , RDV(Rendez vous) , Caisse 
             // (Service Administration ) : RH(Resources Humaines) , Comptabilite , Materiel 
-
         }
     }
 }
