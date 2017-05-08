@@ -47,3 +47,9 @@ C:\Users\DELL\Desktop\Learn ItextSharp\TPITextSharp\TPITextSharp\bin\Debug\pt\Mi
 C:\Users\DELL\Desktop\Learn ItextSharp\TPITextSharp\TPITextSharp\bin\Debug\ru\Microsoft.SqlServer.Types.resources.dll
 C:\Users\DELL\Desktop\Learn ItextSharp\TPITextSharp\TPITextSharp\bin\Debug\zh-Hans\Microsoft.SqlServer.Types.resources.dll
 C:\Users\DELL\Desktop\Learn ItextSharp\TPITextSharp\TPITextSharp\bin\Debug\zh-Hant\Microsoft.SqlServer.Types.resources.dll
+C:\Users\DELL\Desktop\stock-management-app\Learn ItextSharp\TPITextSharp\TPITextSharp\bin\Debug\TPITextSharp.exe.config
+C:\Users\DELL\Desktop\stock-management-app\Learn ItextSharp\TPITextSharp\TPITextSharp\obj\Debug\Interop.AcroPDFLib.dll
+C:\Users\DELL\Desktop\stock-management-app\Learn ItextSharp\TPITextSharp\TPITextSharp\obj\Debug\AxInterop.AcroPDFLib.dll
+C:\Users\DELL\Desktop\stock-management-app\Learn ItextSharp\TPITextSharp\TPITextSharp\obj\Debug\TPITextSharp.csproj.ResolveComReference.cache
+C:\Users\DELL\Desktop\stock-management-app\Learn ItextSharp\TPITextSharp\TPITextSharp\obj\Debug\TPITextSharp.exe
+C:\Users\DELL\Desktop\stock-management-app\Learn ItextSharp\TPITextSharp\TPITextSharp\obj\Debug\TPITextSharp.pdb
