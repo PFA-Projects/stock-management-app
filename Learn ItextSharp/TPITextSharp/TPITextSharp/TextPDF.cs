@@ -52,7 +52,7 @@ namespace TPITextSharp
             list.Add("four");
             doc.Add(list);
             // 3
-            iTextSharp.text.Image image = iTextSharp.text.Image.GetInstance(@"C:\Users\DELL\Desktop\Learn ItextSharp\TPITextSharp\TPITextSharp\Images\Lighthouse.jpg");
+            iTextSharp.text.Image image = iTextSharp.text.Image.GetInstance(@"C:\Users\DELL\Desktop\stock-management-app\Learn ItextSharp\Lighthouse.jpg");
             //image.ScalePercent(20f);
             //image.SetAbsolutePosition(doc.PageSize.Width - 36f - 72f, doc.PageSize.Height - 36f - 216.6f);
             image.ScaleToFit(50f, 100f);
@@ -132,13 +132,16 @@ namespace TPITextSharp
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void readpdf_btn_Click(object sender, EventArgs e)
+        private void btn_readpdf_Click(object sender, EventArgs e)
         {
             OpenFileDialog file = new OpenFileDialog();
-            if(file.ShowDialog() == DialogResult.OK)
+            if (file.ShowDialog() == DialogResult.OK)
             {
                 axAcroPDF1.src = file.FileName;
             }
         }
+
+        
+
     }
 }
