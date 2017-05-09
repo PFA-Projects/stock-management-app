@@ -240,6 +240,12 @@
     <Compile Include="Entities\Service.cs" />
     <Compile Include="Entities\Societe.cs" />
     <Compile Include="Enumerations\PhysicalState.cs" />
+    <Compile Include="FormMenuApplication.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMenuApplication.designer.cs">
+      <DependentUpon>FormMenuApplication.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\201705051101450_Add_Tables.cs" />
     <Compile Include="Migrations\201705051101450_Add_Tables.Designer.cs">
       <DependentUpon>201705051101450_Add_Tables.cs</DependentUpon>
@@ -381,6 +387,9 @@
     <EmbeddedResource Include="Entities\Resources\Societe\Societe.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Societe.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMenuApplication.resx">
+      <DependentUpon>FormMenuApplication.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201705051101450_Add_Tables.resx">
       <DependentUpon>201705051101450_Add_Tables.cs</DependentUpon>
