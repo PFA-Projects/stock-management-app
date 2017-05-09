@@ -257,10 +257,6 @@
     <Compile Include="Presentations\Menu\FormMenu.Designer.cs">
       <DependentUpon>FormMenu.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormMenuApplication.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormMenuApplication.Designer.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Entities\Resources\Configuration\configuration.ar.resx">
@@ -386,7 +382,6 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Societe.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormMenuApplication.resx" />
     <EmbeddedResource Include="Migrations\201705051101450_Add_Tables.resx">
       <DependentUpon>201705051101450_Add_Tables.cs</DependentUpon>
     </EmbeddedResource>
