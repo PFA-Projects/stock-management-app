@@ -1,3 +1,0 @@
-C:\Users\ES-SARRAJ Fouad\Documents\GitHub\stock-management-app\StockManagement\StockManagement\bin\Debug\StockManagement.exe.config
-C:\Users\ES-SARRAJ Fouad\Documents\GitHub\stock-management-app\StockManagement\StockManagement\obj\Debug\StockManagement.exe
-C:\Users\ES-SARRAJ Fouad\Documents\GitHub\stock-management-app\StockManagement\StockManagement\obj\Debug\StockManagement.pdb

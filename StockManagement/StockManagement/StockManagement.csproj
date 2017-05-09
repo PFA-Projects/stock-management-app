@@ -257,9 +257,7 @@
     <Compile Include="Presentations\MaterialManger\FormAjouterGroupe.designer.cs">
       <DependentUpon>FormAjouterGroupe.cs</DependentUpon>
     </Compile>
-    <Compile Include="Presentations\Menu\FormMenu.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="Presentations\Menu\FormMenu.cs" />
     <Compile Include="Presentations\Menu\FormMenu.Designer.cs">
       <DependentUpon>FormMenu.cs</DependentUpon>
     </Compile>
