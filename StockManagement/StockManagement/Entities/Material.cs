@@ -61,7 +61,7 @@ namespace StockManagement.Entities
         public string Acquisition { get; set; }
 
         //[EntryForm]
-        [DataGrid]
+        //[DataGrid]
         //[Filter]
         public bool AcquisitionValueExist { get; set; }
         //
