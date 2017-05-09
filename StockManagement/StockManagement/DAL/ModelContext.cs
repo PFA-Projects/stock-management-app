@@ -24,7 +24,7 @@ namespace StockManagement.DAL
 
         }
 
-        //(LocalDb)\MSSQLLocalDB
+        // (LocalDb)\MSSQLLocalDB
         //public ModelContext() : base(@"data source=(LocalDb)\MSSQLLocalDB;initial catalog=StockManagement;integrated security=True;MultipleActiveResultSets=True;App=EntityFramework")
         //{
         //    //  Database.SetInitializer<ModelContext>(new CreateDatabaseIfNotExists<ModelContext>());

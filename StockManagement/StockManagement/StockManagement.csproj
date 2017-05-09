@@ -34,22 +34,22 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Castle.Core">
-      <HintPath>..\..\packages\Gwin Library\Castle.Core.dll</HintPath>
+      <HintPath>..\packages\Gwin Library\Castle.Core.dll</HintPath>
     </Reference>
     <Reference Include="Castle.Windsor">
-      <HintPath>..\..\packages\Gwin Library\Castle.Windsor.dll</HintPath>
+      <HintPath>..\packages\Gwin Library\Castle.Windsor.dll</HintPath>
     </Reference>
     <Reference Include="EntityFramework">
-      <HintPath>..\..\packages\Gwin Library\EntityFramework.dll</HintPath>
+      <HintPath>..\packages\Gwin Library\EntityFramework.dll</HintPath>
     </Reference>
     <Reference Include="EntityFramework.SqlServer">
-      <HintPath>..\..\packages\Gwin Library\EntityFramework.SqlServer.dll</HintPath>
+      <HintPath>..\packages\Gwin Library\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
     <Reference Include="GwinApp">
-      <HintPath>..\..\packages\Gwin Library\GwinApp.dll</HintPath>
+      <HintPath>..\packages\Gwin Library\GwinApp.dll</HintPath>
     </Reference>
     <Reference Include="LinqKit">
-      <HintPath>..\..\packages\Gwin Library\LinqKit.dll</HintPath>
+      <HintPath>..\packages\Gwin Library\LinqKit.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
@@ -69,7 +69,7 @@
   <ItemGroup>
     <Compile Include="BLL\BaseBLO.cs" />
     <Compile Include="BLL\LocationsBLO.cs" />
-    <Compile Include="BLL\MaterialsBLO.cs" />
+    <Compile Include="BLL\MaterialBLO.cs" />
     <Compile Include="BLL\MaterialsCategoriesBLO.cs" />
     <Compile Include="BLL\PersonnesBLO.cs" />
     <Compile Include="BLL\ServicesBLO.cs" />
@@ -203,9 +203,9 @@
     <Compile Include="Entities\Service.cs" />
     <Compile Include="Entities\Societe.cs" />
     <Compile Include="Enumerations\PhysicalState.cs" />
-    <Compile Include="Migrations\201705041120551_Create_data.cs" />
-    <Compile Include="Migrations\201705041120551_Create_data.Designer.cs">
-      <DependentUpon>201705041120551_Create_data.cs</DependentUpon>
+    <Compile Include="Migrations\201705051632209_Create_data.cs" />
+    <Compile Include="Migrations\201705051632209_Create_data.Designer.cs">
+      <DependentUpon>201705051632209_Create_data.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Presentations\MaterialManger\FormAjouterGroupe.cs">
@@ -213,12 +213,6 @@
     </Compile>
     <Compile Include="Presentations\MaterialManger\FormAjouterGroupe.designer.cs">
       <DependentUpon>FormAjouterGroupe.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Presentations\Menu\FormMenu.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Presentations\Menu\FormMenu.Designer.cs">
-      <DependentUpon>FormMenu.cs</DependentUpon>
     </Compile>
     <Compile Include="FormMenuApplication.cs">
       <SubType>Form</SubType>
@@ -323,14 +317,11 @@
       <LastGenOutput>Societe.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="FormMenuApplication.resx" />
-    <EmbeddedResource Include="Migrations\201705041120551_Create_data.resx">
-      <DependentUpon>201705041120551_Create_data.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201705051632209_Create_data.resx">
+      <DependentUpon>201705051632209_Create_data.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentations\MaterialManger\FormAjouterGroupe.resx">
       <DependentUpon>FormAjouterGroupe.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Presentations\Menu\FormMenu.resx">
-      <DependentUpon>FormMenu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
