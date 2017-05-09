@@ -22,16 +22,9 @@
   </Class>
   <Class Name="StockManagement.Entities.MaterialInOut">
     <Position X="10" Y="0.5" Width="2" />
-    <NestedTypes>
-      <Enum Name="StockManagement.Entities.MaterialInOut.PhysicalState" Collapsed="true">
-        <TypeIdentifier>
-          <NewMemberFileName>Entities\Material.cs</NewMemberFileName>
-        </TypeIdentifier>
-      </Enum>
-    </NestedTypes>
     <TypeIdentifier>
       <HashCode>AEAAAAEAAAQAAAAAAAIQAAABCAAAAAAAAAAAAAAgAAA=</HashCode>
-      <FileName>Entities\MaterialAccessExit.cs</FileName>
+      <FileName>Entities\MaterialInOut.cs</FileName>
       <NewMemberFileName>Entities\Material.cs</NewMemberFileName>
     </TypeIdentifier>
     <ShowAsAssociation>
@@ -41,17 +34,17 @@
     </ShowAsAssociation>
   </Class>
   <Class Name="StockManagement.Entities.MaterialCategory">
-    <Position X="14.25" Y="0.5" Width="1.5" />
+    <Position X="14.75" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAgAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAA=</HashCode>
       <FileName>Entities\MaterialCategory.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="StockManagement.Entities.Employee">
-    <Position X="6.75" Y="2.25" Width="1.5" />
+    <Position X="6.75" Y="2.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Entities\Personne.cs</FileName>
+      <FileName>Entities\Employee.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="StockManagement.Entities.Service">
@@ -62,14 +55,14 @@
     </TypeIdentifier>
   </Class>
   <Class Name="StockManagement.Entities.Societe">
-    <Position X="6.5" Y="4" Width="1.5" />
+    <Position X="6" Y="4.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAgAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAA=</HashCode>
       <FileName>Entities\Societe.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="StockManagement.Entities.Material">
-    <Position X="13.25" Y="3" Width="1.5" />
+    <Position X="13.25" Y="3" Width="2.75" />
     <TypeIdentifier>
       <HashCode>AAABAAAAAAAAAACAAAAYAABBACiBAgIAAAiAAAAAAgg=</HashCode>
       <FileName>Entities\Material.cs</FileName>
