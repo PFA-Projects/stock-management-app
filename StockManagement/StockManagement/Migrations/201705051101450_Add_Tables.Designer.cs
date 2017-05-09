@@ -7,13 +7,13 @@ namespace StockManagement.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.3-40302")]
-    public sealed partial class Create_data : IMigrationMetadata
+    public sealed partial class Add_Tables : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(Create_data));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(Add_Tables));
         
         string IMigrationMetadata.Id
         {
-            get { return "201705041120551_Create_data"; }
+            get { return "201705051101450_Add_Tables"; }
         }
         
         string IMigrationMetadata.Source
