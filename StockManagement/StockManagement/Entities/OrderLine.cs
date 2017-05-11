@@ -34,6 +34,11 @@ namespace StockManagement.Entities
         [Filter]
         [DataGrid(WidthColonne = 100)]
         public Order order { get; set; }
+
+        public void Method()
+        {
+            throw new System.NotImplementedException();
+        }
         //public Order order { get; set; }
     }
 }

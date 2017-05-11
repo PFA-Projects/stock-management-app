@@ -1,4 +1,4 @@
-﻿// Mariam Ait Al
+﻿// hala ftouh Ghammat
 
 using App.Gwin.Attributes;
 using App.Gwin.Entities;
@@ -21,8 +21,27 @@ namespace StockManagement.Entities
     [Menu]
     public class Employee:Person
     {
-       
+        [EntryForm]
+        [DataGrid]
+        [Filter]
+        public LocalizedString FirstName { get; set; }
+
+        [EntryForm]
+        [DataGrid]
+        public LocalizedString LastName { get; set; }
+
+        [EntryForm]
+        [DataGrid]
+        [Filter]
+        public  LocalizedString Phone { get; set; }
+
+        //Relations
+       [EntryForm(GroupeBox = "")]
+       [DataGrid]
+       [Filter]
+       [Relationship(Relation = RelationshipAttribute.Relations.ManyToOne)]
+        public Location location { get; set; }
 
        
-    }
+   }
 }
