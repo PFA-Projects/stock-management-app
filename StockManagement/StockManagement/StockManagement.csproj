@@ -53,6 +53,15 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\..\stock-management-app\packages\Gwin Library\GwinApp.dll</HintPath>
     </Reference>
+    <Reference Include="itextsharp">
+      <HintPath>.\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp.pdfa">
+      <HintPath>.\itextsharp.pdfa.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp.xtra">
+      <HintPath>.\itextsharp.xtra.dll</HintPath>
+    </Reference>
     <Reference Include="LinqKit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=bc217f8844052a91, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\..\stock-management-app\packages\Gwin Library\LinqKit.dll</HintPath>
@@ -244,6 +253,10 @@
     <Compile Include="Migrations\201705101034213_Add_Tables.Designer.cs">
       <DependentUpon>201705101034213_Add_Tables.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201705111015316_Update_tables.cs" />
+    <Compile Include="Migrations\201705111015316_Update_tables.Designer.cs">
+      <DependentUpon>201705111015316_Update_tables.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Presentations\MaterialManger\FormAjouterGroupe.cs">
       <SubType>Form</SubType>
@@ -408,6 +421,9 @@
     <EmbeddedResource Include="Migrations\201705101034213_Add_Tables.resx">
       <DependentUpon>201705101034213_Add_Tables.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705111015316_Update_tables.resx">
+      <DependentUpon>201705111015316_Update_tables.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Presentations\MaterialManger\FormAjouterGroupe.resx">
       <DependentUpon>FormAjouterGroupe.cs</DependentUpon>
     </EmbeddedResource>
@@ -446,7 +462,9 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

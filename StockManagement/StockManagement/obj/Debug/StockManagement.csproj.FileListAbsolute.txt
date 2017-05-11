@@ -186,3 +186,8 @@ C:\Users\ok\Desktop\Hala_stock\stock-management-app\StockManagement\StockManagem
 C:\Users\ok\Desktop\Hala_stock\stock-management-app\StockManagement\StockManagement\obj\Debug\StockManagement.exe
 C:\Users\ok\Desktop\Hala_stock\stock-management-app\StockManagement\StockManagement\obj\Debug\StockManagement.pdb
 C:\Users\ok\Desktop\Hala_stock\stock-management-app\StockManagement\StockManagement\obj\Debug\StockManagement.csprojResolveAssemblyReference.cache
+C:\Users\ok\Desktop\Hala_stock\stock-management-app\StockManagement\StockManagement\bin\Debug\itextsharp.dll
+C:\Users\ok\Desktop\Hala_stock\stock-management-app\StockManagement\StockManagement\bin\Debug\itextsharp.pdfa.dll
+C:\Users\ok\Desktop\Hala_stock\stock-management-app\StockManagement\StockManagement\bin\Debug\itextsharp.xtra.dll
+C:\Users\ok\Desktop\Hala_stock\stock-management-app\StockManagement\StockManagement\bin\Debug\itextsharp.xml
+C:\Users\ok\Desktop\Hala_stock\stock-management-app\StockManagement\StockManagement\obj\Debug\StockManagement.Migrations.Update_tables.resources

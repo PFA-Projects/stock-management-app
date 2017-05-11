@@ -1,15 +1,12 @@
 ﻿//hala ftouh ghammat
 using App.Gwin.Attributes;
+using iTextSharp.text;
+using iTextSharp.text.pdf;
 using StockManagement.DAL;
 using StockManagement.Entities;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
+using System.IO;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace StockManagement.Presentations.RiskOFStock
@@ -149,6 +146,22 @@ namespace StockManagement.Presentations.RiskOFStock
 
             this.tabControl1.TabPages.Remove(tabAjouter);
             this.materialGridUC1.acctualisir();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Document doc = new Document(iTextSharp.text.PageSize.LETTER, 10, 10, 42, 35);
+            PdfWriter wri = PdfWriter.GetInstance(doc, new FileStream("LearnPdf.pdf", FileMode.Create));
+            doc.Open();//open Document to Write
+            //write Some content
+            Paragraph paragraph = new Paragraph("this is my first time using itextsharp.");
+            //now add the above created text using diffrent class object to our pdf document 
+            doc.Add(paragraph);
+            doc.Close();//Close documentint datagridview
+                        /////////////////////////////////
+                        //print datagridview
+
+
         }
     }
     }
