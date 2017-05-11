@@ -13,15 +13,15 @@ using System.Threading.Tasks;
 
 namespace StockManagement.BLL
 {
-    public class ServicesBLO:BaseBLO<Service>
+    public class ServiceBLO:BaseBLO<Service>
     {
         ModelContext db = new ModelContext();
 
-        public ServicesBLO(DbContext context) : base(context)
+        public ServiceBLO(DbContext context) : base(context)
         {
         }
 
-        public ServicesBLO() : base()
+        public ServiceBLO() : base()
         {
         }
 

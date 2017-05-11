@@ -60,10 +60,7 @@ namespace StockManagement.Entities
         //[Filter]
         public string Acquisition { get; set; }
 
-        //[EntryForm]
-        [DataGrid]
-        //[Filter]
-        public bool AcquisitionValueExist { get; set; }
+
         //
         [EntryForm(GroupeBox = "MaterialSituation")]
         [DataGrid]
@@ -71,10 +68,10 @@ namespace StockManagement.Entities
         public PhysicalStates PhysicalState { get; set; }
 
         //
-        [EntryForm(GroupeBox = "MaterialSituation")]
-        [DataGrid]
+        //[EntryForm(GroupeBox = "MaterialSituation")]
+        //[DataGrid]
         //[Filter]
-        public bool StockExistence { get; set; }
+       // public bool StockExistence { get; set; }
 
         [EntryForm(GroupeBox = "InventoryInformations")]
         [DataGrid]
@@ -108,5 +105,12 @@ namespace StockManagement.Entities
         [Filter]
         [Relationship(Relation = RelationshipAttribute.Relations.ManyToOne)]
         public MaterialCategory MaterialCategory { get; set; }
+
+
+        [EntryForm(GroupeBox = "")]
+        [DataGrid]
+        [Filter]
+        [Relationship(Relation = RelationshipAttribute.Relations.ManyToOne)]
+        public Service service { get; set; }
     }
 }

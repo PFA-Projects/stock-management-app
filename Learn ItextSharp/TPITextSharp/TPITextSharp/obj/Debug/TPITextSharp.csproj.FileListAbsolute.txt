@@ -92,3 +92,4 @@ C:\Users\DELL\Desktop\stock-management-app\Learn ItextSharp\TPITextSharp\TPIText
 C:\Users\DELL\Desktop\stock-management-app\Learn ItextSharp\TPITextSharp\TPITextSharp\obj\Debug\TPITextSharp.Properties.Resources.resources
 C:\Users\DELL\Desktop\stock-management-app\Learn ItextSharp\TPITextSharp\TPITextSharp\obj\Debug\TPITextSharp.TextPDF.resources
 C:\Users\DELL\Desktop\stock-management-app\Learn ItextSharp\TPITextSharp\TPITextSharp\obj\Debug\TPITextSharp.csproj.GenerateResource.Cache
+C:\Users\DELL\Desktop\stock-management-app\Learn ItextSharp\TPITextSharp\TPITextSharp\obj\Debug\TPITextSharp.Test.resources

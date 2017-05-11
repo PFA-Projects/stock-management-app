@@ -138,6 +138,7 @@ namespace TPITextSharp
             if (file.ShowDialog() == DialogResult.OK)
             {
                 axAcroPDF1.src = file.FileName;
+                
             }
         }
 
