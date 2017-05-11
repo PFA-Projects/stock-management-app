@@ -51,7 +51,7 @@
     </Reference>
     <Reference Include="GwinApp, Version=0.0.0.8, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\stock-management-app\packages\Gwin Library\GwinApp.dll</HintPath>
+      <HintPath>..\..\..\GenericWinSolution\Version 0.012\GwinApp.dll</HintPath>
     </Reference>
     <Reference Include="itextsharp">
       <HintPath>.\itextsharp.dll</HintPath>
@@ -64,7 +64,7 @@
     </Reference>
     <Reference Include="LinqKit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=bc217f8844052a91, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\stock-management-app\packages\Gwin Library\LinqKit.dll</HintPath>
+      <HintPath>..\..\..\GenericWinSolution\Version 0.012\LinqKit.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />

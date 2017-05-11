@@ -1,5 +1,6 @@
 ﻿using App.Gwin;
 using App.Gwin.Application.Presentation.EntityManagement;
+using App.Gwin.Application.Presentation.MainForm;
 using App.Gwin.Entities.Secrurity.Authentication;
 using StockManagement.BAL;
 using StockManagement.BLL;
@@ -31,8 +32,10 @@ namespace StockManagement
             User user = null;
 
             user = User.CreateRootUser(new ModelContext());
-            //user.Language = GwinApp.Languages.fr;
-            //GwinApp.Start(typeof(ModelContext), typeof(BaseBLO<>), null, user);
+          //  user.Language = GwinApp.Languages.fr;
+            //   
+
+            GwinApp.Start(typeof(ModelContext), typeof(BaseBLO<>),null, user);
 
             //Form Aggrandize
             this.WindowState = FormWindowState.Maximized;

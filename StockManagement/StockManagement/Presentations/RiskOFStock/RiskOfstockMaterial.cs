@@ -11,8 +11,7 @@ using System.Windows.Forms;
 
 namespace StockManagement.Presentations.RiskOFStock
 {
-    [GwinEntity(Localizable = true, DisplayMember = "Reference")]
-    [Menu(Group = "Materiels")]
+    [App.Gwin.Attributes.Menu(EntityType = typeof(Material), Order = 10, Title = "Risk OF Stock")]
     public partial class RiskOfstockMaterial : Form
     {
        
@@ -116,7 +115,7 @@ namespace StockManagement.Presentations.RiskOFStock
 
                 // Insertion du formulaire 
                 MaterialUC materialUC = new MaterialUC();
-                materialUC.Name = "materialUC=";
+                materialUC.Name = "materialUC";
                 this.tabControl1.TabPages["TabAjouter"].Controls.Add(materialUC );
                 materialUC.EnregistrerClick += MaterialUC_EnregistrerClick;
                 materialUC.AnnulerClick += MaterialUC_AnnulerAjouterClick;
@@ -132,7 +131,7 @@ namespace StockManagement.Presentations.RiskOFStock
         {
             TabPage tabAjouter = this.tabControl1.TabPages["TabAjouter"];
             MaterialUC materialUC= (MaterialUC)tabAjouter.Controls
-                .Find("materialUC",false).First();
+                .Find("materialUC",true).First();
            
 
             if (db.SaveChanges() > 0)
