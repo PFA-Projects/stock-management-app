@@ -13,7 +13,7 @@ namespace StockManagement.Migrations
         
         string IMigrationMetadata.Id
         {
-            get { return "201705051101450_Add_Tables"; }
+            get { return "201705101034213_Add_Tables"; }
         }
         
         string IMigrationMetadata.Source

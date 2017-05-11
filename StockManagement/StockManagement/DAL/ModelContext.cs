@@ -58,7 +58,7 @@ namespace StockManagement.DAL
         public virtual DbSet<Societe> Societes { get; set; }
         public virtual DbSet <Notification> notifications { get; set; }
         public virtual DbSet <Order> orders { get; set; } 
-        public virtual DbSet <configuration> configurations { get; set; }
+        public virtual DbSet <Configuration> configurations { get; set; }
         public virtual DbSet <OrderLine>orderlines { get; set; }
     }
 

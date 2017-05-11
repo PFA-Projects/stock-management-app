@@ -82,7 +82,7 @@
     <Compile Include="BLL\ServicesBLO.cs" />
     <Compile Include="Configuration.cs" />
     <Compile Include="DAL\ModelContext.cs" />
-    <Compile Include="Entities\configuration.cs" />
+    <Compile Include="Entities\Configuration.cs" />
     <Compile Include="Entities\Delivery.cs" />
     <Compile Include="Entities\Location.cs" />
     <Compile Include="Entities\Material.cs" />
@@ -92,15 +92,15 @@
     <Compile Include="Entities\Notification.cs" />
     <Compile Include="Entities\Order.cs" />
     <Compile Include="Entities\OrderLine.cs" />
-    <Compile Include="Entities\Resources\Configuration\configuration.ar1.Designer.cs">
+    <Compile Include="Entities\Resources\Configuration\Configuration.ar.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>configuration.ar.resx</DependentUpon>
+      <DependentUpon>Configuration.ar.resx</DependentUpon>
     </Compile>
-    <Compile Include="Entities\Resources\Configuration\configuration1.Designer.cs">
+    <Compile Include="Entities\Resources\Configuration\Configuration.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>configuration.resx</DependentUpon>
+      <DependentUpon>Configuration.resx</DependentUpon>
     </Compile>
     <Compile Include="Entities\Resources\Delivery\Delivery.ar.Designer.cs">
       <DependentUpon>Delivery.ar.resx</DependentUpon>
@@ -240,9 +240,9 @@
     <Compile Include="Entities\Service.cs" />
     <Compile Include="Entities\Societe.cs" />
     <Compile Include="Enumerations\PhysicalState.cs" />
-    <Compile Include="Migrations\201705051101450_Add_Tables.cs" />
-    <Compile Include="Migrations\201705051101450_Add_Tables.Designer.cs">
-      <DependentUpon>201705051101450_Add_Tables.cs</DependentUpon>
+    <Compile Include="Migrations\201705101034213_Add_Tables.cs" />
+    <Compile Include="Migrations\201705101034213_Add_Tables.Designer.cs">
+      <DependentUpon>201705101034213_Add_Tables.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Presentations\MaterialManger\FormAjouterGroupe.cs">
@@ -261,16 +261,34 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormMenuApplication.Designer.cs" />
+    <Compile Include="Presentations\RiskOFStock\MaterialGridUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Presentations\RiskOFStock\MaterialGridUC.Designer.cs">
+      <DependentUpon>MaterialGridUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentations\RiskOFStock\MaterialUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Presentations\RiskOFStock\MaterialUC.Designer.cs">
+      <DependentUpon>MaterialUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentations\RiskOFStock\RiskOfstockMaterial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentations\RiskOFStock\RiskOfstockMaterial.Designer.cs">
+      <DependentUpon>RiskOfstockMaterial.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Entities\Resources\Configuration\configuration.ar.resx">
+    <EmbeddedResource Include="Entities\Resources\Configuration\Configuration.ar.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>configuration.ar1.Designer.cs</LastGenOutput>
+      <LastGenOutput>Configuration.ar.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="Entities\Resources\Configuration\configuration.fr.resx" />
-    <EmbeddedResource Include="Entities\Resources\Configuration\configuration.resx">
+    <EmbeddedResource Include="Entities\Resources\Configuration\Configuration.fr.resx" />
+    <EmbeddedResource Include="Entities\Resources\Configuration\Configuration.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>configuration1.Designer.cs</LastGenOutput>
+      <LastGenOutput>Configuration.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Entities\Resources\Delivery\Delivery.ar.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -387,14 +405,23 @@
       <LastGenOutput>Societe.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="FormMenuApplication.resx" />
-    <EmbeddedResource Include="Migrations\201705051101450_Add_Tables.resx">
-      <DependentUpon>201705051101450_Add_Tables.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201705101034213_Add_Tables.resx">
+      <DependentUpon>201705101034213_Add_Tables.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentations\MaterialManger\FormAjouterGroupe.resx">
       <DependentUpon>FormAjouterGroupe.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentations\Menu\FormMenu.resx">
       <DependentUpon>FormMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentations\RiskOFStock\MaterialGridUC.resx">
+      <DependentUpon>MaterialGridUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentations\RiskOFStock\MaterialUC.resx">
+      <DependentUpon>MaterialUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentations\RiskOFStock\RiskOfstockMAterial.resx">
+      <DependentUpon>RiskOfstockMaterial.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -408,6 +435,7 @@
     <None Include="App.config" />
     <None Include="Entities\StockManagementClasses.cd" />
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\StockManagement.Entities.Material.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

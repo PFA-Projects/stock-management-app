@@ -4,6 +4,7 @@ using App.Gwin.Entities.Secrurity.Authentication;
 using StockManagement.BAL;
 using StockManagement.BLL;
 using StockManagement.DAL;
+using StockManagement.Presentations.RiskOFStock;
 using System;
 using System.Windows.Forms;
 
@@ -30,8 +31,8 @@ namespace StockManagement
             User user = null;
 
             user = User.CreateRootUser(new ModelContext());
-            user.Language = GwinApp.Languages.fr;
-            GwinApp.Start(typeof(ModelContext), typeof(BaseBLO<>), null, user);
+            //user.Language = GwinApp.Languages.fr;
+            //GwinApp.Start(typeof(ModelContext), typeof(BaseBLO<>), null, user);
 
             //Form Aggrandize
             this.WindowState = FormWindowState.Maximized;
@@ -68,6 +69,13 @@ namespace StockManagement
             //this.IsMdiContainer = true;
             //f.MdiParent = this;
             //f.Show();
+        }
+
+        private void riskOfStockToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+         RiskOfstockMaterial  f= new RiskOfstockMaterial();
+            
+            f.Show();
         }
     }
 }

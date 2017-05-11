@@ -1,4 +1,5 @@
-﻿using App.Gwin.Attributes;
+﻿//Hala Ftouh Ghammat
+using App.Gwin.Attributes;
 using App.Gwin.Entities;
 using System;
 using System.Collections.Generic;
@@ -12,23 +13,26 @@ namespace StockManagement.Entities
   
     [Menu(Group = "Configuration")]
 
-    public class configuration : BaseEntity
+    public class Configuration : BaseEntity
     {
 
 
-     
+        [DisplayProperty(Titre = "TVA")]
         [EntryForm]
         [DataGrid]
+        [Filter]
 
         public float TVA { get; set; }
 
-      
-         [EntryForm]
+
+        [DisplayProperty(Titre = "RiskOfStock")]
+        [EntryForm]
         [DataGrid]
+        [Filter]
 
         public int RiskOfStock { get; set; }
 
-        public configuration()
+        public Configuration()
         {
             TVA = 20;
             RiskOfStock = 10;
