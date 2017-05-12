@@ -21,13 +21,21 @@ namespace StockManagement.Presentations.Print_PDF_using_itextsharp
     public class PdfFile
     {
         /// <summary>
+        /// Create Document before openning the pdf file
+        /// </summary>
+        /// <returns></returns>
+        public Document CreateDocument()
+        {
+            Document doc = new Document(PageSize.LETTER, 10, 10, 42, 35);
+            return doc;
+        }
+        /// <summary>
         ///  Open PDF File
         /// </summary>
         /// <param name="FileName"></param>
         /// <param name="doc"></param>
         public PdfWriter OpenPDFFile(string FileName,Document doc)
         {
-            doc = new Document(PageSize.LETTER, 10, 10, 42, 35);
             string Directory = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
             PdfWriter writer = PdfWriter.GetInstance(doc, new FileStream(Directory +@"\"+FileName+@".pdf", FileMode.Create));
             doc.Open();

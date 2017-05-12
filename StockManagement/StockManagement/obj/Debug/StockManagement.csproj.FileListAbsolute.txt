@@ -116,4 +116,5 @@ C:\Users\DELL\Desktop\stock-management-app\StockManagement\StockManagement\obj\D
 C:\Users\DELL\Desktop\stock-management-app\StockManagement\StockManagement\obj\Debug\StockManagement.pdb
 C:\Users\DELL\Desktop\stock-management-app\StockManagement\StockManagement\obj\Debug\StockManagement.csprojResolveAssemblyReference.cache
 C:\Users\DELL\Desktop\stock-management-app\StockManagement\StockManagement\obj\Debug\StockManagement.Migrations.Up_table_material.resources
-C:\Users\DELL\Desktop\stock-management-app\StockManagement\StockManagement\obj\Debug\StockManagement.Presentations.Print_PDF_using_itextsharp.PrintFile.resources
+C:\Users\DELL\Desktop\stock-management-app\StockManagement\StockManagement\obj\Debug\StockManagement.Presentations.Print_PDF_using_itextsharp.PrintPDF.resources
+C:\Users\DELL\Desktop\stock-management-app\StockManagement\StockManagement\obj\Debug\StockManagement.Migrations.a.resources
