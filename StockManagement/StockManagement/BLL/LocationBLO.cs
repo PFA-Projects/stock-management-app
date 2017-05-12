@@ -13,18 +13,18 @@ using System.Threading.Tasks;
 namespace StockManagement.BLL
 {
     /// <summary>
-    /// en : Personnes Management
-    /// fr : Gestion des personnes
+    ///  en : Locations Management
+    ///  fr : Gestion d'emplacements
     /// </summary>
-    public class PersonnesBLO:BaseBLO<Employee>
+    public class LocationBLO:BaseBLO<Location>
     {
         ModelContext db = new ModelContext();
 
-        public PersonnesBLO(DbContext context) : base(context)
+        public LocationBLO(DbContext context) : base(context)
         {
         }
 
-        public PersonnesBLO() : base()
+        public LocationBLO() : base()
         {
         }
     }

@@ -48,6 +48,18 @@
     <Reference Include="GwinApp">
       <HintPath>..\packages\Gwin Library\GwinApp.dll</HintPath>
     </Reference>
+    <Reference Include="itextsharp, Version=5.5.10.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp.pdfa, Version=5.5.10.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\itextsharp.pdfa.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp.xtra, Version=5.5.10.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\itextsharp.xtra.dll</HintPath>
+    </Reference>
     <Reference Include="LinqKit">
       <HintPath>..\packages\Gwin Library\LinqKit.dll</HintPath>
     </Reference>
@@ -68,11 +80,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BLL\BaseBLO.cs" />
-    <Compile Include="BLL\LocationsBLO.cs" />
+    <Compile Include="BLL\LocationBLO.cs" />
     <Compile Include="BLL\MaterialBLO.cs" />
-    <Compile Include="BLL\MaterialsCategoriesBLO.cs" />
-    <Compile Include="BLL\PersonnesBLO.cs" />
-    <Compile Include="BLL\ServicesBLO.cs" />
+    <Compile Include="BLL\MaterialCategoryBLO.cs" />
+    <Compile Include="BLL\EmployeeBLO.cs" />
+    <Compile Include="BLL\ServiceBLO.cs" />
     <Compile Include="DAL\ModelContext.cs" />
     <Compile Include="Entities\Delivery.cs" />
     <Compile Include="Entities\Location.cs" />
@@ -207,6 +219,18 @@
     <Compile Include="Migrations\201705051632209_Create_data.Designer.cs">
       <DependentUpon>201705051632209_Create_data.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201705081227486_Update_Material_Table.cs" />
+    <Compile Include="Migrations\201705081227486_Update_Material_Table.Designer.cs">
+      <DependentUpon>201705081227486_Update_Material_Table.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201705082137297_Update2_Table_Material.cs" />
+    <Compile Include="Migrations\201705082137297_Update2_Table_Material.Designer.cs">
+      <DependentUpon>201705082137297_Update2_Table_Material.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201705101132125_Up_table_material.cs" />
+    <Compile Include="Migrations\201705101132125_Up_table_material.Designer.cs">
+      <DependentUpon>201705101132125_Up_table_material.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Presentations\MaterialManger\FormAjouterGroupe.cs">
       <SubType>Form</SubType>
@@ -218,6 +242,7 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormMenuApplication.Designer.cs" />
+    <Compile Include="Presentations\Print PDF using itextsharp\PdfFile.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Entities\Resources\Delivery\Delivery.ar.resx">
@@ -320,6 +345,15 @@
     <EmbeddedResource Include="Migrations\201705051632209_Create_data.resx">
       <DependentUpon>201705051632209_Create_data.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705081227486_Update_Material_Table.resx">
+      <DependentUpon>201705081227486_Update_Material_Table.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705082137297_Update2_Table_Material.resx">
+      <DependentUpon>201705082137297_Update2_Table_Material.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705101132125_Up_table_material.resx">
+      <DependentUpon>201705101132125_Up_table_material.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Presentations\MaterialManger\FormAjouterGroupe.resx">
       <DependentUpon>FormAjouterGroupe.cs</DependentUpon>
     </EmbeddedResource>
@@ -345,6 +379,7 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

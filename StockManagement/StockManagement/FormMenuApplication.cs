@@ -19,12 +19,13 @@ namespace GenericWinForm.Demo
         private void FormMenuApplication_Load(object sender, EventArgs e)
         {
             User user = null;
-            //user = User.CreateGuestUser(new ModelContext());
+            user = User.CreateGuestUser(new ModelContext());
 
-            user = User.CreateAdminUser(new ModelContext());
+            // user = User.CreateAdminUser(new ModelContext());
+            ///user = User.CreateRootUser(new ModelContext());
             user.Language = GwinApp.Languages.fr;
 
-            // user = User.CreateRootUser(new ModelContext());
+             
             // Start Gwin Application with Authentification
             GwinApp.Start(typeof(ModelContext), typeof(BaseBLO<>), this, user);
         }

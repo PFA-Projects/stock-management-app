@@ -17,7 +17,7 @@ namespace TPITextSharp
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new TextPDF());
+            Application.Run(new Test());
         }
     }
 }

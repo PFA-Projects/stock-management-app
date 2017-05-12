@@ -13,18 +13,18 @@ using System.Threading.Tasks;
 namespace StockManagement.BLL
 {
     /// <summary>
-    /// fr : Gestion des Categoriy de materiels
-    /// en : Materials Categries Management
+    /// en : Personnes Management
+    /// fr : Gestion des personnes
     /// </summary>
-    public class MaterialsCategoriesBLO : BaseBLO<MaterialCategory>
+    public class EmployeeBLO:BaseBLO<Employee>
     {
         ModelContext db = new ModelContext();
 
-        public MaterialsCategoriesBLO(DbContext context) : base(context)
+        public EmployeeBLO(DbContext context) : base(context)
         {
         }
 
-        public MaterialsCategoriesBLO() : base()
+        public EmployeeBLO() : base()
         {
         }
     }
