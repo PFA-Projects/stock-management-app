@@ -83,6 +83,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BLL\BaseBLO.cs" />
+    <Compile Include="DAL\Configurations.cs" />
     <Compile Include="BLL\ConfigurationBLO.cs" />
     <Compile Include="BLL\LocationsBLO.cs" />
     <Compile Include="BLL\MaterialsBLO.cs" />
@@ -249,15 +250,10 @@
     <Compile Include="Entities\Service.cs" />
     <Compile Include="Entities\Societe.cs" />
     <Compile Include="Enumerations\PhysicalState.cs" />
-    <Compile Include="Migrations\201705101034213_Add_Tables.cs" />
-    <Compile Include="Migrations\201705101034213_Add_Tables.Designer.cs">
-      <DependentUpon>201705101034213_Add_Tables.cs</DependentUpon>
+    <Compile Include="Migrations\201705121848484_Add_tables.cs" />
+    <Compile Include="Migrations\201705121848484_Add_tables.Designer.cs">
+      <DependentUpon>201705121848484_Add_tables.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201705111015316_Update_tables.cs" />
-    <Compile Include="Migrations\201705111015316_Update_tables.Designer.cs">
-      <DependentUpon>201705111015316_Update_tables.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Presentations\MaterialManger\FormAjouterGroupe.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -274,6 +270,24 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormMenuApplication.Designer.cs" />
+    <Compile Include="Presentations\RiskOFStock\MaterialCategories\FormMaterialCategory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentations\RiskOFStock\MaterialCategories\FormMaterialCategory.Designer.cs">
+      <DependentUpon>FormMaterialCategory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentations\RiskOFStock\MaterialCategories\MaterialCategoryGridUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Presentations\RiskOFStock\MaterialCategories\MaterialCategoryGridUC.Designer.cs">
+      <DependentUpon>MaterialCategoryGridUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentations\RiskOFStock\MaterialCategories\MaterialCategoryUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Presentations\RiskOFStock\MaterialCategories\MaterialCategoryUC.Designer.cs">
+      <DependentUpon>MaterialCategoryUC.cs</DependentUpon>
+    </Compile>
     <Compile Include="Presentations\RiskOFStock\MaterialGridUC.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -418,17 +432,23 @@
       <LastGenOutput>Societe.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="FormMenuApplication.resx" />
-    <EmbeddedResource Include="Migrations\201705101034213_Add_Tables.resx">
-      <DependentUpon>201705101034213_Add_Tables.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201705111015316_Update_tables.resx">
-      <DependentUpon>201705111015316_Update_tables.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201705121848484_Add_tables.resx">
+      <DependentUpon>201705121848484_Add_tables.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentations\MaterialManger\FormAjouterGroupe.resx">
       <DependentUpon>FormAjouterGroupe.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentations\Menu\FormMenu.resx">
       <DependentUpon>FormMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentations\RiskOFStock\MaterialCategories\FormMaterialCategory.resx">
+      <DependentUpon>FormMaterialCategory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentations\RiskOFStock\MaterialCategories\MaterialCategoryGridUC.resx">
+      <DependentUpon>MaterialCategoryGridUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentations\RiskOFStock\MaterialCategories\MaterialCategoryUC.resx">
+      <DependentUpon>MaterialCategoryUC.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentations\RiskOFStock\MaterialGridUC.resx">
       <DependentUpon>MaterialGridUC.cs</DependentUpon>
@@ -452,6 +472,7 @@
     <None Include="Entities\StockManagementClasses.cd" />
     <None Include="packages.config" />
     <None Include="Properties\DataSources\StockManagement.Entities.Material.datasource" />
+    <None Include="Properties\DataSources\StockManagement.Entities.MaterialCategory.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

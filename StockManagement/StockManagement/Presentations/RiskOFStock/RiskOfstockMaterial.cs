@@ -132,7 +132,7 @@ namespace StockManagement.Presentations.RiskOFStock
             TabPage tabAjouter = this.tabControl1.TabPages["TabAjouter"];
             MaterialUC materialUC= (MaterialUC)tabAjouter.Controls
                 .Find("materialUC",true).First();
-           
+            db.Materials.Add(materialUC.material);
 
             if (db.SaveChanges() > 0)
             {

@@ -16,23 +16,23 @@ namespace StockManagement.Entities
     /// fr : Materiel
     /// </summary>
     /// 
-    //[GwinEntity(Localizable = true, DisplayMember = "InventoryNumber")]
-    //[Menu(Group ="Materiels")]
+    [GwinEntity(Localizable = true, DisplayMember = "InventoryNumber")]
+    [Menu(Group = "Materiels")]
     public class Material: BaseEntity
     {
-        //[EntryForm(GroupeBox = "InventoryInformations")]
-        //[DataGrid]
-        //[Filter]
+        [EntryForm(GroupeBox = "InventoryInformations")]
+        [DataGrid]
+        [Filter]
         public LocalizedString InventoryNumber { get; set; }
 
-        //[EntryForm(GroupeBox = "InventoryInformations")]
-        //[DataGrid]
-       // [Filter]
+        [EntryForm(GroupeBox = "InventoryInformations")]
+        [DataGrid]
+        [Filter]
         public LocalizedString Designation { get; set; }
 
-        //[EntryForm(GroupeBox = "AcquisitionInformations")]
-        //[DataGrid]
-        //[Filter]
+        [EntryForm(GroupeBox = "AcquisitionInformations")]
+        [DataGrid]
+        [Filter]
         public LocalizedString Mark { get; set; }
 
         //[EntryForm(GroupeBox = "AcquisitionInformations")]

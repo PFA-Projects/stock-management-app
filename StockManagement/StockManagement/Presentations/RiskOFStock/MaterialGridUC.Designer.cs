@@ -30,8 +30,8 @@
         {
             this.components = new System.ComponentModel.Container();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.materialBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.Update = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.Delete = new System.Windows.Forms.DataGridViewButtonColumn();
             this.inventoryNumberDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.designationDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.markDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -48,7 +48,7 @@
             this.serieNumberDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.deliveryDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.materialCategoryDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.materialBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.Delete = new System.Windows.Forms.DataGridViewButtonColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.materialBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -83,17 +83,16 @@
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
+            // materialBindingSource
+            // 
+            this.materialBindingSource.DataSource = typeof(StockManagement.Entities.Material);
+            // 
             // Update
             // 
-            this.Update.DataPropertyName = "InventoryNumber";
+            this.Update.DataPropertyName = "Update";
             this.Update.HeaderText = "update";
             this.Update.Name = "Update";
-            // 
-            // Delete
-            // 
-            this.Delete.DataPropertyName = "InventoryNumber";
-            this.Delete.HeaderText = "Delete";
-            this.Delete.Name = "Delete";
+            this.Update.Text = "Update";
             // 
             // inventoryNumberDataGridViewTextBoxColumn
             // 
@@ -191,9 +190,12 @@
             this.materialCategoryDataGridViewTextBoxColumn.HeaderText = "MaterialCategory";
             this.materialCategoryDataGridViewTextBoxColumn.Name = "materialCategoryDataGridViewTextBoxColumn";
             // 
-            // materialBindingSource
+            // Delete
             // 
-            this.materialBindingSource.DataSource = typeof(StockManagement.Entities.Material);
+            this.Delete.DataPropertyName = "Delete";
+            this.Delete.HeaderText = "Delete";
+            this.Delete.Name = "Delete";
+            this.Delete.Text = "Delete";
             // 
             // MaterialGridUC
             // 

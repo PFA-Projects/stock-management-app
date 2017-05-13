@@ -2,16 +2,18 @@
 using App.Gwin.Application.Presentation.EntityManagement;
 using App.Gwin.Application.Presentation.MainForm;
 using App.Gwin.Entities.Secrurity.Authentication;
+using GenericWinForm.Demo;
 using StockManagement.BAL;
 using StockManagement.BLL;
 using StockManagement.DAL;
 using StockManagement.Presentations.RiskOFStock;
+using StockManagement.Presentations.RiskOFStock.MaterialCategories;
 using System;
 using System.Windows.Forms;
 
 namespace StockManagement
 {
-    public partial class FormMenu : Form
+    public partial class FormMenu : FormMenuApplication
     {
         public FormMenu()
         {
@@ -79,6 +81,12 @@ namespace StockManagement
          RiskOfstockMaterial  f= new RiskOfstockMaterial();
             
             f.Show();
+        }
+
+        private void mAterialCategoriesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormMaterialCategory fm = new FormMaterialCategory();
+            fm.Show();
         }
     }
 }

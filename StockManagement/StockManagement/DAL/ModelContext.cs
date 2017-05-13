@@ -4,6 +4,7 @@ namespace StockManagement.DAL
     using App.Gwin.Entities.ContactInformations;
     using App.Gwin.Entities.Secrurity.Authentication;
     using App.Gwin.Entities.Secrurity.Autorizations;
+    using App.Migrations;
     using Entities;
     using System;
     using System.Data.Entity;
@@ -60,6 +61,7 @@ namespace StockManagement.DAL
         public virtual DbSet <Order> orders { get; set; } 
         public virtual DbSet <Configuration> configurations { get; set; }
         public virtual DbSet <OrderLine>orderlines { get; set; }
+   ///public virtual DbSet<Configurations>configurationss { get; set; }
     }
 
     //public class MyEntity

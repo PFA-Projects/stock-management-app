@@ -27,5 +27,15 @@ namespace StockManagement.BLL
         public MaterialsCategoriesBLO() : base()
         {
         }
+
+        public int  countMaterialNumbre (int cat)
+
+        {
+                  int  x = new int ();
+             x=Convert.ToInt32( db.Materials.SqlQuery(" select count (m.InventoryNumber) as totalMaterial from Material m,MaterialCategory mc where m.Id=mc.Id and mc.Id="+cat));
+            return x;
+        }
+        
+        
     }
 }

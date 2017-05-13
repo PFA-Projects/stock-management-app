@@ -26,7 +26,7 @@ namespace StockManagement.Entities
 
         [EntryForm]
         [DataGrid]
-        //[Filter]
+        [Filter]
         public LocalizedString Description { get; set; }
     }
 }

@@ -1,9 +1,9 @@
-namespace StockManagement.Migrations
+namespace App.Migrations
 {
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class Add_Tables : DbMigration
+    public partial class Add_tables : DbMigration
     {
         public override void Up()
         {
@@ -282,6 +282,9 @@ namespace StockManagement.Migrations
                         LastName_French = c.String(),
                         LastName_English = c.String(),
                         LastName_Arab = c.String(),
+                        Phone_French = c.String(),
+                        Phone_English = c.String(),
+                        Phone_Arab = c.String(),
                         CIN = c.String(),
                         DateOfBirth = c.DateTime(nullable: false),
                         Sex = c.Boolean(nullable: false),
@@ -297,10 +300,13 @@ namespace StockManagement.Migrations
                         DateCreation = c.DateTime(nullable: false),
                         DateModification = c.DateTime(nullable: false),
                         City_Id = c.Long(),
+                        location_Id = c.Long(),
                     })
                 .PrimaryKey(t => t.Id)
                 .ForeignKey("dbo.Cities", t => t.City_Id)
-                .Index(t => t.City_Id);
+                .ForeignKey("dbo.Locations", t => t.location_Id)
+                .Index(t => t.City_Id)
+                .Index(t => t.location_Id);
             
             CreateTable(
                 "dbo.MenuItemApplications",
@@ -501,6 +507,7 @@ namespace StockManagement.Migrations
             DropForeignKey("dbo.MaterialInOuts", "Material_Id", "dbo.Materials");
             DropForeignKey("dbo.MaterialInOuts", "Location_Id", "dbo.Locations");
             DropForeignKey("dbo.MaterialInOuts", "Employee_Id", "dbo.Employees");
+            DropForeignKey("dbo.Employees", "location_Id", "dbo.Locations");
             DropForeignKey("dbo.Employees", "City_Id", "dbo.Cities");
             DropForeignKey("dbo.Materials", "MaterialCategory_Id", "dbo.MaterialCategories");
             DropForeignKey("dbo.Materials", "Delivery_Id", "dbo.Deliveries");
@@ -520,6 +527,7 @@ namespace StockManagement.Migrations
             DropIndex("dbo.Users", new[] { "City_Id" });
             DropIndex("dbo.Users", new[] { "Login" });
             DropIndex("dbo.MenuItemApplications", new[] { "Code" });
+            DropIndex("dbo.Employees", new[] { "location_Id" });
             DropIndex("dbo.Employees", new[] { "City_Id" });
             DropIndex("dbo.MaterialInOuts", new[] { "Material_Id" });
             DropIndex("dbo.MaterialInOuts", new[] { "Location_Id" });

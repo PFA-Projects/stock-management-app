@@ -37,6 +37,7 @@
             this.materialsCategoryManagementToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.materialsManagementToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.riskOfStockToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.mAterialCategoriesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -45,7 +46,8 @@
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.societeToolStripMenuItem,
             this.materialsToolStripMenuItem,
-            this.riskOfStockToolStripMenuItem});
+            this.riskOfStockToolStripMenuItem,
+            this.mAterialCategoriesToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(975, 24);
@@ -113,6 +115,13 @@
             this.riskOfStockToolStripMenuItem.Text = "Risk Of stock";
             this.riskOfStockToolStripMenuItem.Click += new System.EventHandler(this.riskOfStockToolStripMenuItem_Click);
             // 
+            // mAterialCategoriesToolStripMenuItem
+            // 
+            this.mAterialCategoriesToolStripMenuItem.Name = "mAterialCategoriesToolStripMenuItem";
+            this.mAterialCategoriesToolStripMenuItem.Size = new System.Drawing.Size(120, 20);
+            this.mAterialCategoriesToolStripMenuItem.Text = "MAterialCategories";
+            this.mAterialCategoriesToolStripMenuItem.Click += new System.EventHandler(this.mAterialCategoriesToolStripMenuItem_Click);
+            // 
             // FormMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -141,5 +150,6 @@
         private System.Windows.Forms.ToolStripMenuItem materialsCategoryManagementToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem materialsManagementToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem riskOfStockToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem mAterialCategoriesToolStripMenuItem;
     }
 }
