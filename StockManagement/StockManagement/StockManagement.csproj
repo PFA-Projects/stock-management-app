@@ -231,6 +231,10 @@
     <Compile Include="Migrations\201705101132125_Up_table_material.Designer.cs">
       <DependentUpon>201705101132125_Up_table_material.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201705111514420_a.cs" />
+    <Compile Include="Migrations\201705111514420_a.Designer.cs">
+      <DependentUpon>201705111514420_a.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Presentations\MaterialManger\FormAjouterGroupe.cs">
       <SubType>Form</SubType>
@@ -243,6 +247,12 @@
     </Compile>
     <Compile Include="FormMenuApplication.Designer.cs" />
     <Compile Include="Presentations\Print PDF using itextsharp\PdfFile.cs" />
+    <Compile Include="Presentations\Print PDF using itextsharp\PrintPDF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentations\Print PDF using itextsharp\PrintPDF.Designer.cs">
+      <DependentUpon>PrintPDF.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Entities\Resources\Delivery\Delivery.ar.resx">
@@ -354,8 +364,14 @@
     <EmbeddedResource Include="Migrations\201705101132125_Up_table_material.resx">
       <DependentUpon>201705101132125_Up_table_material.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705111514420_a.resx">
+      <DependentUpon>201705111514420_a.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Presentations\MaterialManger\FormAjouterGroupe.resx">
       <DependentUpon>FormAjouterGroupe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentations\Print PDF using itextsharp\PrintPDF.resx">
+      <DependentUpon>PrintPDF.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
