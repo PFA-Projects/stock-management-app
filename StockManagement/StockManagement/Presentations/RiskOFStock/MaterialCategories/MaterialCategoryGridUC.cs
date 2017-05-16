@@ -30,6 +30,12 @@ namespace StockManagement.Presentations.RiskOFStock.MaterialCategories
         {
             materialCategoryBindingSource.Clear();
             materialCategoryBindingSource.DataSource = db.MaterialCategories.ToList<MaterialCategory>();
+            foreach (DataGridViewRow dr in dataGridView1.Rows)
+            {
+                //dataGridView1.Columns[""]
+                dr.Cells[7].Value = new  MaterialsCategoriesBLO().getMaterialNumbre(Convert.ToInt32( dr.Cells[0].Value));
+                
+            }
         }
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -56,14 +62,11 @@ namespace StockManagement.Presentations.RiskOFStock.MaterialCategories
             }
 
 
-            foreach (DataGridViewRow r in dataGridView1.Rows)
-            {
-                if (dataGridView1.CurrentRow.Cells[0].Value != null)
-                {
-                    MaterialCategory materialcategory = new MaterialCategory();
-                int x  = new MaterialsCategoriesBLO(db).countMaterialNumbre(Convert.ToInt32( dataGridView1.CurrentRow.Cells[0].Value.ToString()));
-                    r.Cells[2].Value = x + "";
-                }
+          
+                  //  MaterialCategory materialcategory = new MaterialCategory();
+          //   dataGridView1.DataSource  = new MaterialsCategoriesBLO(db).MaterialNumbreinMaterialCategory();
+                
+               
               
             }
 
@@ -71,4 +74,3 @@ namespace StockManagement.Presentations.RiskOFStock.MaterialCategories
 
 
     }
-}

@@ -75,14 +75,13 @@ namespace StockManagement.Presentations.RiskOFStock
            material.SerieNumber= SerieNumbertextBox.Text  ;
            // material.StockExistence= StockExistencetextBox.Text ;
             material.DateCreation = DateTime.Now;
-            
 
 
 
             if (comboBox1.SelectedItem != null)
-                material.Delivery= (Delivery)comboBox1.SelectedItem;
+                material.Delivery = (Delivery)comboBox1.SelectedValue;
             if (comboBox2.SelectedItem != null)
-                material.MaterialCategory = (MaterialCategory)comboBox2.SelectedItem;
+                material.MaterialCategory = (MaterialCategory)comboBox2.SelectedValue;
             EnregistrerClick(this, e);
         }
 

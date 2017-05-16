@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.SerieNumbertextBox = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
@@ -59,7 +60,11 @@
             this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.deliveryBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.materialCategoryBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.deliveryBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.materialCategoryBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -118,19 +123,25 @@
             // 
             // comboBox2
             // 
+            this.comboBox2.DataSource = this.deliveryBindingSource;
+            this.comboBox2.DisplayMember = "Market";
             this.comboBox2.FormattingEnabled = true;
             this.comboBox2.Location = new System.Drawing.Point(615, 253);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(188, 24);
             this.comboBox2.TabIndex = 25;
+            this.comboBox2.ValueMember = "Id";
             // 
             // comboBox1
             // 
+            this.comboBox1.DataSource = this.materialCategoryBindingSource;
+            this.comboBox1.DisplayMember = "Description";
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(615, 310);
+            this.comboBox1.Location = new System.Drawing.Point(615, 318);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(188, 24);
             this.comboBox1.TabIndex = 24;
+            this.comboBox1.ValueMember = "Id";
             // 
             // INN_NumbertextBox
             // 
@@ -350,6 +361,14 @@
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
+            // deliveryBindingSource
+            // 
+            this.deliveryBindingSource.DataSource = typeof(StockManagement.Entities.Delivery);
+            // 
+            // materialCategoryBindingSource
+            // 
+            this.materialCategoryBindingSource.DataSource = typeof(StockManagement.Entities.MaterialCategory);
+            // 
             // MaterialUC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -362,6 +381,8 @@
             this.Load += new System.EventHandler(this.MaterialUC_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.deliveryBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.materialCategoryBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -399,5 +420,7 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.TextBox SerieNumbertextBox;
         private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.BindingSource deliveryBindingSource;
+        private System.Windows.Forms.BindingSource materialCategoryBindingSource;
     }
 }

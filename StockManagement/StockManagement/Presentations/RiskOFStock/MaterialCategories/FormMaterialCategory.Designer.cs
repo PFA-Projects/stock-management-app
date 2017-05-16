@@ -30,8 +30,8 @@
         {
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.materialCategoryGridUC1 = new StockManagement.Presentations.RiskOFStock.MaterialCategories.MaterialCategoryGridUC();
             this.button1 = new System.Windows.Forms.Button();
+            this.materialCategoryGridUC1 = new StockManagement.Presentations.RiskOFStock.MaterialCategories.MaterialCategoryGridUC();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.SuspendLayout();
@@ -56,13 +56,6 @@
             this.tabPage1.Text = "MaterialCategories";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
-            // materialCategoryGridUC1
-            // 
-            this.materialCategoryGridUC1.Location = new System.Drawing.Point(40, 103);
-            this.materialCategoryGridUC1.Name = "materialCategoryGridUC1";
-            this.materialCategoryGridUC1.Size = new System.Drawing.Size(707, 423);
-            this.materialCategoryGridUC1.TabIndex = 0;
-            // 
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(479, 12);
@@ -72,6 +65,13 @@
             this.button1.Text = "Add new materialCategory +";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // materialCategoryGridUC1
+            // 
+            this.materialCategoryGridUC1.Location = new System.Drawing.Point(22, 92);
+            this.materialCategoryGridUC1.Name = "materialCategoryGridUC1";
+            this.materialCategoryGridUC1.Size = new System.Drawing.Size(798, 423);
+            this.materialCategoryGridUC1.TabIndex = 0;
             // 
             // FormMaterialCategory
             // 

@@ -471,6 +471,7 @@
     <None Include="App.config" />
     <None Include="Entities\StockManagementClasses.cd" />
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\StockManagement.Entities.Delivery.datasource" />
     <None Include="Properties\DataSources\StockManagement.Entities.Material.datasource" />
     <None Include="Properties\DataSources\StockManagement.Entities.MaterialCategory.datasource" />
     <None Include="Properties\Settings.settings">
