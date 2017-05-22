@@ -117,8 +117,14 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="btn_Add_Service" xml:space="preserve">
+    <value>اضافة قسم جديد</value>
+  </data>
   <data name="Description" xml:space="preserve">
     <value>الوصف</value>
+  </data>
+  <data name="MaterialsList" xml:space="preserve">
+    <value>لائحة البضائع</value>
   </data>
   <data name="Name" xml:space="preserve">
     <value>الاسم</value>
@@ -129,7 +135,13 @@
   <data name="PluralName" xml:space="preserve">
     <value>الاقسام</value>
   </data>
+  <data name="Service_Grid_Title" xml:space="preserve">
+    <value>الاقسام</value>
+  </data>
   <data name="SingularName" xml:space="preserve">
     <value>القسم</value>
+  </data>
+  <data name="Service_Management" xml:space="preserve">
+    <value>تدبير الاقسام</value>
   </data>
 </root>

@@ -9,9 +9,10 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>StockManagement</RootNamespace>
     <AssemblyName>StockManagement</AssemblyName>
-    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -48,8 +49,35 @@
     <Reference Include="GwinApp">
       <HintPath>..\packages\Gwin Library\GwinApp.dll</HintPath>
     </Reference>
+    <Reference Include="itextsharp, Version=5.5.10.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp.pdfa, Version=5.5.10.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\itextsharp.pdfa.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp.xtra, Version=5.5.10.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\itextsharp.xtra.dll</HintPath>
+    </Reference>
     <Reference Include="LinqKit">
       <HintPath>..\packages\Gwin Library\LinqKit.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework">
+      <HintPath>..\packages\Gwin Library\MetroFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Design">
+      <HintPath>..\packages\Gwin Library\MetroFramework.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Fonts">
+      <HintPath>..\packages\Gwin Library\MetroFramework.Fonts.dll</HintPath>
+    </Reference>
+    <Reference Include="Spire.License">
+      <HintPath>..\packages\Spire-Pdf\Spire.License.dll</HintPath>
+    </Reference>
+    <Reference Include="Spire.Pdf">
+      <HintPath>..\packages\Spire-Pdf\Spire.Pdf.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
@@ -68,18 +96,21 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BLL\BaseBLO.cs" />
-    <Compile Include="BLL\LocationsBLO.cs" />
+    <Compile Include="BLL\LocationBLO.cs" />
     <Compile Include="BLL\MaterialBLO.cs" />
-    <Compile Include="BLL\MaterialsCategoriesBLO.cs" />
-    <Compile Include="BLL\PersonnesBLO.cs" />
-    <Compile Include="BLL\ServicesBLO.cs" />
+    <Compile Include="BLL\MaterialCategoryBLO.cs" />
+    <Compile Include="BLL\EmployeeBLO.cs" />
+    <Compile Include="BLL\MaterialsManagement\PrintMaterialsListByLocation.cs" />
+    <Compile Include="BLL\MaterialsManagement\PrintMaterialsListByService.cs" />
+    <Compile Include="BLL\PrintManagement\PrintPage.cs" />
+    <Compile Include="BLL\ServiceBLO.cs" />
     <Compile Include="DAL\ModelContext.cs" />
     <Compile Include="Entities\Delivery.cs" />
-    <Compile Include="Entities\Location.cs" />
-    <Compile Include="Entities\Material.cs" />
-    <Compile Include="Entities\MaterialInOut.cs" />
-    <Compile Include="Entities\MaterialCategory.cs" />
-    <Compile Include="Entities\Employee.cs" />
+    <Compile Include="Entities\Materials\Material.cs" />
+    <Compile Include="Entities\Societe\Location.cs" />
+    <Compile Include="Entities\Materials\MaterialInOut.cs" />
+    <Compile Include="Entities\Materials\MaterialCategory.cs" />
+    <Compile Include="Entities\Societe\Employee.cs" />
     <Compile Include="Entities\Resources\Delivery\Delivery.ar.Designer.cs">
       <DependentUpon>Delivery.ar.resx</DependentUpon>
       <AutoGen>True</AutoGen>
@@ -140,21 +171,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>MaterialInOut.resx</DependentUpon>
     </Compile>
-    <Compile Include="Entities\Resources\Material\Material.ar.Designer.cs">
-      <DependentUpon>Material.ar.resx</DependentUpon>
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-    </Compile>
-    <Compile Include="Entities\Resources\Material\Material.fr.Designer.cs">
-      <DependentUpon>Material.fr.resx</DependentUpon>
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-    </Compile>
-    <Compile Include="Entities\Resources\Material\Material.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Material.resx</DependentUpon>
-    </Compile>
     <Compile Include="Entities\Resources\Employee\Employee.ar.Designer.cs">
       <DependentUpon>Employee.ar.resx</DependentUpon>
       <AutoGen>True</AutoGen>
@@ -169,6 +185,16 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Employee.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\Resources\Material\Material.fr.Designer.cs">
+      <DependentUpon>Material.fr.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Entities\Resources\Material\Material.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Material.resx</DependentUpon>
     </Compile>
     <Compile Include="Entities\Resources\Service\Service.ar.Designer.cs">
       <DependentUpon>Service.ar.resx</DependentUpon>
@@ -200,12 +226,16 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Societe.resx</DependentUpon>
     </Compile>
-    <Compile Include="Entities\Service.cs" />
-    <Compile Include="Entities\Societe.cs" />
+    <Compile Include="Entities\Societe\Service.cs" />
     <Compile Include="Enumerations\PhysicalState.cs" />
-    <Compile Include="Migrations\201705051632209_Create_data.cs" />
-    <Compile Include="Migrations\201705051632209_Create_data.Designer.cs">
-      <DependentUpon>201705051632209_Create_data.cs</DependentUpon>
+    <Compile Include="Libs\ITextSharp\PdfFile.cs" />
+    <Compile Include="Migrations\201705220948296_Create_data.cs" />
+    <Compile Include="Migrations\201705220948296_Create_data.Designer.cs">
+      <DependentUpon>201705220948296_Create_data.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201705220949380_Update_Material_Class.cs" />
+    <Compile Include="Migrations\201705220949380_Update_Material_Class.Designer.cs">
+      <DependentUpon>201705220949380_Update_Material_Class.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Presentations\MaterialManger\FormAjouterGroupe.cs">
@@ -218,8 +248,30 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormMenuApplication.Designer.cs" />
+    <Compile Include="Presentations\Print Materials List\By Location\FormPrintByLocation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentations\Print Materials List\By Location\FormPrintByLocation.Designer.cs">
+      <DependentUpon>FormPrintByLocation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentations\Print Materials List\By Service\FormPrintByService.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentations\Print Materials List\By Service\FormPrintByService.Designer.cs">
+      <DependentUpon>FormPrintByService.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Resources\MarocHeaderresx.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MarocHeaderresx.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\SanteHeader.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SanteHeader.resx</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Entities\Resources\Delivery\Delivery.ar.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Delivery.ar.Designer.cs</LastGenOutput>
@@ -268,18 +320,6 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>MaterialInOut.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="Entities\Resources\Material\Material.ar.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Material.ar.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Entities\Resources\Material\Material.fr.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Material.fr.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Entities\Resources\Material\Material.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Material.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
     <EmbeddedResource Include="Entities\Resources\Employee\Employee.ar.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Employee.ar.Designer.cs</LastGenOutput>
@@ -291,6 +331,14 @@
     <EmbeddedResource Include="Entities\Resources\Employee\Employee.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Employee.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Entities\Resources\Material\Material.fr.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Material.fr.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Entities\Resources\Material\Material.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Material.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Entities\Resources\Service\Service.ar.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -317,11 +365,20 @@
       <LastGenOutput>Societe.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="FormMenuApplication.resx" />
-    <EmbeddedResource Include="Migrations\201705051632209_Create_data.resx">
-      <DependentUpon>201705051632209_Create_data.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201705220948296_Create_data.resx">
+      <DependentUpon>201705220948296_Create_data.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705220949380_Update_Material_Class.resx">
+      <DependentUpon>201705220949380_Update_Material_Class.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentations\MaterialManger\FormAjouterGroupe.resx">
       <DependentUpon>FormAjouterGroupe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentations\Print Materials List\By Location\FormPrintByLocation.resx">
+      <DependentUpon>FormPrintByLocation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentations\Print Materials List\By Service\FormPrintByService.resx">
+      <DependentUpon>FormPrintByService.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -331,7 +388,16 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Resources\MarocHeaderresx.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>MarocHeaderresx.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\SanteHeader.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>SanteHeader.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
     <None Include="App.config" />
     <None Include="Entities\StockManagementClasses.cd" />
     <None Include="packages.config" />
@@ -345,6 +411,13 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Maroc.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sante.PNG" />
+  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

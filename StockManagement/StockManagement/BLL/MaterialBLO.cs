@@ -1,74 +1,60 @@
-﻿// Mariam Ait Al
+﻿//Mariam Ait Al
+//2017
 
-using App.Gwin.Entities.MultiLanguage;
 using StockManagement.BAL;
 using StockManagement.DAL;
 using StockManagement.Entities;
+using StockManagement.Entities.Materials;
+using System;
+using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
-using App.Gwin.Entities;
-using System;
+using System.Text;
+using System.Threading.Tasks;
 
-namespace StockManagement.BAL
+namespace StockManagement.BLL
 {
     /// <summary>
-    /// fr : Gestion des Materials
     /// en : Materials Management
+    /// fr : Gestion des Materiels
     /// </summary>
-    public class MaterialBLO: BaseBLO<Material>
+    public class MaterialBLO:BaseBLO<Material>
     {
         ModelContext db = new ModelContext();
 
-        public MaterialBLO() : base()
-        {
-
-        }
         public MaterialBLO(DbContext context) : base(context)
         {
-
         }
-        public MaterialBLO(Type TypeDbContext) : base(TypeDbContext)
-        {
 
+        public MaterialBLO() : base()
+        {
         }
 
         /// <summary>
-        /// fr : reEcrire La methode enregistrer materiel
-        /// en : Define material s save function
+        /// Get Materials List By Service
         /// </summary>
-        /// <param name="item"></param>
+        /// <param name="service"></param>
         /// <returns></returns>
-        public override int Save(Material item)
+        public List<Material> GetMaterialsByService(Service service)
         {
-            // Get the materiel s informations
-            Material material = new Material();
-            material.InventoryNumber = item.InventoryNumber;
-            material.Designation = item.Designation;
-            material.Mark = item.Mark;
-            material.Model = item.Model;
-            material.UpdateServiceDate = item.UpdateServiceDate;
-            material.Observation = item.Observation;
-            material.AcquisitionValue = item.AcquisitionValue;
-            material.Acquisition = item.Acquisition;
-            material.PhysicalState = item.PhysicalState;
-            material.StockExistence = item.StockExistence;
-            material.dimension = item.dimension;
-            material.INN_Number = item.INN_Number;
-            material.SerieNumber = item.SerieNumber;
-            material.Delivery = item.Delivery;
-            material.MaterialCategory = item.MaterialCategory;
-            // define if the acquisition value existe 
-            if (item.AcquisitionValue != 0)
-            {
-                material.AcquisitionValueExist = true;
-            }
-            else
-            {
-                material.AcquisitionValueExist = false;
-            }
-            return db.SaveChanges();
+            var query = from m in db.Materials
+                        where m.Service.Id == service.Id
+                        select m;
+            return query.ToList<Material>();
         }
 
-
+        /// <summary>
+        /// Get Materials List By Locations
+        /// </summary>
+        /// <param name="Location"></param>
+        /// <returns></returns>
+        public List<Material> GetMaterialsBylocation(Location Location)
+        {
+            var query = from m in db.Materials
+                        where m.Location.Id == Location.Id
+                        select m;
+            return query.ToList<Material>();
+        }
+        
     }
 }

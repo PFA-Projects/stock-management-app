@@ -115,6 +115,15 @@ namespace StockManagement.Entities.Resources.MaterialInOut {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Reason.
+        /// </summary>
+        internal static string Reason {
+            get {
+                return ResourceManager.GetString("Reason", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Material In Out.
         /// </summary>
         internal static string SingularName {

@@ -1,22 +1,7 @@
 ﻿using System;
 using System.Data.Entity;
-using System.Collections.Generic;
-using System.Linq;
-using System.Linq.Expressions;
-using System.Text;
-using System.Threading.Tasks;
-using System.ComponentModel;
-using App.Gwin.Attributes;
-using LinqExtension;
-using System.Reflection;
-using System.Data.Entity.Infrastructure;
-using System.Data.SqlClient;
-using App.Gwin;
-using System.Data.Entity.Validation;
 using App.Gwin.Entities;
-using App.Gwin.Application.Presentation.Messages;
 using App.Gwin.Application.BAL;
-using App;
 using StockManagement.DAL;
 
 namespace StockManagement.BAL

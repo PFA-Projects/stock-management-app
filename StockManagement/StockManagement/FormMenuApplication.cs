@@ -21,17 +21,15 @@ namespace GenericWinForm.Demo
             User user = null;
             //user = User.CreateGuestUser(new ModelContext());
 
-            user = User.CreateAdminUser(new ModelContext());
+             user = User.CreateAdminUser(new ModelContext());
+           // user = User.CreateRootUser(new ModelContext());
             user.Language = GwinApp.Languages.fr;
 
-            // user = User.CreateRootUser(new ModelContext());
+             
             // Start Gwin Application with Authentification
             GwinApp.Start(typeof(ModelContext), typeof(BaseBLO<>), this, user);
         }
 
-     
-
-        
 
 
 
@@ -40,14 +38,17 @@ namespace GenericWinForm.Demo
 
 
 
-        ///// <summary>
-        ///// Reload the form after language change
-        ///// </summary>
-        //public override void Reload()
-        //{
-        //    base.Reload();
-        //    InitializeComponent();
-        //}
+
+
+
+        /// <summary>
+        /// Reload the form after language change
+        /// </summary>
+        public override void Reload()
+        {
+            base.Reload();
+            InitializeComponent();
+        }
 
 
     }

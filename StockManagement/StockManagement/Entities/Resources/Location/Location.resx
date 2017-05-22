@@ -135,4 +135,13 @@
   <data name="SingularName" xml:space="preserve">
     <value>Location</value>
   </data>
+  <data name="GridViewTitle" xml:space="preserve">
+    <value>Locations</value>
+  </data>
+  <data name="btn_Add_Location" xml:space="preserve">
+    <value>Add Location</value>
+  </data>
+  <data name="MaterialsList" xml:space="preserve">
+    <value>Materials List</value>
+  </data>
 </root>

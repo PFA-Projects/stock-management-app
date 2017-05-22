@@ -22,6 +22,7 @@
 
         protected override void Seed(StockManagement.DAL.ModelContext context)
         {
+
             // -------------------------------------
             // Giwn App V 0.08
             // -------------------------------------
@@ -125,11 +126,7 @@
 
             context.SaveChanges();
 
-            //
-            //Materiel
-            Authorization MaterielAuthorizations = new Authorization();
-            MaterielAuthorizations.BusinessEntity = typeof(Material).FullName;
-            RoleAdmin.Authorizations.Add(MaterielAuthorizations);
+            
 
             context.SaveChanges();
 
@@ -140,7 +137,11 @@
             RoleAdmin.Authorizations.Add(MaterialCategoryAuthorizations);
 
             context.SaveChanges();
-
+            //
+            // Material
+            Authorization MaterialAuthorizations = new Authorization();
+            MaterialAuthorizations.BusinessEntity = typeof(MaterialCategory).FullName;
+            RoleAdmin.Authorizations.Add(MaterialAuthorizations);
             //
             // Material In out
             Authorization MaterialInOutAuthorizations = new Authorization();
@@ -159,9 +160,9 @@
 
             //
             // Societe
-            Authorization SocieteAuthorizations = new Authorization();
-            SocieteAuthorizations.BusinessEntity = typeof(Societe).FullName;
-            RoleAdmin.Authorizations.Add(SocieteAuthorizations);
+            //Authorization SocieteAuthorizations = new Authorization();
+            //SocieteAuthorizations.BusinessEntity = typeof(Societe).FullName;
+            //RoleAdmin.Authorizations.Add(SocieteAuthorizations);
 
             context.SaveChanges();
 
@@ -172,15 +173,15 @@
             // SAA , Bloc , Maternite , Urgence , Consultation , Hospitalisation , Laboratoire , Radio , Administration 
             context.Services.AddOrUpdate(
                 s => s.Reference,
-                new Service() { Name = new LocalizedString() { French = "SAA", English = "SAA", Arab = "SAA" }, Description = new LocalizedString() { French = "", English = "", Arab = "" }, Observation = new LocalizedString() { French = "", English = "", Arab = "" } },
-                new Service() { Name = new LocalizedString() { French = "Bloc", English = "Bloc", Arab = "Bloc" }, Observation = new LocalizedString() { French = "", Arab = "", English = "" }, Description = new LocalizedString() { French = "", English = "", Arab = "" } },
-                new Service() { Name = new LocalizedString() { French = "Maternite", English = "Maternite", Arab = "Maternite" }, Observation = new LocalizedString() { French = "", Arab = "", English = "" }, Description = new LocalizedString() { French = "", English = "", Arab = "" } },
-                new Service() { Name = new LocalizedString() { French = "Urgence", English = "Urgence", Arab = "Urgence" }, Observation = new LocalizedString() { French = "", Arab = "", English = "" }, Description = new LocalizedString() { French = "", English = "", Arab = "" } },
-                new Service() { Name = new LocalizedString() { French = "Consultations", English = "Consultation", Arab = "Consultation" }, Observation = new LocalizedString() { French = "", Arab = "", English = "" }, Description = new LocalizedString() { French = "", English = "", Arab = "" } },
-                new Service() { Name = new LocalizedString() { French = "Hospitalisation", English = "Hospitalisation", Arab = "Hospitalisation" }, Observation = new LocalizedString() { French = "", Arab = "", English = "" }, Description = new LocalizedString() { French = "", English = "", Arab = "" } },
-                new Service() { Name = new LocalizedString() { French = "Laboratoire", English = "Laboratoire", Arab = "Laboratoire" }, Observation = new LocalizedString() { French = "", Arab = "", English = "" }, Description = new LocalizedString() { French = "", English = "", Arab = "" } },
-                new Service() { Name = new LocalizedString() { French = "Radio", English = "Radio", Arab = "Radio" }, Observation = new LocalizedString() { French = "", Arab = "", English = "" }, Description = new LocalizedString() { French = "", English = "", Arab = "" } },
-                new Service() { Name = new LocalizedString() { French = "Administration", English = "Administration", Arab = "Administration" }, Observation = new LocalizedString() { French = "", Arab = "", English = "" }, Description = new LocalizedString() { French = "", English = "", Arab = "" } }
+                new Service() { Reference = "SAA", Name = new LocalizedString() { French = "SAA", English = "SAA", Arab = "SAA" }, Description = new LocalizedString() { French = "", English = "", Arab = "" }, Observation = new LocalizedString() { French = "", English = "", Arab = "" } },
+                new Service() { Reference = "Bloc", Name = new LocalizedString() { French = "Bloc", English = "Bloc", Arab = "Bloc" }, Observation = new LocalizedString() { French = "", Arab = "", English = "" }, Description = new LocalizedString() { French = "", English = "", Arab = "" } },
+                new Service() { Reference = "Maternite", Name = new LocalizedString() { French = "Maternite", English = "Maternite", Arab = "Maternite" }, Observation = new LocalizedString() { French = "", Arab = "", English = "" }, Description = new LocalizedString() { French = "", English = "", Arab = "" } },
+                new Service() { Reference = "Urgence", Name = new LocalizedString() { French = "Urgence", English = "Urgence", Arab = "Urgence" }, Observation = new LocalizedString() { French = "", Arab = "", English = "" }, Description = new LocalizedString() { French = "", English = "", Arab = "" } },
+                new Service() { Reference = "Consultations", Name = new LocalizedString() { French = "Consultations", English = "Consultation", Arab = "Consultation" }, Observation = new LocalizedString() { French = "", Arab = "", English = "" }, Description = new LocalizedString() { French = "", English = "", Arab = "" } },
+                new Service() { Reference = "Hospitalisation", Name = new LocalizedString() { French = "Hospitalisation", English = "Hospitalisation", Arab = "Hospitalisation" }, Observation = new LocalizedString() { French = "", Arab = "", English = "" }, Description = new LocalizedString() { French = "", English = "", Arab = "" } },
+                new Service() { Reference = "Laboratoire", Name = new LocalizedString() { French = "Laboratoire", English = "Laboratoire", Arab = "Laboratoire" }, Observation = new LocalizedString() { French = "", Arab = "", English = "" }, Description = new LocalizedString() { French = "", English = "", Arab = "" } },
+                new Service() { Reference = "Radio", Name = new LocalizedString() { French = "Radio", English = "Radio", Arab = "Radio" }, Observation = new LocalizedString() { French = "", Arab = "", English = "" }, Description = new LocalizedString() { French = "", English = "", Arab = "" } },
+                new Service() { Reference = "Administration", Name = new LocalizedString() { French = "Administration", English = "Administration", Arab = "Administration" }, Observation = new LocalizedString() { French = "", Arab = "", English = "" }, Description = new LocalizedString() { French = "", English = "", Arab = "" } }
                 );
             // Locations Data : 
             // (Service : SAA) : Statistiques , Recouvrement , RDV(Rendez vous) , Caisse 
