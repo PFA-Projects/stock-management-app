@@ -61,6 +61,15 @@ namespace StockManagement.Entities.Resources.Location {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Add Location.
+        /// </summary>
+        internal static string btn_Add_Location {
+            get {
+                return ResourceManager.GetString("btn_Add_Location", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Description.
         /// </summary>
         internal static string Description {
@@ -75,6 +84,24 @@ namespace StockManagement.Entities.Resources.Location {
         internal static string Designation {
             get {
                 return ResourceManager.GetString("Designation", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Locations.
+        /// </summary>
+        internal static string GridViewTitle {
+            get {
+                return ResourceManager.GetString("GridViewTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Materials List.
+        /// </summary>
+        internal static string MaterialsList {
+            get {
+                return ResourceManager.GetString("MaterialsList", resourceCulture);
             }
         }
         

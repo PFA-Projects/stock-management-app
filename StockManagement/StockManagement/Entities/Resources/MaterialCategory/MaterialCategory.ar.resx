@@ -117,11 +117,20 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="btn_add_MG" xml:space="preserve">
+    <value>اضافة  نوع</value>
+  </data>
   <data name="Description" xml:space="preserve">
     <value>الوصف</value>
   </data>
   <data name="Designation" xml:space="preserve">
     <value>التعيين</value>
+  </data>
+  <data name="Materials_Categories_Management" xml:space="preserve">
+    <value>تدبير انواع البضائع</value>
+  </data>
+  <data name="MG_DGV" xml:space="preserve">
+    <value>انواع البضائع</value>
   </data>
   <data name="PluralName" xml:space="preserve">
     <value>انواع البضائع</value>

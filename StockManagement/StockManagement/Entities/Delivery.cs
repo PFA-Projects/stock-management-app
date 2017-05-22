@@ -39,12 +39,6 @@ namespace StockManagement.Entities
             DeliveryDate = DateTime.Now;
         }
 
-        // Relations
-        // One To Many 
-        [EntryForm]
-        [DataGrid]
-        [Filter]
-        [Relationship(Relation = RelationshipAttribute.Relations.ManyToOne)]
-        public Societe Societe { get; set; }
+        
     }
 }

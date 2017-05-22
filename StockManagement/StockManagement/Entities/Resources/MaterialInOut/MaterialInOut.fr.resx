@@ -135,6 +135,9 @@
   <data name="PluralName" xml:space="preserve">
     <value>Entree Sorties Materiels</value>
   </data>
+  <data name="Reason" xml:space="preserve">
+    <value>Raison</value>
+  </data>
   <data name="SingularName" xml:space="preserve">
     <value>Entree Sortie Materiel</value>
   </data>

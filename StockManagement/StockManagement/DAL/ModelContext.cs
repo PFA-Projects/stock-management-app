@@ -5,6 +5,7 @@ namespace StockManagement.DAL
     using App.Gwin.Entities.Secrurity.Authentication;
     using App.Gwin.Entities.Secrurity.Autorizations;
     using Entities;
+    using Entities.Materials;
     using System;
     using System.Data.Entity;
     using System.Linq;
@@ -50,12 +51,11 @@ namespace StockManagement.DAL
         // Stock Management : Entities
         public virtual DbSet<Delivery> Deliveries { get; set; }
         public virtual DbSet<Location> Locations { get; set; }
-        public virtual DbSet<Material> Materials { get; set; }
         public virtual DbSet<MaterialInOut> MaterialsAccessexit { get; set; }
         public virtual DbSet<MaterialCategory> MaterialCategories { get; set; }
         public virtual DbSet<Employee> Personnes { get; set; }
         public virtual DbSet<Service> Services { get; set; }
-        public virtual DbSet<Societe> Societes { get; set; }
+        public virtual DbSet<Material> Materials { get; set; }
     }
 
     //public class MyEntity

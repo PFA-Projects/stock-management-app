@@ -135,6 +135,9 @@
   <data name="PluralName" xml:space="preserve">
     <value>دخول خروج البضائع</value>
   </data>
+  <data name="Reason" xml:space="preserve">
+    <value>السبب</value>
+  </data>
   <data name="SingularName" xml:space="preserve">
     <value>دخول خروج البضاعة</value>
   </data>

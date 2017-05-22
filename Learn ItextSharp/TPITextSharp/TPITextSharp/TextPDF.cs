@@ -76,7 +76,7 @@ namespace TPITextSharp
             PdfWriter writer = PdfWriter.GetInstance(doc, new FileStream("TableTest.pdf", FileMode.Create));
             doc.Open();
 
-
+            
             PdfPTable table = new PdfPTable(GroupsDataGridView.Columns.Count);
             // add the headers from the dgv to the table
             for (int i = 0; i < GroupsDataGridView.Columns.Count; i++)
@@ -138,11 +138,12 @@ namespace TPITextSharp
             if (file.ShowDialog() == DialogResult.OK)
             {
                 axAcroPDF1.src = file.FileName;
-                
             }
         }
 
-        
-
+        private void button1_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show(Directory.GetCurrentDirectory());
+        }
     }
 }

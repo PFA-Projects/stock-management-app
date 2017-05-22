@@ -129,10 +129,16 @@
   <data name="PluralName" xml:space="preserve">
     <value>المواقع</value>
   </data>
-  <data name="service" xml:space="preserve">
-    <value>القسم</value>
-  </data>
   <data name="SingularName" xml:space="preserve">
     <value>الموقع</value>
+  </data>
+  <data name="GridViewTitle" xml:space="preserve">
+    <value>لائحة المواقع</value>
+  </data>
+  <data name="btn_Add_Location" xml:space="preserve">
+    <value>اضافة موقع</value>
+  </data>
+  <data name="MaterialsList" xml:space="preserve">
+    <value>لائحة البضائع</value>
   </data>
 </root>

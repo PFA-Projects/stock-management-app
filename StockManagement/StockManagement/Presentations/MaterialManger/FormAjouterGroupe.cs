@@ -11,7 +11,7 @@ using System.Windows.Forms;
 
 namespace StockManagement
 {
-    [App.Gwin.Attributes.Menu(EntityType = typeof(Entities.Material), Order = 10, Title = "AjouterGroupe")]
+    //[Menu(EntityType = typeof(Entities.Material), Order = 10, Title = "AjouterGroupe")]
   //  [Menu(Group ="Societe")]
     public partial class FormAjouterGroupe : Form
     {

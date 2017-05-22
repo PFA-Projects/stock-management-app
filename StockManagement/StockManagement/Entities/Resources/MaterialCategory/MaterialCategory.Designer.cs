@@ -61,6 +61,15 @@ namespace StockManagement.Entities.Resources.MaterialCategory {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Add Material Category.
+        /// </summary>
+        internal static string btn_add_MG {
+            get {
+                return ResourceManager.GetString("btn_add_MG", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Description.
         /// </summary>
         internal static string Description {
@@ -79,6 +88,24 @@ namespace StockManagement.Entities.Resources.MaterialCategory {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Materials Categories Management.
+        /// </summary>
+        internal static string Materials_Categories_Management {
+            get {
+                return ResourceManager.GetString("Materials_Categories_Management", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Materials Categories.
+        /// </summary>
+        internal static string MG_DGV {
+            get {
+                return ResourceManager.GetString("MG_DGV", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Material Categories.
         /// </summary>
         internal static string PluralName {
@@ -88,7 +115,7 @@ namespace StockManagement.Entities.Resources.MaterialCategory {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to MaterialCategory.
+        ///   Looks up a localized string similar to Materia lCategory.
         /// </summary>
         internal static string SingularName {
             get {

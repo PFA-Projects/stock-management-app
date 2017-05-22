@@ -123,29 +123,17 @@
   <data name="AcquisitionValue" xml:space="preserve">
     <value>Valeur d'acquisition</value>
   </data>
-  <data name="AcquisitionValueExist" xml:space="preserve">
-    <value>L'existence de valeur d'acquisition</value>
-  </data>
-  <data name="delivery" xml:space="preserve">
-    <value>Livraison</value>
-  </data>
   <data name="Designation" xml:space="preserve">
     <value>Designation</value>
   </data>
-  <data name="dimension" xml:space="preserve">
-    <value>dimension</value>
-  </data>
-  <data name="INN_Number" xml:space="preserve">
-    <value>Nombre INN</value>
+  <data name="Dimension" xml:space="preserve">
+    <value>Dimension</value>
   </data>
   <data name="InventoryNumber" xml:space="preserve">
-    <value>Numero d'inventaire</value>
+    <value>Numero d'Inventaire</value>
   </data>
   <data name="Mark" xml:space="preserve">
     <value>Marque</value>
-  </data>
-  <data name="materialCategory" xml:space="preserve">
-    <value>Categorie de materiel</value>
   </data>
   <data name="Model" xml:space="preserve">
     <value>Modele</value>
@@ -154,30 +142,18 @@
     <value>Observation</value>
   </data>
   <data name="PhysicalState" xml:space="preserve">
-    <value>L'etat Physique</value>
+    <value>L'Etat Physique</value>
   </data>
   <data name="PluralName" xml:space="preserve">
     <value>Materiels</value>
   </data>
-  <data name="SingularName" xml:space="preserve">
-    <value>Materiel</value>
-  </data>
-  <data name="StockExistence" xml:space="preserve">
-    <value>L'existence en stock</value>
-  </data>
-  <data name="UpdateServiceDate" xml:space="preserve">
-    <value>Date mise en service</value>
-  </data>
   <data name="SerieNumber" xml:space="preserve">
     <value>Numero de serie</value>
   </data>
-  <data name="AcquisitionInformations" xml:space="preserve">
-    <value>Informations d'acquisition</value>
+  <data name="SingularName" xml:space="preserve">
+    <value>Material</value>
   </data>
-  <data name="InventoryInformations" xml:space="preserve">
-    <value>Informations d'inventaire</value>
-  </data>
-  <data name="MaterialSituation" xml:space="preserve">
-    <value>Situation de Materiel</value>
+  <data name="UpdateServiceDate" xml:space="preserve">
+    <value>Date de mise à jour de service</value>
   </data>
 </root>
