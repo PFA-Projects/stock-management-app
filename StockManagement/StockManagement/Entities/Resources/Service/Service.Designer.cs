@@ -61,11 +61,29 @@ namespace StockManagement.Entities.Resources.Service {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Add new Service.
+        /// </summary>
+        internal static string btn_Add_Service {
+            get {
+                return ResourceManager.GetString("btn_Add_Service", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Description.
         /// </summary>
         internal static string Description {
             get {
                 return ResourceManager.GetString("Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Materials List.
+        /// </summary>
+        internal static string MaterialsList {
+            get {
+                return ResourceManager.GetString("MaterialsList", resourceCulture);
             }
         }
         
@@ -93,6 +111,24 @@ namespace StockManagement.Entities.Resources.Service {
         internal static string PluralName {
             get {
                 return ResourceManager.GetString("PluralName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Services .
+        /// </summary>
+        internal static string Service_Grid_Title {
+            get {
+                return ResourceManager.GetString("Service_Grid_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Services Management.
+        /// </summary>
+        internal static string Service_Management {
+            get {
+                return ResourceManager.GetString("Service_Management", resourceCulture);
             }
         }
         

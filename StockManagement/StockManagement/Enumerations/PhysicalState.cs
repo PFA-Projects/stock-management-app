@@ -8,8 +8,11 @@ namespace StockManagement.Enumerations
 {
     public enum PhysicalStates
     {
-        New,
-        Used,
-        BrokenDown  // fr: en panne
+        //New,
+        //Used,
+        //BrokenDown  
+        Nouveau ,
+        Utilisé,
+        Enpanne
     }
 }

@@ -1,2 +1,0 @@
-* Annotations de Realtion Many To One de  classe MaterielInOut !
-* Repetitions des donnes de "Seed"  pour chaque commande " Update-DataBase" (Voir Capture 2 )

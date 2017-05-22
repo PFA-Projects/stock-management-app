@@ -70,38 +70,11 @@ namespace StockManagement.Entities.Resources.Material {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Acquisition Informations.
-        /// </summary>
-        internal static string AcquisitionInformations {
-            get {
-                return ResourceManager.GetString("AcquisitionInformations", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Acquisition Value.
         /// </summary>
         internal static string AcquisitionValue {
             get {
                 return ResourceManager.GetString("AcquisitionValue", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Acquisition Value Exist.
-        /// </summary>
-        internal static string AcquisitionValueExist {
-            get {
-                return ResourceManager.GetString("AcquisitionValueExist", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to delivery.
-        /// </summary>
-        internal static string delivery {
-            get {
-                return ResourceManager.GetString("delivery", resourceCulture);
             }
         }
         
@@ -115,29 +88,11 @@ namespace StockManagement.Entities.Resources.Material {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to dimension.
+        ///   Looks up a localized string similar to Dimension.
         /// </summary>
-        internal static string dimension {
+        internal static string Dimension {
             get {
-                return ResourceManager.GetString("dimension", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to INN Number.
-        /// </summary>
-        internal static string INN_Number {
-            get {
-                return ResourceManager.GetString("INN_Number", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Inventory Informations.
-        /// </summary>
-        internal static string InventoryInformations {
-            get {
-                return ResourceManager.GetString("InventoryInformations", resourceCulture);
+                return ResourceManager.GetString("Dimension", resourceCulture);
             }
         }
         
@@ -156,24 +111,6 @@ namespace StockManagement.Entities.Resources.Material {
         internal static string Mark {
             get {
                 return ResourceManager.GetString("Mark", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to material Category.
-        /// </summary>
-        internal static string materialCategory {
-            get {
-                return ResourceManager.GetString("materialCategory", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Material Situation.
-        /// </summary>
-        internal static string MaterialSituation {
-            get {
-                return ResourceManager.GetString("MaterialSituation", resourceCulture);
             }
         }
         
@@ -232,16 +169,7 @@ namespace StockManagement.Entities.Resources.Material {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Stock Existence.
-        /// </summary>
-        internal static string StockExistence {
-            get {
-                return ResourceManager.GetString("StockExistence", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Update Service Date.
+        ///   Looks up a localized string similar to UpdateServiceDate.
         /// </summary>
         internal static string UpdateServiceDate {
             get {

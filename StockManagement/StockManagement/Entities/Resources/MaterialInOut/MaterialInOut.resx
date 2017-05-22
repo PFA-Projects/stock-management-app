@@ -135,6 +135,9 @@
   <data name="PluralName" xml:space="preserve">
     <value>Materials ls In Out</value>
   </data>
+  <data name="Reason" xml:space="preserve">
+    <value>Reason</value>
+  </data>
   <data name="SingularName" xml:space="preserve">
     <value>Material In Out</value>
   </data>
