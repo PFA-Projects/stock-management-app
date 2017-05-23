@@ -13,6 +13,7 @@ namespace StockManagement.Enumerations
         //BrokenDown  
         Nouveau ,
         Utilisé,
-        Enpanne
+        EnPanne ,
+        autre
     }
 }

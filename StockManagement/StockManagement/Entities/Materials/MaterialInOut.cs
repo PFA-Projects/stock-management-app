@@ -3,12 +3,7 @@
 using App.Gwin.Attributes;
 using App.Gwin.Entities;
 using App.Gwin.Entities.MultiLanguage;
-using StockManagement.Entities.Materials;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace StockManagement.Entities
 {

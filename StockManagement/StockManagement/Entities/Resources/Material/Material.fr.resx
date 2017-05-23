@@ -123,6 +123,9 @@
   <data name="AcquisitionValue" xml:space="preserve">
     <value>Valeur d'acquisition</value>
   </data>
+  <data name="btn_add_MG" xml:space="preserve">
+    <value>Ajouter une Materiel</value>
+  </data>
   <data name="Designation" xml:space="preserve">
     <value>Designation</value>
   </data>
@@ -138,17 +141,26 @@
   <data name="Model" xml:space="preserve">
     <value>Modele</value>
   </data>
+  <data name="NBRE" xml:space="preserve">
+    <value>NBRE</value>
+  </data>
   <data name="Observation" xml:space="preserve">
     <value>Observation</value>
   </data>
   <data name="PhysicalState" xml:space="preserve">
     <value>L'Etat Physique</value>
   </data>
+  <data name="PhysicalStateExplication" xml:space="preserve">
+    <value>Autre Etat Physique </value>
+  </data>
   <data name="PluralName" xml:space="preserve">
     <value>Materiels</value>
   </data>
   <data name="SerieNumber" xml:space="preserve">
     <value>Numero de serie</value>
+  </data>
+  <data name="Service_Grid_Title" xml:space="preserve">
+    <value>Materiels</value>
   </data>
   <data name="SingularName" xml:space="preserve">
     <value>Material</value>

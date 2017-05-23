@@ -27,5 +27,18 @@ namespace StockManagement.BLL
         public LocationBLO() : base()
         {
         }
+
+        /// <summary>
+        /// Get Locations By Service
+        /// </summary>
+        /// <param name="service"></param>
+        /// <returns></returns>
+        public List<Location> LocationsByService(Service service)
+        {
+            var query = from l in db.Locations
+                        where l.Service.Id == service.Id
+                        select l;
+            return query.ToList<Location>();
+        }
     }
 }

@@ -6,9 +6,7 @@
     using App.Gwin.Entities.Secrurity.Authentication;
     using App.Gwin.Entities.Secrurity.Autorizations;
     using Entities;
-    using System;
     using System.Collections.Generic;
-    using System.Data.Entity;
     using System.Data.Entity.Migrations;
     using System.Linq;
 
@@ -17,12 +15,11 @@
         public Configuration()
         {
             AutomaticMigrationsEnabled = false;
-            ContextKey = "StockManagementSystem";
+            ContextKey = "StockManagement";
         }
 
         protected override void Seed(StockManagement.DAL.ModelContext context)
         {
-
             // -------------------------------------
             // Giwn App V 0.08
             // -------------------------------------
@@ -126,7 +123,7 @@
 
             context.SaveChanges();
 
-            
+
 
             context.SaveChanges();
 
@@ -140,7 +137,7 @@
             //
             // Material
             Authorization MaterialAuthorizations = new Authorization();
-            MaterialAuthorizations.BusinessEntity = typeof(MaterialCategory).FullName;
+            MaterialAuthorizations.BusinessEntity = typeof(Material).FullName;
             RoleAdmin.Authorizations.Add(MaterialAuthorizations);
             //
             // Material In out
@@ -185,7 +182,7 @@
                 );
             // Locations Data : 
             // (Service : SAA) : Statistiques , Recouvrement , RDV(Rendez vous) , Caisse 
-            // (Service Administration ) : RH(Resources Humaines) , Comptabilite , Materiel 
+            // (Service Administration ) : RH(Resources Humaines) , Comptabilite , Materiel
         }
     }
 }

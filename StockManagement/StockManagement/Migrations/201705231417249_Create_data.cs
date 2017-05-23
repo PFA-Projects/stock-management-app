@@ -186,6 +186,7 @@ namespace StockManagement.Migrations
                         Acquisition_Arab = c.String(),
                         PhysicalState = c.Int(nullable: false),
                         Dimension = c.Single(nullable: false),
+                        SerieNumber = c.String(),
                         NBRE = c.Int(nullable: false),
                         Reference = c.String(),
                         Ordre = c.Int(nullable: false),
@@ -193,14 +194,17 @@ namespace StockManagement.Migrations
                         DateModification = c.DateTime(nullable: false),
                         Delivery_Id = c.Long(),
                         Location_Id = c.Long(),
+                        Materialcategory_Id = c.Long(),
                         Service_Id = c.Long(),
                     })
                 .PrimaryKey(t => t.Id)
                 .ForeignKey("dbo.Deliveries", t => t.Delivery_Id)
                 .ForeignKey("dbo.Locations", t => t.Location_Id)
+                .ForeignKey("dbo.MaterialCategories", t => t.Materialcategory_Id)
                 .ForeignKey("dbo.Services", t => t.Service_Id)
                 .Index(t => t.Delivery_Id)
                 .Index(t => t.Location_Id)
+                .Index(t => t.Materialcategory_Id)
                 .Index(t => t.Service_Id);
             
             CreateTable(
@@ -411,6 +415,7 @@ namespace StockManagement.Migrations
             DropForeignKey("dbo.MaterialInOuts", "Employee_Id", "dbo.Employees");
             DropForeignKey("dbo.Employees", "City_Id", "dbo.Cities");
             DropForeignKey("dbo.Materials", "Service_Id", "dbo.Services");
+            DropForeignKey("dbo.Materials", "Materialcategory_Id", "dbo.MaterialCategories");
             DropForeignKey("dbo.Materials", "Location_Id", "dbo.Locations");
             DropForeignKey("dbo.Materials", "Delivery_Id", "dbo.Deliveries");
             DropForeignKey("dbo.Locations", "Service_Id", "dbo.Services");
@@ -431,6 +436,7 @@ namespace StockManagement.Migrations
             DropIndex("dbo.MaterialInOuts", new[] { "Material_Id" });
             DropIndex("dbo.MaterialInOuts", new[] { "Employee_Id" });
             DropIndex("dbo.Materials", new[] { "Service_Id" });
+            DropIndex("dbo.Materials", new[] { "Materialcategory_Id" });
             DropIndex("dbo.Materials", new[] { "Location_Id" });
             DropIndex("dbo.Materials", new[] { "Delivery_Id" });
             DropIndex("dbo.Locations", new[] { "Service_Id" });

@@ -40,6 +40,9 @@ namespace StockManagement.BLL
 
             return query.ToList<Service>();
         }
+
+
+       
         
       
     }

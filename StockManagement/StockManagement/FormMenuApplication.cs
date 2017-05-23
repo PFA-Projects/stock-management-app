@@ -48,6 +48,7 @@ namespace GenericWinForm.Demo
         {
             base.Reload();
             InitializeComponent();
+            languageToolStripMenuItem1.Visible = false;
         }
 
 

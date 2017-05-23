@@ -105,7 +105,12 @@
     <Compile Include="BLL\PrintManagement\PrintPage.cs" />
     <Compile Include="BLL\ServiceBLO.cs" />
     <Compile Include="DAL\ModelContext.cs" />
-    <Compile Include="Entities\Delivery.cs" />
+    <Compile Include="Entities\Delivery\Delivery.cs" />
+    <Compile Include="Entities\Mail\Arrival.cs" />
+    <Compile Include="Entities\Mail\Departure.cs" />
+    <Compile Include="Entities\Mail\MailConfiguration.cs" />
+    <Compile Include="Entities\Mail\Reciever.cs" />
+    <Compile Include="Entities\Mail\Sender.cs" />
     <Compile Include="Entities\Materials\Material.cs" />
     <Compile Include="Entities\Societe\Location.cs" />
     <Compile Include="Entities\Materials\MaterialInOut.cs" />
@@ -229,15 +234,28 @@
     <Compile Include="Entities\Societe\Service.cs" />
     <Compile Include="Enumerations\PhysicalState.cs" />
     <Compile Include="Libs\ITextSharp\PdfFile.cs" />
-    <Compile Include="Migrations\201705220948296_Create_data.cs" />
-    <Compile Include="Migrations\201705220948296_Create_data.Designer.cs">
-      <DependentUpon>201705220948296_Create_data.cs</DependentUpon>
+    <Compile Include="Migrations\201705231417249_Create_data.cs" />
+    <Compile Include="Migrations\201705231417249_Create_data.Designer.cs">
+      <DependentUpon>201705231417249_Create_data.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201705220949380_Update_Material_Class.cs" />
-    <Compile Include="Migrations\201705220949380_Update_Material_Class.Designer.cs">
-      <DependentUpon>201705220949380_Update_Material_Class.cs</DependentUpon>
+    <Compile Include="Migrations\201705231422575_Up2.cs" />
+    <Compile Include="Migrations\201705231422575_Up2.Designer.cs">
+      <DependentUpon>201705231422575_Up2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201705231514043_Update_Material3.cs" />
+    <Compile Include="Migrations\201705231514043_Update_Material3.Designer.cs">
+      <DependentUpon>201705231514043_Update_Material3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201705231708364_Add_mail_classes1.cs" />
+    <Compile Include="Migrations\201705231708364_Add_mail_classes1.Designer.cs">
+      <DependentUpon>201705231708364_Add_mail_classes1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201705231713133_Update_Mail_Classes2.cs" />
+    <Compile Include="Migrations\201705231713133_Update_Mail_Classes2.Designer.cs">
+      <DependentUpon>201705231713133_Update_Mail_Classes2.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Presentations\MaterialManagement\MaterialPLO.cs" />
     <Compile Include="Presentations\MaterialManger\FormAjouterGroupe.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -365,11 +383,20 @@
       <LastGenOutput>Societe.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="FormMenuApplication.resx" />
-    <EmbeddedResource Include="Migrations\201705220948296_Create_data.resx">
-      <DependentUpon>201705220948296_Create_data.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201705231417249_Create_data.resx">
+      <DependentUpon>201705231417249_Create_data.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201705220949380_Update_Material_Class.resx">
-      <DependentUpon>201705220949380_Update_Material_Class.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201705231422575_Up2.resx">
+      <DependentUpon>201705231422575_Up2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705231514043_Update_Material3.resx">
+      <DependentUpon>201705231514043_Update_Material3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705231708364_Add_mail_classes1.resx">
+      <DependentUpon>201705231708364_Add_mail_classes1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705231713133_Update_Mail_Classes2.resx">
+      <DependentUpon>201705231713133_Update_Mail_Classes2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentations\MaterialManger\FormAjouterGroupe.resx">
       <DependentUpon>FormAjouterGroupe.cs</DependentUpon>

@@ -1,18 +1,12 @@
 ﻿// Mariam Ait Al
-using App.Gwin.Entities.MultiLanguage;
 using iTextSharp.text;
 using iTextSharp.text.pdf;
 using StockManagement.BLL.PrintManagement;
 using StockManagement.DAL;
 using StockManagement.Entities;
-using StockManagement.Entities.Materials;
 using System;
 using System.Collections.Generic;
-using System.Drawing.Imaging;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using vtts.Presentation.PrintOrderMission;
 
 namespace StockManagement.BLL.MaterialsManagement
@@ -55,7 +49,7 @@ namespace StockManagement.BLL.MaterialsManagement
                     // Document Header
 
                     PrintPage page = new PrintPage();
-                    page.CreateHeader(file, doc, writer);
+                    page.CreateHeader(file, doc, writer,service);
                     //
                     List<String> HeaderText = new List<string>();
                     HeaderText.Add("Designation");
@@ -102,6 +96,9 @@ namespace StockManagement.BLL.MaterialsManagement
                     PdfContentByte cb = writer.DirectContent;
                     table.TotalWidth = 500f;
                     table.WriteSelectedRows(0, -1, 50, 665, cb);
+
+                    //
+                    page.CreateFooter(file, doc, writer);
                     // Step 6: Closing the Document
                     doc.Close();
                 }
