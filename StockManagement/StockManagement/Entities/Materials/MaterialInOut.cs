@@ -3,6 +3,8 @@
 using App.Gwin.Attributes;
 using App.Gwin.Entities;
 using App.Gwin.Entities.MultiLanguage;
+using StockManagement.Enumerations;
+using StockManagement.Presentations.MaterialManagement;
 using System;
 
 namespace StockManagement.Entities
@@ -13,96 +15,55 @@ namespace StockManagement.Entities
     /// 
     [GwinEntity(Localizable = true, DisplayMember = "Reference")]
     [Menu(Group = "Materiels")]
+    [PresentationLogic(TypePLO = typeof(MaterialInOutPLO))]
     public class MaterialInOut:BaseEntity
     {
-        // [EntryForm]
-        // [DataGrid]
-        //// [Filter]
-        // public DateTime OutDate { get; set; }
+        
+        // Material In Out Type 
+        [EntryForm(Ordre = 1) ]
+        public MaterialState MaterialState { get; set; }
 
-        // [EntryForm]
-        // [DataGrid]
-        // // [Filter]
-        // public DateTime InDate { get; set; }
-
-        // [EntryForm]
-        // [DataGrid]
-        // // [Filter]
-        // public LocalizedString InReason { get; set; }
-
-
-        // [EntryForm]
-        // [DataGrid]
-        // // [Filter]
-        // public LocalizedString OutReason { get; set; }
-
-
-        // [EntryForm]
-        // [DataGrid]
-        // // [Filter]
-        // public LocalizedString Observation { get; set; }
-
-        // // Initialize DateTime
-        // public MaterialInOut()
-        // {
-        //     InDate = DateTime.Now;
-        //     OutDate = DateTime.Now;
-        // }
-
-        //// Relations
-        //[EntryForm]
-        //[DataGrid]
-        ////[Filter]
-        //[Relationship(Relation = RelationshipAttribute.Relations.ManyToOne)]
-        // public Material Material { get; set; }
-        // // //
-        // [EntryForm]
-        // [DataGrid]
-        // // [Filter]
-        // [Relationship(Relation = RelationshipAttribute.Relations.ManyToOne)]
-        // public Location Location { get; set; }
-
-        // // /// <summary>
-        // // /// Out Responsible
-        // // /// </summary>
-
-        // [EntryForm]
-        // [DataGrid]
-        // // [Filter]
-        // [Relationship(Relation = RelationshipAttribute.Relations.ManyToOne)]
-        // public Employee Employee { get; set; }
-
+        // Material Informations
+        [EntryForm(Ordre =2,isDefaultIsEmpty =true)]
         [Relationship(Relation = RelationshipAttribute.Relations.ManyToOne)]
-        [EntryForm]
-        [DataGrid]
-        [Filter]
+        public MaterialCategory MaterialCategory { get; set; }
+
+        [EntryForm(Ordre = 2,isDefaultIsEmpty =true)]
+        [Relationship(Relation = RelationshipAttribute.Relations.ManyToOne)]
         public Material Material { get; set; }
 
+        // Type = "Changement" (IN/OUT)
+        // In
+
+        [EntryForm(Ordre = 3)]
+        public bool IsMaterialInStock { get; set; }
+        [EntryForm(Ordre = 3)]
+        public DateTime InDate { get; set; }
+        [EntryForm(Ordre = 3)]
+        public String InReason { get; set; }
+        // Out
+        [EntryForm(Ordre = 4)]
+        public DateTime OutDate { get; set; }
+        [EntryForm(Ordre = 4)]
+        public String OutReason { get; set; }
+        [EntryForm(Ordre = 4,isDefaultIsEmpty = true)]
         [Relationship(Relation = RelationshipAttribute.Relations.ManyToOne)]
-        [EntryForm]
-        [DataGrid]
-        public Location OriginaLLocation { get; set; }
-
+        public Service Service { get; set; }
+        [EntryForm(Ordre = 4)]
         [Relationship(Relation = RelationshipAttribute.Relations.ManyToOne)]
-        [EntryForm]
-        [DataGrid]
-        public Location NewLocation { get; set; }
+        public Location Location { get; set; }
+        
 
-        [EntryForm]
-        [DataGrid]
-        public LocalizedString Reason { get; set; }
 
-        [Relationship(Relation = RelationshipAttribute.Relations.ManyToOne)]
-        [EntryForm]
-        [DataGrid]
-        public Employee Employee { get; set; }
 
-        [EntryForm]
-        [DataGrid]
-        public LocalizedString Observation { get; set; }
 
-        [EntryForm]
-        [DataGrid]
-        public DateTime InOutDate { get; set; }
+
+        //
+        public MaterialInOut()
+        {
+            InDate = DateTime.Now;
+        }
+
+
     }
 }

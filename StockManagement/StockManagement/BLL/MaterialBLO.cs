@@ -52,5 +52,17 @@ namespace StockManagement.BLL
             return query.ToList<Material>();
         }
         
+        /// <summary>
+        /// Get Materials List By Material Category
+        /// </summary>
+        /// <param name="MaterialCategory"></param>
+        /// <returns></returns>
+        public List<Material> GetMaterialsByMaterialCategory(MaterialCategory MaterialCategory)
+        {
+            var query = from m in db.Materials
+                        where m.Materialcategory.Id == MaterialCategory.Id
+                        select m;
+            return query.ToList<Material>();
+        }
     }
 }

@@ -161,16 +161,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>MaterialCategory.resx</DependentUpon>
     </Compile>
-    <Compile Include="Entities\Resources\MaterialInOut\MaterialInOut.ar.Designer.cs">
-      <DependentUpon>MaterialInOut.ar.resx</DependentUpon>
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-    </Compile>
-    <Compile Include="Entities\Resources\MaterialInOut\MaterialInOut.fr.Designer.cs">
-      <DependentUpon>MaterialInOut.fr.resx</DependentUpon>
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <Compile Include="Entities\Resources\MaterialInOut\MaterialInOut.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -232,6 +222,7 @@
       <DependentUpon>Societe.resx</DependentUpon>
     </Compile>
     <Compile Include="Entities\Societe\Service.cs" />
+    <Compile Include="Enumerations\MaterialState.cs" />
     <Compile Include="Enumerations\PhysicalState.cs" />
     <Compile Include="Libs\ITextSharp\PdfFile.cs" />
     <Compile Include="Migrations\201705231417249_Create_data.cs" />
@@ -254,7 +245,24 @@
     <Compile Include="Migrations\201705231713133_Update_Mail_Classes2.Designer.cs">
       <DependentUpon>201705231713133_Update_Mail_Classes2.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201705240937387_Upd_MIO_clas1.cs" />
+    <Compile Include="Migrations\201705240937387_Upd_MIO_clas1.Designer.cs">
+      <DependentUpon>201705240937387_Upd_MIO_clas1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201705240948474_Up_MIO_Clas2.cs" />
+    <Compile Include="Migrations\201705240948474_Up_MIO_Clas2.Designer.cs">
+      <DependentUpon>201705240948474_Up_MIO_Clas2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201705240958112_Up_MIO_C3.cs" />
+    <Compile Include="Migrations\201705240958112_Up_MIO_C3.Designer.cs">
+      <DependentUpon>201705240958112_Up_MIO_C3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201705241000256_Update_mIO_c4.cs" />
+    <Compile Include="Migrations\201705241000256_Update_mIO_c4.Designer.cs">
+      <DependentUpon>201705241000256_Update_mIO_c4.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Presentations\MaterialManagement\MaterialInOutPLO.cs" />
     <Compile Include="Presentations\MaterialManagement\MaterialPLO.cs" />
     <Compile Include="Presentations\MaterialManger\FormAjouterGroupe.cs">
       <SubType>Form</SubType>
@@ -326,14 +334,6 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>MaterialCategory.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="Entities\Resources\MaterialInOut\MaterialInOut.ar.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>MaterialInOut.ar.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Entities\Resources\MaterialInOut\MaterialInOut.fr.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>MaterialInOut.fr.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
     <EmbeddedResource Include="Entities\Resources\MaterialInOut\MaterialInOut.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>MaterialInOut.Designer.cs</LastGenOutput>
@@ -397,6 +397,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201705231713133_Update_Mail_Classes2.resx">
       <DependentUpon>201705231713133_Update_Mail_Classes2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705240937387_Upd_MIO_clas1.resx">
+      <DependentUpon>201705240937387_Upd_MIO_clas1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705240948474_Up_MIO_Clas2.resx">
+      <DependentUpon>201705240948474_Up_MIO_Clas2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705240958112_Up_MIO_C3.resx">
+      <DependentUpon>201705240958112_Up_MIO_C3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705241000256_Update_mIO_c4.resx">
+      <DependentUpon>201705241000256_Update_mIO_c4.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentations\MaterialManger\FormAjouterGroupe.resx">
       <DependentUpon>FormAjouterGroupe.cs</DependentUpon>

@@ -61,65 +61,11 @@ namespace StockManagement.Entities.Resources.MaterialInOut {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to In Date.
-        /// </summary>
-        internal static string InDate {
-            get {
-                return ResourceManager.GetString("InDate", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to In Reason.
-        /// </summary>
-        internal static string InReason {
-            get {
-                return ResourceManager.GetString("InReason", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Observation.
-        /// </summary>
-        internal static string Observation {
-            get {
-                return ResourceManager.GetString("Observation", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Out Date.
-        /// </summary>
-        internal static string OutDate {
-            get {
-                return ResourceManager.GetString("OutDate", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Out Reason.
-        /// </summary>
-        internal static string OutReason {
-            get {
-                return ResourceManager.GetString("OutReason", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Materials ls In Out.
         /// </summary>
         internal static string PluralName {
             get {
                 return ResourceManager.GetString("PluralName", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Reason.
-        /// </summary>
-        internal static string Reason {
-            get {
-                return ResourceManager.GetString("Reason", resourceCulture);
             }
         }
         

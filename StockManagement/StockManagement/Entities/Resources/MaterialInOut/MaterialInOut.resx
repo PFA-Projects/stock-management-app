@@ -117,26 +117,8 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="InDate" xml:space="preserve">
-    <value>In Date</value>
-  </data>
-  <data name="InReason" xml:space="preserve">
-    <value>In Reason</value>
-  </data>
-  <data name="Observation" xml:space="preserve">
-    <value>Observation</value>
-  </data>
-  <data name="OutDate" xml:space="preserve">
-    <value>Out Date</value>
-  </data>
-  <data name="OutReason" xml:space="preserve">
-    <value>Out Reason</value>
-  </data>
   <data name="PluralName" xml:space="preserve">
     <value>Materials ls In Out</value>
-  </data>
-  <data name="Reason" xml:space="preserve">
-    <value>Reason</value>
   </data>
   <data name="SingularName" xml:space="preserve">
     <value>Material In Out</value>

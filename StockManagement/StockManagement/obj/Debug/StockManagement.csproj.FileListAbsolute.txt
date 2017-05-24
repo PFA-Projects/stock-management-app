@@ -115,8 +115,6 @@ C:\Users\DELL\Desktop\stock-management-app\StockManagement\StockManagement\obj\D
 C:\Users\DELL\Desktop\stock-management-app\StockManagement\StockManagement\obj\Debug\StockManagement.Entities.Resources.Location.Location.fr.resources
 C:\Users\DELL\Desktop\stock-management-app\StockManagement\StockManagement\obj\Debug\StockManagement.Entities.Resources.MaterialCategory.MaterialCategory.ar.resources
 C:\Users\DELL\Desktop\stock-management-app\StockManagement\StockManagement\obj\Debug\StockManagement.Entities.Resources.MaterialCategory.MaterialCategory.fr.resources
-C:\Users\DELL\Desktop\stock-management-app\StockManagement\StockManagement\obj\Debug\StockManagement.Entities.Resources.MaterialInOut.MaterialInOut.ar.resources
-C:\Users\DELL\Desktop\stock-management-app\StockManagement\StockManagement\obj\Debug\StockManagement.Entities.Resources.MaterialInOut.MaterialInOut.fr.resources
 C:\Users\DELL\Desktop\stock-management-app\StockManagement\StockManagement\obj\Debug\StockManagement.Entities.Resources.Employee.Employee.ar.resources
 C:\Users\DELL\Desktop\stock-management-app\StockManagement\StockManagement\obj\Debug\StockManagement.Entities.Resources.Employee.Employee.fr.resources
 C:\Users\DELL\Desktop\stock-management-app\StockManagement\StockManagement\obj\Debug\StockManagement.Entities.Resources.Material.Material.fr.resources
@@ -126,3 +124,7 @@ C:\Users\DELL\Desktop\stock-management-app\StockManagement\StockManagement\obj\D
 C:\Users\DELL\Desktop\stock-management-app\StockManagement\StockManagement\obj\Debug\StockManagement.Entities.Resources.Societe.Societe.fr.resources
 C:\Users\DELL\Desktop\stock-management-app\StockManagement\StockManagement\obj\Debug\StockManagement.Migrations.Add_mail_classes1.resources
 C:\Users\DELL\Desktop\stock-management-app\StockManagement\StockManagement\obj\Debug\StockManagement.Migrations.Update_Mail_Classes2.resources
+C:\Users\DELL\Desktop\stock-management-app\StockManagement\StockManagement\obj\Debug\StockManagement.Migrations.Upd_MIO_clas1.resources
+C:\Users\DELL\Desktop\stock-management-app\StockManagement\StockManagement\obj\Debug\StockManagement.Migrations.Up_MIO_Clas2.resources
+C:\Users\DELL\Desktop\stock-management-app\StockManagement\StockManagement\obj\Debug\StockManagement.Migrations.Up_MIO_C3.resources
+C:\Users\DELL\Desktop\stock-management-app\StockManagement\StockManagement\obj\Debug\StockManagement.Migrations.Update_mIO_c4.resources
