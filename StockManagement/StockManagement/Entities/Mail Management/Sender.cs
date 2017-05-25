@@ -18,7 +18,7 @@ namespace StockManagement.Entities
     /// 
     [GwinEntity(Localizable = true, DisplayMember = "Name")]
     [ManagementForm(TitrePageGridView = "Senders_DGV", TitreButtonAjouter = "btn_add_Senders", Height = 580, Width = 1050)]
-    [Menu(Group = "Location")]
+    [Menu(Group = "Transactions")]
     public class Sender:BaseEntity
     {
         [Filter(Ordre = 1, WidthControl = 250)]

@@ -106,10 +106,10 @@
     <Compile Include="BLL\PrintManagement\PrintPage.cs" />
     <Compile Include="BLL\ServiceBLO.cs" />
     <Compile Include="DAL\ModelContext.cs" />
-    <Compile Include="Entities\Arrival.cs" />
-    <Compile Include="Entities\Departure.cs" />
-    <Compile Include="Entities\MailConfiguration.cs" />
-    <Compile Include="Entities\Receiver.cs" />
+    <Compile Include="Entities\Mail Management\Arrival.cs" />
+    <Compile Include="Entities\Mail Management\Departure.cs" />
+    <Compile Include="Entities\Mail Management\MailConfiguration.cs" />
+    <Compile Include="Entities\Mail Management\Receiver.cs" />
     <Compile Include="Entities\Resources\Arrival\Arrival.fr.Designer.cs">
       <DependentUpon>Arrival.fr.resx</DependentUpon>
       <AutoGen>True</AutoGen>
@@ -160,7 +160,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Sender.resx</DependentUpon>
     </Compile>
-    <Compile Include="Entities\Sender.cs" />
+    <Compile Include="Entities\Mail Management\Sender.cs" />
     <Compile Include="Entities\Stock Management\Delivery\Delivery.cs" />
     <Compile Include="Entities\Stock Management\Materials\MaterialRepair.cs" />
     <Compile Include="Entities\Stock Management\Materials\Material.cs" />

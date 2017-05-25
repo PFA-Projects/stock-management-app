@@ -22,10 +22,24 @@ namespace StockManagement.Entities
     [Menu(Group = "Operations")]
     public class Departure:BaseEntity
     {
+        [EntryForm]
+        [DataGrid]
         public DateTime DepartureDate { get; set; }
+
+        [EntryForm]
+        [DataGrid]
         public LocalizedString CorrespondanceObject { get; set; }
+
+        [EntryForm]
+        [DataGrid]
         public LocalizedString Designation { get; set; }
+
+        [EntryForm]
+        [DataGrid]
         public int Number { get; set; }
+
+        [EntryForm]
+        [DataGrid]
         public LocalizedString Observations { get; set; }
 
         //
@@ -36,12 +50,18 @@ namespace StockManagement.Entities
 
         // Relations
         [Relationship(Relation = RelationshipAttribute.Relations.ManyToOne)]
+        [EntryForm]
+        [DataGrid]
         public MailConfiguration Configuration { get; set; }
 
         [Relationship(Relation = RelationshipAttribute.Relations.ManyToOne)]
+        [EntryForm]
+        [DataGrid]
         public Receiver Receiver { get; set; }
 
         [Relationship(Relation = RelationshipAttribute.Relations.ManyToOne)]
+        [EntryForm]
+        [DataGrid]
         public Sender Sender { get; set; }
     }
 }
