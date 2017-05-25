@@ -22,6 +22,8 @@ namespace StockManagement.Presentations.MaterialManagement
         {
             // Location
             EntryForm.Fields[nameof(Material.Location)].Hide();
+
+           // EntryForm.GroupsBoxes[]
             // Physical State Explication
             EntryForm.Fields[nameof(Material.PhysicalStateExplication)].Hide();
         }

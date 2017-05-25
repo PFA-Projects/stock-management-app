@@ -95,16 +95,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BLL\BaseBLO.cs" />
-    <Compile Include="BLL\LocationBLO.cs" />
-    <Compile Include="BLL\MaterialBLO.cs" />
-    <Compile Include="BLL\MaterialCategoryBLO.cs" />
-    <Compile Include="BLL\EmployeeBLO.cs" />
-    <Compile Include="BLL\MaterialInOutBLO.cs" />
-    <Compile Include="BLL\MaterialsManagement\PrintMaterialsListByLocation.cs" />
-    <Compile Include="BLL\MaterialsManagement\PrintMaterialsListByService.cs" />
-    <Compile Include="BLL\PrintManagement\PrintPage.cs" />
-    <Compile Include="BLL\ServiceBLO.cs" />
+    <Compile Include="BAL\BaseBLO.cs" />
+    <Compile Include="BAL\LocationBLO.cs" />
+    <Compile Include="BAL\MaterialBLO.cs" />
+    <Compile Include="BAL\MaterialCategoryBLO.cs" />
+    <Compile Include="BAL\EmployeeBLO.cs" />
+    <Compile Include="BAL\MaterialInOutBLO.cs" />
+    <Compile Include="BAL\MaterialsManagement\PrintMaterialsListByLocation.cs" />
+    <Compile Include="BAL\MaterialsManagement\PrintMaterialsListByService.cs" />
+    <Compile Include="BAL\PrintManagement\PrintPage.cs" />
+    <Compile Include="BAL\ServiceBLO.cs" />
     <Compile Include="DAL\ModelContext.cs" />
     <Compile Include="Entities\Mail Management\Arrival.cs" />
     <Compile Include="Entities\Mail Management\Departure.cs" />
