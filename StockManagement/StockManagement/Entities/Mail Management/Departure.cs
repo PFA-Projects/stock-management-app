@@ -1,16 +1,25 @@
 ﻿// Mariam Ait Al
 // 2017
 
+using App.Gwin.Attributes;
 using App.Gwin.Entities;
 using App.Gwin.Entities.MultiLanguage;
+using StockManagement.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace StockManagement.Entities.Mail
+namespace StockManagement.Entities
 {
+    /// <summary>
+    /// fr : Depart
+    /// </summary>
+    /// 
+    [GwinEntity(Localizable = true, DisplayMember = "Name")]
+    [ManagementForm(TitrePageGridView = "Departure_DGV", TitreButtonAjouter = "btn_add_Departure", Height = 580, Width = 1050)]
+    [Menu(Group = "Operations")]
     public class Departure:BaseEntity
     {
         public DateTime DepartureDate { get; set; }
@@ -26,8 +35,13 @@ namespace StockManagement.Entities.Mail
         }
 
         // Relations
+        [Relationship(Relation = RelationshipAttribute.Relations.ManyToOne)]
         public MailConfiguration Configuration { get; set; }
-        public Reciever Receiver { get; set; }
+
+        [Relationship(Relation = RelationshipAttribute.Relations.ManyToOne)]
+        public Receiver Receiver { get; set; }
+
+        [Relationship(Relation = RelationshipAttribute.Relations.ManyToOne)]
         public Sender Sender { get; set; }
     }
 }

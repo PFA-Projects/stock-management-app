@@ -106,15 +106,65 @@
     <Compile Include="BLL\PrintManagement\PrintPage.cs" />
     <Compile Include="BLL\ServiceBLO.cs" />
     <Compile Include="DAL\ModelContext.cs" />
-    <Compile Include="Entities\Delivery\Delivery.cs" />
-    <Compile Include="Entities\Mail\Arrival.cs" />
-    <Compile Include="Entities\Mail\Departure.cs" />
-    <Compile Include="Entities\Mail\MailConfiguration.cs" />
-    <Compile Include="Entities\Mail\Reciever.cs" />
-    <Compile Include="Entities\Mail\Sender.cs" />
-    <Compile Include="Entities\Materials\MaterialRepair.cs" />
-    <Compile Include="Entities\Materials\Material.cs" />
-    <Compile Include="Entities\MaterialTransfer.cs" />
+    <Compile Include="Entities\Arrival.cs" />
+    <Compile Include="Entities\Departure.cs" />
+    <Compile Include="Entities\MailConfiguration.cs" />
+    <Compile Include="Entities\Receiver.cs" />
+    <Compile Include="Entities\Resources\Arrival\Arrival.fr.Designer.cs">
+      <DependentUpon>Arrival.fr.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Entities\Resources\Arrival\Arrival.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Arrival.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\Resources\Departure\Departure.fr.Designer.cs">
+      <DependentUpon>Departure.fr.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Entities\Resources\Departure\Departure.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Departure.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\Resources\MailConfiguration\MailConfiguration.fr.Designer.cs">
+      <DependentUpon>MailConfiguration.fr.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Entities\Resources\MailConfiguration\MailConfiguration.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MailConfiguration.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\Resources\Receiver\Receiver.fr.Designer.cs">
+      <DependentUpon>Receiver.fr.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Entities\Resources\Receiver\Receiver.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Receiver.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\Resources\Sender\Sender.fr.Designer.cs">
+      <DependentUpon>Sender.fr.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Entities\Resources\Sender\Sender.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Sender.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\Sender.cs" />
+    <Compile Include="Entities\Stock Management\Delivery\Delivery.cs" />
+    <Compile Include="Entities\Stock Management\Materials\MaterialRepair.cs" />
+    <Compile Include="Entities\Stock Management\Materials\Material.cs" />
+    <Compile Include="Entities\Stock Management\Materials\MaterialTransfer.cs" />
     <Compile Include="Entities\Resources\MaterialInOut\MaterialInOut.fr.Designer.cs">
       <DependentUpon>MaterialInOut.fr.resx</DependentUpon>
       <AutoGen>True</AutoGen>
@@ -140,10 +190,10 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>MaterialTransfer.resx</DependentUpon>
     </Compile>
-    <Compile Include="Entities\Societe\Location.cs" />
-    <Compile Include="Entities\Materials\MaterialInOut.cs" />
-    <Compile Include="Entities\Materials\MaterialCategory.cs" />
-    <Compile Include="Entities\Societe\Employee.cs" />
+    <Compile Include="Entities\Stock Management\Societe\Location.cs" />
+    <Compile Include="Entities\Stock Management\Materials\MaterialInOut.cs" />
+    <Compile Include="Entities\Stock Management\Materials\MaterialCategory.cs" />
+    <Compile Include="Entities\Stock Management\Societe\Employee.cs" />
     <Compile Include="Entities\Resources\Delivery\Delivery.ar.Designer.cs">
       <DependentUpon>Delivery.ar.resx</DependentUpon>
       <AutoGen>True</AutoGen>
@@ -249,7 +299,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Societe.resx</DependentUpon>
     </Compile>
-    <Compile Include="Entities\Societe\Service.cs" />
+    <Compile Include="Entities\Stock Management\Societe\Service.cs" />
     <Compile Include="Enumerations\PhysicalState.cs" />
     <Compile Include="Libs\ITextSharp\PdfFile.cs" />
     <Compile Include="Migrations\201705231417249_Create_data.cs" />
@@ -344,6 +394,30 @@
     <Compile Include="Migrations\201705250049174_Up88.Designer.cs">
       <DependentUpon>201705250049174_Up88.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201705251038217_Upd_MR_c.cs" />
+    <Compile Include="Migrations\201705251038217_Upd_MR_c.Designer.cs">
+      <DependentUpon>201705251038217_Upd_MR_c.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201705251048494_Create_MailConfig_Class.cs" />
+    <Compile Include="Migrations\201705251048494_Create_MailConfig_Class.Designer.cs">
+      <DependentUpon>201705251048494_Create_MailConfig_Class.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201705251226254_Create_Class_Receiver.cs" />
+    <Compile Include="Migrations\201705251226254_Create_Class_Receiver.Designer.cs">
+      <DependentUpon>201705251226254_Create_Class_Receiver.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201705251319448_Add_Sender_Class.cs" />
+    <Compile Include="Migrations\201705251319448_Add_Sender_Class.Designer.cs">
+      <DependentUpon>201705251319448_Add_Sender_Class.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201705251332084_Create_Arrival_Class.cs" />
+    <Compile Include="Migrations\201705251332084_Create_Arrival_Class.Designer.cs">
+      <DependentUpon>201705251332084_Create_Arrival_Class.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201705251341379_Create_Departure_Class.cs" />
+    <Compile Include="Migrations\201705251341379_Create_Departure_Class.Designer.cs">
+      <DependentUpon>201705251341379_Create_Departure_Class.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Presentations\MaterialManagement\MaterialInOutPLO.cs" />
     <Compile Include="Presentations\MaterialManagement\MaterialPLO.cs" />
@@ -383,6 +457,14 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>SanteHeader.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Entities\Resources\Arrival\Arrival.fr.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Arrival.fr.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Entities\Resources\Arrival\Arrival.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Arrival.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="Entities\Resources\Delivery\Delivery.ar.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Delivery.ar.Designer.cs</LastGenOutput>
@@ -395,6 +477,14 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Delivery.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="Entities\Resources\Departure\Departure.fr.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Departure.fr.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Entities\Resources\Departure\Departure.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Departure.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="Entities\Resources\Location\Location.ar.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Location.ar.Designer.cs</LastGenOutput>
@@ -406,6 +496,14 @@
     <EmbeddedResource Include="Entities\Resources\Location\Location.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Location.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Entities\Resources\MailConfiguration\MailConfiguration.fr.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>MailConfiguration.fr.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Entities\Resources\MailConfiguration\MailConfiguration.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>MailConfiguration.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Entities\Resources\MaterialCategory\MaterialCategory.ar.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -462,6 +560,22 @@
     <EmbeddedResource Include="Entities\Resources\Material\Material.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Material.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Entities\Resources\Receiver\Receiver.fr.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Receiver.fr.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Entities\Resources\Receiver\Receiver.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Receiver.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Entities\Resources\Sender\Sender.fr.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Sender.fr.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Entities\Resources\Sender\Sender.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Sender.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Entities\Resources\Service\Service.ar.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -557,6 +671,24 @@
     <EmbeddedResource Include="Migrations\201705250049174_Up88.resx">
       <DependentUpon>201705250049174_Up88.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705251038217_Upd_MR_c.resx">
+      <DependentUpon>201705251038217_Upd_MR_c.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705251048494_Create_MailConfig_Class.resx">
+      <DependentUpon>201705251048494_Create_MailConfig_Class.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705251226254_Create_Class_Receiver.resx">
+      <DependentUpon>201705251226254_Create_Class_Receiver.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705251319448_Add_Sender_Class.resx">
+      <DependentUpon>201705251319448_Add_Sender_Class.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705251332084_Create_Arrival_Class.resx">
+      <DependentUpon>201705251332084_Create_Arrival_Class.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705251341379_Create_Departure_Class.resx">
+      <DependentUpon>201705251341379_Create_Departure_Class.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Presentations\MaterialManger\FormAjouterGroupe.resx">
       <DependentUpon>FormAjouterGroupe.cs</DependentUpon>
     </EmbeddedResource>
@@ -585,7 +717,6 @@
       <LastGenOutput>SanteHeader.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <None Include="App.config" />
-    <None Include="Entities\StockManagementClasses.cd" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

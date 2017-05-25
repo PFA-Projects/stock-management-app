@@ -7,6 +7,7 @@ using StockManagement.Entities;
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
+using App.Gwin.Entities;
 
 namespace StockManagement.BLL
 {
@@ -64,5 +65,37 @@ namespace StockManagement.BLL
                         select m;
             return query.ToList<Material>();
         }
+
+
+        //public override int Save(Material item)
+        //{
+        //    Material Material = new Material();
+        //    Material.Acquisition = item.Acquisition;
+        //    Material.AcquisitionValue = item.AcquisitionValue;
+        //    Material.Delivery = item.Delivery;
+        //    Material.DateCreation = item.DateCreation;
+        //    Material.DateModification = item.DateModification;
+        //    Material.Designation = item.Designation;
+        //    Material.Dimension = item.Dimension;
+        //    Material.Id = item.Id;
+        //    Material.InventoryNumber = item.InventoryNumber;
+        //    Material.IsInStock = true;
+        //    Material.Location = item.Location;
+        //    Material.Mark = item.Mark;
+        //    Material.Materialcategory = item.Materialcategory;
+        //    Material.Model = item.Model;
+        //    Material.NBRE = item.NBRE;
+        //    Material.Observation = item.Observation;
+        //    Material.Ordre = item.Ordre;
+        //    Material.PhysicalState = item.PhysicalState;
+        //    Material.PhysicalStateExplication = item.PhysicalStateExplication;
+        //    Material.Provider = item.Provider;
+        //    Material.Reference = item.Reference;
+        //    Material.SerieNumber = item.SerieNumber;
+        //    Material.Service = item.Service;
+
+        //    db.Materials.Add(Material);
+        //    return db.SaveChanges();
+        //}
     }
 }

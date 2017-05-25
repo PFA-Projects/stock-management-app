@@ -70,6 +70,15 @@ namespace StockManagement.Entities.Resources.MaterialTransfer {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Material Informations.
+        /// </summary>
+        internal static string Material_Informations {
+            get {
+                return ResourceManager.GetString("Material_Informations", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Observations.
         /// </summary>
         internal static string Observations {
@@ -120,6 +129,15 @@ namespace StockManagement.Entities.Resources.MaterialTransfer {
         internal static string Transfer {
             get {
                 return ResourceManager.GetString("Transfer", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Transfer Informations.
+        /// </summary>
+        internal static string Transfer_Informations {
+            get {
+                return ResourceManager.GetString("Transfer_Informations", resourceCulture);
             }
         }
         

@@ -47,6 +47,10 @@ namespace StockManagement.Entities
         [EntryForm(GroupeBox = "repair_Informations", GroupeBoxOrder = 2)]
         public DateTime ReturnDate { get; set; }
 
+        // Get This Material Repairs Number 
+        [DataGrid]
+        public int TimesNumber { get; set; }
+
 
         public MaterialRepair()
         {

@@ -5,7 +5,6 @@ namespace StockManagement.DAL
     using App.Gwin.Entities.Secrurity.Authentication;
     using App.Gwin.Entities.Secrurity.Autorizations;
     using Entities;
-    using Entities.Mail;
     using System.Data.Entity;
 
     public class ModelContext : DbContext
@@ -59,10 +58,10 @@ namespace StockManagement.DAL
         //
         // Mail Management : Entities
         public virtual DbSet<MailConfiguration> MailConfigurations { get; set; }
+        public virtual DbSet<Receiver> Receivers { get; set; }
+        public virtual DbSet<Sender> Senders { get; set; }
         public virtual DbSet<Arrival> Arrivals { get; set; }
         public virtual DbSet<Departure> Departurs { get; set; }
-        public virtual DbSet<Reciever> Recievers { get; set; }
-        public virtual DbSet<Sender> Senders { get; set; }
     }
 
     //public class MyEntity

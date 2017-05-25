@@ -165,11 +165,33 @@
 
             //
             // Material Transfer
-            //Authorization MaterialTransferAuthorizations = new Authorization();
-            //MaterialTransferAuthorizations.BusinessEntity = typeof(MaterialTransfer).FullName;
-            //RoleAdmin.Authorizations.Add(MaterialTransferAuthorizations);
+            Authorization MaterialTransferAuthorizations = new Authorization();
+            MaterialTransferAuthorizations.BusinessEntity = typeof(MaterialTransfer).FullName;
+            RoleAdmin.Authorizations.Add(MaterialTransferAuthorizations);
 
 
+            ////////
+            //
+            // Mail Configuration
+            Authorization MailConfigurationAuthorizations = new Authorization();
+            MailConfigurationAuthorizations.BusinessEntity = typeof(MailConfiguration).FullName;
+            RoleAdmin.Authorizations.Add(MailConfigurationAuthorizations);
+            // Receiver
+            Authorization ReceiverAuthorizations = new Authorization();
+            ReceiverAuthorizations.BusinessEntity = typeof(Receiver).FullName;
+            RoleAdmin.Authorizations.Add(ReceiverAuthorizations);
+            // Sender
+            Authorization SenderAuthorizations = new Authorization();
+            SenderAuthorizations.BusinessEntity = typeof(Sender).FullName;
+            RoleAdmin.Authorizations.Add(SenderAuthorizations);
+            // Arrival
+            Authorization ArrivalAuthorizations = new Authorization();
+            ArrivalAuthorizations.BusinessEntity = typeof(Arrival).FullName;
+            RoleAdmin.Authorizations.Add(ArrivalAuthorizations);
+            // Departure
+            Authorization DepartureAuthorizations = new Authorization();
+            DepartureAuthorizations.BusinessEntity = typeof(Departure).FullName;
+            RoleAdmin.Authorizations.Add(DepartureAuthorizations);
 
             //
             // Services Data :

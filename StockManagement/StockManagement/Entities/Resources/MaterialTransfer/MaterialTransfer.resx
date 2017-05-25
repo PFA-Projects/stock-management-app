@@ -141,4 +141,10 @@
   <data name="Tr_Grid" xml:space="preserve">
     <value>Transferts</value>
   </data>
+  <data name="Material_Informations" xml:space="preserve">
+    <value>Material Informations</value>
+  </data>
+  <data name="Transfer_Informations" xml:space="preserve">
+    <value>Transfer Informations</value>
+  </data>
 </root>

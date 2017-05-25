@@ -15,7 +15,8 @@ namespace StockManagement.Entities
     /// <summary>
     /// fr : Transfert des Materiels
     /// </summary>
-    /// [GwinEntity(Localizable = true, DisplayMember = "Reference")]
+    /// 
+    [GwinEntity(Localizable = true, DisplayMember = "Reference")]
     [Menu(Group = "Transfer")]
     [ManagementForm(Width = 800, TitrePageGridView = "Tr_Grid", TitreButtonAjouter = "btn_Add_Tr")]
     [PresentationLogic(TypePLO = typeof(MaterialTransferPLO))]
