@@ -10,7 +10,6 @@ using System.Threading.Tasks;
 using App.Gwin;
 using StockManagement.Entities;
 using App.Gwin.Fields;
-using StockManagement.Enumerations;
 using StockManagement.BLL;
 using StockManagement.DAL;
 
@@ -20,16 +19,11 @@ namespace StockManagement.Presentations.MaterialManagement
     {
         public void FormAfterInit(BaseEntryForm EntryForm)
         {
-            // Locations By Service
-            EntryForm.Fields[nameof(MaterialInOut.Location)].Hide();
-            // IN /OUT
+            // In
             EntryForm.Fields[nameof(MaterialInOut.InDate)].Hide();
             EntryForm.Fields[nameof(MaterialInOut.InReason)].Hide();
-            EntryForm.Fields[nameof(MaterialInOut.IsMaterialInStock)].Hide();
-            EntryForm.Fields[nameof(MaterialInOut.Service)].Hide();
+            // Location
             EntryForm.Fields[nameof(MaterialInOut.Location)].Hide();
-            EntryForm.Fields[nameof(MaterialInOut.OutDate)].Hide();
-            EntryForm.Fields[nameof(MaterialInOut.OutReason)].Hide();
         }
 
         public void FormBeforInit(BaseEntryForm EntryForm)
@@ -41,13 +35,23 @@ namespace StockManagement.Presentations.MaterialManagement
         {
             
         }
-
         //
         ModelContext db = new ModelContext();
         public void ValueChanged(BaseEntryForm EntryForm, object sender)
         {
+            // In
+            if ((bool)EntryForm.Fields[nameof(MaterialInOut.InStock)].Value == true)
+            {
+                EntryForm.Fields[nameof(MaterialInOut.InDate)].Show();
+                EntryForm.Fields[nameof(MaterialInOut.InReason)].Show();
+            }
+            else
+            {
+                EntryForm.Fields[nameof(MaterialInOut.InDate)].Hide();
+                EntryForm.Fields[nameof(MaterialInOut.InReason)].Hide();
+            }
 
-
+            // Location
             BaseField field = sender as BaseField;
 
             switch (field.Name)
@@ -61,57 +65,21 @@ namespace StockManagement.Presentations.MaterialManagement
 
                         if (service != null)
                         {
-                            EntryForm.Fields[nameof(Material.Location)].Show();
+                            EntryForm.Fields[nameof(MaterialInOut.Location)].Show();
 
-                            ManyToOneField LocationField = EntryForm.Fields[nameof(Material.Location)] as ManyToOneField;
+                            ManyToOneField LocationField = EntryForm.Fields[nameof(MaterialInOut.Location)] as ManyToOneField;
                             List<Location> lc = new LocationBLO(db).LocationsByService(service);
                             LocationField.DataSource = lc;
                         }
-
-
-                    }
-                    break;
-                // Material Category
-                case nameof(MaterialInOut.MaterialCategory):
-                    {
-                        ManyToOneField MaterialCategoryField = field as ManyToOneField;
-                        MaterialCategory MaterialCategory = MaterialCategoryField.SelectedItem as MaterialCategory;
-
-                        if(MaterialCategory != null)
+                        else
                         {
-                            ManyToOneField MaterialsField = EntryForm.Fields[nameof(MaterialInOut.Material)] as ManyToOneField;
-                            List<Material> lm = new MaterialBLO(db).GetMaterialsByMaterialCategory(MaterialCategory);
-                            MaterialsField.DataSource = lm;
+                            EntryForm.Fields[nameof(MaterialInOut.Location)].Hide();
                         }
 
-                    }
-                    break;
-                // Material State
-                // In / Out
-                case nameof(MaterialInOut.MaterialState):
-                    {
-                        ComboBoxField MaterialStateField = field as ComboBoxField;
 
-                        MaterialState MaterialState = (MaterialState)MaterialStateField.Value;
-
-                        if(MaterialState == MaterialState.Changement)
-                        {
-                            EntryForm.Fields[nameof(MaterialInOut.IsMaterialInStock)].Show();
-                            EntryForm.Fields[nameof(MaterialInOut.Service)].Show();
-                            EntryForm.Fields[nameof(MaterialInOut.OutDate)].Show();
-                            EntryForm.Fields[nameof(MaterialInOut.OutReason)].Show();
-                        }
-
-                    }
-                    break;
-                // In
-                case nameof(MaterialInOut.IsMaterialInStock):
-                    {
                     }
                     break;
             }
-
-
             }
     }
 }

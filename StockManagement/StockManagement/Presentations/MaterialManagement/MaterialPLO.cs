@@ -59,6 +59,10 @@ namespace StockManagement.Presentations.MaterialManagement
                             List<Location> lc = new LocationBLO(db).LocationsByService(service);
                             LocationField.DataSource = lc;
                         }
+                        else
+                        {
+                            EntryForm.Fields[nameof(MaterialInOut.Location)].Hide();
+                        }
 
 
                     }

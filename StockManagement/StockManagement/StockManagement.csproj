@@ -100,6 +100,7 @@
     <Compile Include="BLL\MaterialBLO.cs" />
     <Compile Include="BLL\MaterialCategoryBLO.cs" />
     <Compile Include="BLL\EmployeeBLO.cs" />
+    <Compile Include="BLL\MaterialInOutBLO.cs" />
     <Compile Include="BLL\MaterialsManagement\PrintMaterialsListByLocation.cs" />
     <Compile Include="BLL\MaterialsManagement\PrintMaterialsListByService.cs" />
     <Compile Include="BLL\PrintManagement\PrintPage.cs" />
@@ -111,7 +112,34 @@
     <Compile Include="Entities\Mail\MailConfiguration.cs" />
     <Compile Include="Entities\Mail\Reciever.cs" />
     <Compile Include="Entities\Mail\Sender.cs" />
+    <Compile Include="Entities\Materials\MaterialRepair.cs" />
     <Compile Include="Entities\Materials\Material.cs" />
+    <Compile Include="Entities\MaterialTransfer.cs" />
+    <Compile Include="Entities\Resources\MaterialInOut\MaterialInOut.fr.Designer.cs">
+      <DependentUpon>MaterialInOut.fr.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Entities\Resources\MaterialRepair\MaterialRepair.fr.Designer.cs">
+      <DependentUpon>MaterialRepair.fr.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Entities\Resources\MaterialRepair\MaterialRepair.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MaterialRepair.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\Resources\MaterialTransfer\MaterialTransfer.fr.Designer.cs">
+      <DependentUpon>MaterialTransfer.fr.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Entities\Resources\MaterialTransfer\MaterialTransfer.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MaterialTransfer.resx</DependentUpon>
+    </Compile>
     <Compile Include="Entities\Societe\Location.cs" />
     <Compile Include="Entities\Materials\MaterialInOut.cs" />
     <Compile Include="Entities\Materials\MaterialCategory.cs" />
@@ -222,7 +250,6 @@
       <DependentUpon>Societe.resx</DependentUpon>
     </Compile>
     <Compile Include="Entities\Societe\Service.cs" />
-    <Compile Include="Enumerations\MaterialState.cs" />
     <Compile Include="Enumerations\PhysicalState.cs" />
     <Compile Include="Libs\ITextSharp\PdfFile.cs" />
     <Compile Include="Migrations\201705231417249_Create_data.cs" />
@@ -261,9 +288,67 @@
     <Compile Include="Migrations\201705241000256_Update_mIO_c4.Designer.cs">
       <DependentUpon>201705241000256_Update_mIO_c4.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201705241824513_Update_MIO_Clas5.cs" />
+    <Compile Include="Migrations\201705241824513_Update_MIO_Clas5.Designer.cs">
+      <DependentUpon>201705241824513_Update_MIO_Clas5.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201705241831011_u6.cs" />
+    <Compile Include="Migrations\201705241831011_u6.Designer.cs">
+      <DependentUpon>201705241831011_u6.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201705241833181_u7.cs" />
+    <Compile Include="Migrations\201705241833181_u7.Designer.cs">
+      <DependentUpon>201705241833181_u7.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201705242310321_Up_M_c.cs" />
+    <Compile Include="Migrations\201705242310321_Up_M_c.Designer.cs">
+      <DependentUpon>201705242310321_Up_M_c.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201705242314434_Up_m_c2.cs" />
+    <Compile Include="Migrations\201705242314434_Up_m_c2.Designer.cs">
+      <DependentUpon>201705242314434_Up_m_c2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201705242321074_Add_MR_Class.cs" />
+    <Compile Include="Migrations\201705242321074_Add_MR_Class.Designer.cs">
+      <DependentUpon>201705242321074_Add_MR_Class.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201705242340556_D1.cs" />
+    <Compile Include="Migrations\201705242340556_D1.Designer.cs">
+      <DependentUpon>201705242340556_D1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201705242344064_Add_RM_cl.cs" />
+    <Compile Include="Migrations\201705242344064_Add_RM_cl.Designer.cs">
+      <DependentUpon>201705242344064_Add_RM_cl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201705242347017_Create_mater.cs" />
+    <Compile Include="Migrations\201705242347017_Create_mater.Designer.cs">
+      <DependentUpon>201705242347017_Create_mater.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201705242358400_Update_m_c.cs" />
+    <Compile Include="Migrations\201705242358400_Update_m_c.Designer.cs">
+      <DependentUpon>201705242358400_Update_m_c.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201705250010364_Up11.cs" />
+    <Compile Include="Migrations\201705250010364_Up11.Designer.cs">
+      <DependentUpon>201705250010364_Up11.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201705250040401_Create_TM.cs" />
+    <Compile Include="Migrations\201705250040401_Create_TM.Designer.cs">
+      <DependentUpon>201705250040401_Create_TM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201705250044478_Add_mc_c.cs" />
+    <Compile Include="Migrations\201705250044478_Add_mc_c.Designer.cs">
+      <DependentUpon>201705250044478_Add_mc_c.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201705250049174_Up88.cs" />
+    <Compile Include="Migrations\201705250049174_Up88.Designer.cs">
+      <DependentUpon>201705250049174_Up88.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Presentations\MaterialManagement\MaterialInOutPLO.cs" />
     <Compile Include="Presentations\MaterialManagement\MaterialPLO.cs" />
+    <Compile Include="Presentations\MaterialManagement\MaterialRepairPLO.cs" />
+    <Compile Include="Presentations\MaterialManagement\MaterialTransferPLO.cs" />
     <Compile Include="Presentations\MaterialManger\FormAjouterGroupe.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -334,6 +419,10 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>MaterialCategory.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="Entities\Resources\MaterialInOut\MaterialInOut.fr.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>MaterialInOut.fr.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="Entities\Resources\MaterialInOut\MaterialInOut.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>MaterialInOut.Designer.cs</LastGenOutput>
@@ -349,6 +438,22 @@
     <EmbeddedResource Include="Entities\Resources\Employee\Employee.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Employee.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Entities\Resources\MaterialRepair\MaterialRepair.fr.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>MaterialRepair.fr.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Entities\Resources\MaterialRepair\MaterialRepair.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>MaterialRepair.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Entities\Resources\MaterialTransfer\MaterialTransfer.fr.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>MaterialTransfer.fr.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Entities\Resources\MaterialTransfer\MaterialTransfer.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>MaterialTransfer.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Entities\Resources\Material\Material.fr.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -409,6 +514,48 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201705241000256_Update_mIO_c4.resx">
       <DependentUpon>201705241000256_Update_mIO_c4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705241824513_Update_MIO_Clas5.resx">
+      <DependentUpon>201705241824513_Update_MIO_Clas5.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705241831011_u6.resx">
+      <DependentUpon>201705241831011_u6.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705241833181_u7.resx">
+      <DependentUpon>201705241833181_u7.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705242310321_Up_M_c.resx">
+      <DependentUpon>201705242310321_Up_M_c.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705242314434_Up_m_c2.resx">
+      <DependentUpon>201705242314434_Up_m_c2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705242321074_Add_MR_Class.resx">
+      <DependentUpon>201705242321074_Add_MR_Class.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705242340556_D1.resx">
+      <DependentUpon>201705242340556_D1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705242344064_Add_RM_cl.resx">
+      <DependentUpon>201705242344064_Add_RM_cl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705242347017_Create_mater.resx">
+      <DependentUpon>201705242347017_Create_mater.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705242358400_Update_m_c.resx">
+      <DependentUpon>201705242358400_Update_m_c.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705250010364_Up11.resx">
+      <DependentUpon>201705250010364_Up11.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705250040401_Create_TM.resx">
+      <DependentUpon>201705250040401_Create_TM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705250044478_Add_mc_c.resx">
+      <DependentUpon>201705250044478_Add_mc_c.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705250049174_Up88.resx">
+      <DependentUpon>201705250049174_Up88.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentations\MaterialManger\FormAjouterGroupe.resx">
       <DependentUpon>FormAjouterGroupe.cs</DependentUpon>

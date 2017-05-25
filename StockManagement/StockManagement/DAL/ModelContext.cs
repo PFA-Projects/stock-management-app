@@ -54,7 +54,8 @@ namespace StockManagement.DAL
         public virtual DbSet<Employee> Personnes { get; set; }
         public virtual DbSet<Service> Services { get; set; }
         public virtual DbSet<Material> Materials { get; set; }
-
+        public virtual DbSet<MaterialRepair> MaterialsRepair { get; set; }
+        public virtual DbSet<MaterialTransfer> MaterialTransfers { get; set; }
         //
         // Mail Management : Entities
         public virtual DbSet<MailConfiguration> MailConfigurations { get; set; }

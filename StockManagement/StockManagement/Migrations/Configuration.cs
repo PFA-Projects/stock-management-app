@@ -156,12 +156,18 @@
             context.SaveChanges();
 
             //
-            // Societe
-            //Authorization SocieteAuthorizations = new Authorization();
-            //SocieteAuthorizations.BusinessEntity = typeof(Societe).FullName;
-            //RoleAdmin.Authorizations.Add(SocieteAuthorizations);
+            // Material Repair
+            Authorization MaterialRepairAuthorizations = new Authorization();
+            MaterialRepairAuthorizations.BusinessEntity = typeof(MaterialRepair).FullName;
+            RoleAdmin.Authorizations.Add(MaterialRepairAuthorizations);
 
             context.SaveChanges();
+
+            //
+            // Material Transfer
+            //Authorization MaterialTransferAuthorizations = new Authorization();
+            //MaterialTransferAuthorizations.BusinessEntity = typeof(MaterialTransfer).FullName;
+            //RoleAdmin.Authorizations.Add(MaterialTransferAuthorizations);
 
 
 

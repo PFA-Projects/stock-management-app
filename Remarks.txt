@@ -1,2 +1,14 @@
  1 - Group box hide and show using PLO
  2 - IsFilterEmpty For Enumeration List
+ 3 - Update Material Service In MaterialInOut Using BLO
+ 4 - multiline (InReason)
+ 5 - repair material ( Out of  stock ?)
+
+
+
+Remarks : IsInStock Change
+
+
+
+
+Material Transfer !!

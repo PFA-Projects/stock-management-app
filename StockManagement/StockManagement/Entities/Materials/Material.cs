@@ -20,6 +20,9 @@ namespace StockManagement.Entities
     [PresentationLogic(TypePLO = typeof(MaterialPLO))]
     public class Material:BaseEntity
     {
+        [DataGrid]
+        public bool IsInStock { get; set; }
+
         [EntryForm(GroupeBox ="")]
         [DataGrid]
         public String InventoryNumber { get; set; }
@@ -36,7 +39,9 @@ namespace StockManagement.Entities
         [DataGrid]
         public LocalizedString Model { get; set; }
 
-
+        [EntryForm]
+        [DataGrid]
+        public String Provider { get; set; }
 
         [EntryForm]
         [DataGrid]
@@ -70,7 +75,13 @@ namespace StockManagement.Entities
         [DataGrid]
         public int NBRE { get; set; }
 
-        
+        [EntryForm]
+        public DateTime UpdateServiceDate { get; set; }
+        //
+        public Material()
+        {
+            UpdateServiceDate = DateTime.Now;
+        }
 
         /// Relations
         /// 
@@ -79,8 +90,9 @@ namespace StockManagement.Entities
         [DataGrid]
         public Delivery Delivery { get; set; }
 
+        // Part In Out
         [Relationship(Relation = RelationshipAttribute.Relations.ManyToOne)]
-        [EntryForm(GroupeBox = "", GroupeBoxOrder = 1,isDefaultIsEmpty =true)]
+        [EntryForm(GroupeBox = "", GroupeBoxOrder = 1, isDefaultIsEmpty = true)]
         [DataGrid]
         public Service Service { get; set; }
 
