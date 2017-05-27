@@ -1,10 +1,10 @@
 namespace StockManagement.DAL
 {
     using App.Gwin.Entities.Application;
-    using App.Gwin.Entities.ContactInformations;
     using App.Gwin.Entities.Secrurity.Authentication;
     using App.Gwin.Entities.Secrurity.Autorizations;
     using Entities;
+    using Entities.ContactInformations;
     using System.Data.Entity;
 
     public class ModelContext : DbContext
