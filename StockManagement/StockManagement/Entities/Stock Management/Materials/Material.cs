@@ -8,20 +8,19 @@ using StockManagement.Enumerations;
 using StockManagement.Presentations.MaterialManagement;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace StockManagement.Entities
 {
-    [GwinEntity(Localizable = true, DisplayMember = "InventoryNumber")]
+    [GwinEntity(Localizable = true, DisplayMember = "SerieNumber")]
     [ManagementForm(Width = 800, TitrePageGridView = "Service_Grid_Title", TitreButtonAjouter = "btn_add_MG")]
     [Menu(Group = "Materiels")]
     [PresentationLogic(TypePLO = typeof(MaterialPLO))]
     public class Material:BaseEntity
     {
-        [DataGrid]
-        public bool IsInStock { get; set; }
 
         [EntryForm(GroupeBox ="")]
         [DataGrid]
@@ -90,22 +89,13 @@ namespace StockManagement.Entities
         [DataGrid]
         public Delivery Delivery { get; set; }
 
-        // Part In Out
-        [Relationship(Relation = RelationshipAttribute.Relations.ManyToOne)]
-        [EntryForm(GroupeBox = "", GroupeBoxOrder = 1, isDefaultIsEmpty = true)]
-        [DataGrid]
-        public Service Service { get; set; }
-
-
-
-        [Relationship(Relation = RelationshipAttribute.Relations.ManyToOne)]
-        [EntryForm(isDefaultIsEmpty = true)]
-        [DataGrid]
-        public Location Location { get; set; }
+       
 
         [Relationship(Relation = RelationshipAttribute.Relations.ManyToOne)]
         [EntryForm(isDefaultIsEmpty = true)]
         [DataGrid]
         public MaterialCategory Materialcategory { get; set; }
+
+
     }
 }

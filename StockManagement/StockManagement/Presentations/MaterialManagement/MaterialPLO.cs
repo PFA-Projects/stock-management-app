@@ -20,8 +20,7 @@ namespace StockManagement.Presentations.MaterialManagement
     {
         public void FormAfterInit(BaseEntryForm EntryForm)
         {
-            // Location
-            EntryForm.Fields[nameof(Material.Location)].Hide();
+            
 
            // EntryForm.GroupsBoxes[]
             // Physical State Explication
@@ -46,29 +45,7 @@ namespace StockManagement.Presentations.MaterialManagement
 
             switch (field.Name)
             {
-                // Location
-                case nameof(Material.Service):
-                    {
-                        ManyToOneField servicefield = field as ManyToOneField;
-
-                        Service service = servicefield.SelectedItem as Service;
-                  
-                        if (service != null)
-                        {
-                            EntryForm.Fields[nameof(Material.Location)].Show();
-                            
-                            ManyToOneField LocationField = EntryForm.Fields[nameof(Material.Location)] as ManyToOneField;
-                            List<Location> lc = new LocationBLO(db).LocationsByService(service);
-                            LocationField.DataSource = lc;
-                        }
-                        else
-                        {
-                            EntryForm.Fields[nameof(MaterialInOut.Location)].Hide();
-                        }
-
-
-                    }
-                    break;
+               
                 // Physical State Explication
                 case nameof(Material.PhysicalState):
                     {

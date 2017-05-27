@@ -101,6 +101,7 @@
     <Compile Include="BAL\MaterialCategoryBLO.cs" />
     <Compile Include="BAL\EmployeeBLO.cs" />
     <Compile Include="BAL\MaterialInOutBLO.cs" />
+    <Compile Include="BAL\MaterialRepairBLO.cs" />
     <Compile Include="BAL\MaterialsManagement\PrintMaterialsListByLocation.cs" />
     <Compile Include="BAL\MaterialsManagement\PrintMaterialsListByService.cs" />
     <Compile Include="BAL\PrintManagement\PrintPage.cs" />
@@ -301,123 +302,15 @@
     </Compile>
     <Compile Include="Entities\Stock Management\Societe\Service.cs" />
     <Compile Include="Enumerations\PhysicalState.cs" />
-    <Compile Include="Libs\ITextSharp\PdfFile.cs" />
-    <Compile Include="Migrations\201705231417249_Create_data.cs" />
-    <Compile Include="Migrations\201705231417249_Create_data.Designer.cs">
-      <DependentUpon>201705231417249_Create_data.cs</DependentUpon>
+    <Compile Include="Migrations\201705262233572_Create_data.cs" />
+    <Compile Include="Migrations\201705262233572_Create_data.Designer.cs">
+      <DependentUpon>201705262233572_Create_data.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201705231422575_Up2.cs" />
-    <Compile Include="Migrations\201705231422575_Up2.Designer.cs">
-      <DependentUpon>201705231422575_Up2.cs</DependentUpon>
+    <Compile Include="Migrations\201705262244546_Up_Mr_c1.cs" />
+    <Compile Include="Migrations\201705262244546_Up_Mr_c1.Designer.cs">
+      <DependentUpon>201705262244546_Up_Mr_c1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201705231514043_Update_Material3.cs" />
-    <Compile Include="Migrations\201705231514043_Update_Material3.Designer.cs">
-      <DependentUpon>201705231514043_Update_Material3.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201705231708364_Add_mail_classes1.cs" />
-    <Compile Include="Migrations\201705231708364_Add_mail_classes1.Designer.cs">
-      <DependentUpon>201705231708364_Add_mail_classes1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201705231713133_Update_Mail_Classes2.cs" />
-    <Compile Include="Migrations\201705231713133_Update_Mail_Classes2.Designer.cs">
-      <DependentUpon>201705231713133_Update_Mail_Classes2.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201705240937387_Upd_MIO_clas1.cs" />
-    <Compile Include="Migrations\201705240937387_Upd_MIO_clas1.Designer.cs">
-      <DependentUpon>201705240937387_Upd_MIO_clas1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201705240948474_Up_MIO_Clas2.cs" />
-    <Compile Include="Migrations\201705240948474_Up_MIO_Clas2.Designer.cs">
-      <DependentUpon>201705240948474_Up_MIO_Clas2.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201705240958112_Up_MIO_C3.cs" />
-    <Compile Include="Migrations\201705240958112_Up_MIO_C3.Designer.cs">
-      <DependentUpon>201705240958112_Up_MIO_C3.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201705241000256_Update_mIO_c4.cs" />
-    <Compile Include="Migrations\201705241000256_Update_mIO_c4.Designer.cs">
-      <DependentUpon>201705241000256_Update_mIO_c4.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201705241824513_Update_MIO_Clas5.cs" />
-    <Compile Include="Migrations\201705241824513_Update_MIO_Clas5.Designer.cs">
-      <DependentUpon>201705241824513_Update_MIO_Clas5.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201705241831011_u6.cs" />
-    <Compile Include="Migrations\201705241831011_u6.Designer.cs">
-      <DependentUpon>201705241831011_u6.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201705241833181_u7.cs" />
-    <Compile Include="Migrations\201705241833181_u7.Designer.cs">
-      <DependentUpon>201705241833181_u7.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201705242310321_Up_M_c.cs" />
-    <Compile Include="Migrations\201705242310321_Up_M_c.Designer.cs">
-      <DependentUpon>201705242310321_Up_M_c.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201705242314434_Up_m_c2.cs" />
-    <Compile Include="Migrations\201705242314434_Up_m_c2.Designer.cs">
-      <DependentUpon>201705242314434_Up_m_c2.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201705242321074_Add_MR_Class.cs" />
-    <Compile Include="Migrations\201705242321074_Add_MR_Class.Designer.cs">
-      <DependentUpon>201705242321074_Add_MR_Class.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201705242340556_D1.cs" />
-    <Compile Include="Migrations\201705242340556_D1.Designer.cs">
-      <DependentUpon>201705242340556_D1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201705242344064_Add_RM_cl.cs" />
-    <Compile Include="Migrations\201705242344064_Add_RM_cl.Designer.cs">
-      <DependentUpon>201705242344064_Add_RM_cl.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201705242347017_Create_mater.cs" />
-    <Compile Include="Migrations\201705242347017_Create_mater.Designer.cs">
-      <DependentUpon>201705242347017_Create_mater.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201705242358400_Update_m_c.cs" />
-    <Compile Include="Migrations\201705242358400_Update_m_c.Designer.cs">
-      <DependentUpon>201705242358400_Update_m_c.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201705250010364_Up11.cs" />
-    <Compile Include="Migrations\201705250010364_Up11.Designer.cs">
-      <DependentUpon>201705250010364_Up11.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201705250040401_Create_TM.cs" />
-    <Compile Include="Migrations\201705250040401_Create_TM.Designer.cs">
-      <DependentUpon>201705250040401_Create_TM.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201705250044478_Add_mc_c.cs" />
-    <Compile Include="Migrations\201705250044478_Add_mc_c.Designer.cs">
-      <DependentUpon>201705250044478_Add_mc_c.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201705250049174_Up88.cs" />
-    <Compile Include="Migrations\201705250049174_Up88.Designer.cs">
-      <DependentUpon>201705250049174_Up88.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201705251038217_Upd_MR_c.cs" />
-    <Compile Include="Migrations\201705251038217_Upd_MR_c.Designer.cs">
-      <DependentUpon>201705251038217_Upd_MR_c.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201705251048494_Create_MailConfig_Class.cs" />
-    <Compile Include="Migrations\201705251048494_Create_MailConfig_Class.Designer.cs">
-      <DependentUpon>201705251048494_Create_MailConfig_Class.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201705251226254_Create_Class_Receiver.cs" />
-    <Compile Include="Migrations\201705251226254_Create_Class_Receiver.Designer.cs">
-      <DependentUpon>201705251226254_Create_Class_Receiver.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201705251319448_Add_Sender_Class.cs" />
-    <Compile Include="Migrations\201705251319448_Add_Sender_Class.Designer.cs">
-      <DependentUpon>201705251319448_Add_Sender_Class.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201705251332084_Create_Arrival_Class.cs" />
-    <Compile Include="Migrations\201705251332084_Create_Arrival_Class.Designer.cs">
-      <DependentUpon>201705251332084_Create_Arrival_Class.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201705251341379_Create_Departure_Class.cs" />
-    <Compile Include="Migrations\201705251341379_Create_Departure_Class.Designer.cs">
-      <DependentUpon>201705251341379_Create_Departure_Class.cs</DependentUpon>
-    </Compile>
+    <Compile Include="Migrations\Libs\ITextSharp\PdfFile.cs" />
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Presentations\MaterialManagement\MaterialInOutPLO.cs" />
     <Compile Include="Presentations\MaterialManagement\MaterialPLO.cs" />
@@ -602,92 +495,11 @@
       <LastGenOutput>Societe.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="FormMenuApplication.resx" />
-    <EmbeddedResource Include="Migrations\201705231417249_Create_data.resx">
-      <DependentUpon>201705231417249_Create_data.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201705262233572_Create_data.resx">
+      <DependentUpon>201705262233572_Create_data.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201705231422575_Up2.resx">
-      <DependentUpon>201705231422575_Up2.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201705231514043_Update_Material3.resx">
-      <DependentUpon>201705231514043_Update_Material3.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201705231708364_Add_mail_classes1.resx">
-      <DependentUpon>201705231708364_Add_mail_classes1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201705231713133_Update_Mail_Classes2.resx">
-      <DependentUpon>201705231713133_Update_Mail_Classes2.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201705240937387_Upd_MIO_clas1.resx">
-      <DependentUpon>201705240937387_Upd_MIO_clas1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201705240948474_Up_MIO_Clas2.resx">
-      <DependentUpon>201705240948474_Up_MIO_Clas2.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201705240958112_Up_MIO_C3.resx">
-      <DependentUpon>201705240958112_Up_MIO_C3.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201705241000256_Update_mIO_c4.resx">
-      <DependentUpon>201705241000256_Update_mIO_c4.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201705241824513_Update_MIO_Clas5.resx">
-      <DependentUpon>201705241824513_Update_MIO_Clas5.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201705241831011_u6.resx">
-      <DependentUpon>201705241831011_u6.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201705241833181_u7.resx">
-      <DependentUpon>201705241833181_u7.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201705242310321_Up_M_c.resx">
-      <DependentUpon>201705242310321_Up_M_c.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201705242314434_Up_m_c2.resx">
-      <DependentUpon>201705242314434_Up_m_c2.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201705242321074_Add_MR_Class.resx">
-      <DependentUpon>201705242321074_Add_MR_Class.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201705242340556_D1.resx">
-      <DependentUpon>201705242340556_D1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201705242344064_Add_RM_cl.resx">
-      <DependentUpon>201705242344064_Add_RM_cl.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201705242347017_Create_mater.resx">
-      <DependentUpon>201705242347017_Create_mater.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201705242358400_Update_m_c.resx">
-      <DependentUpon>201705242358400_Update_m_c.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201705250010364_Up11.resx">
-      <DependentUpon>201705250010364_Up11.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201705250040401_Create_TM.resx">
-      <DependentUpon>201705250040401_Create_TM.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201705250044478_Add_mc_c.resx">
-      <DependentUpon>201705250044478_Add_mc_c.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201705250049174_Up88.resx">
-      <DependentUpon>201705250049174_Up88.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201705251038217_Upd_MR_c.resx">
-      <DependentUpon>201705251038217_Upd_MR_c.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201705251048494_Create_MailConfig_Class.resx">
-      <DependentUpon>201705251048494_Create_MailConfig_Class.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201705251226254_Create_Class_Receiver.resx">
-      <DependentUpon>201705251226254_Create_Class_Receiver.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201705251319448_Add_Sender_Class.resx">
-      <DependentUpon>201705251319448_Add_Sender_Class.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201705251332084_Create_Arrival_Class.resx">
-      <DependentUpon>201705251332084_Create_Arrival_Class.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201705251341379_Create_Departure_Class.resx">
-      <DependentUpon>201705251341379_Create_Departure_Class.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201705262244546_Up_Mr_c1.resx">
+      <DependentUpon>201705262244546_Up_Mr_c1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentations\MaterialManger\FormAjouterGroupe.resx">
       <DependentUpon>FormAjouterGroupe.cs</DependentUpon>
@@ -716,7 +528,9 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>SanteHeader.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <None Include="App.config" />
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

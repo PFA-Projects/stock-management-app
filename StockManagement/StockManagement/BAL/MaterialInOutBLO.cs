@@ -1,7 +1,6 @@
 ﻿// Mariam Ait Al
 // 2017
-
-using StockManagement.BAL;
+using StockManagement.BLL;
 using StockManagement.DAL;
 using StockManagement.Entities;
 using System;
@@ -12,32 +11,43 @@ using System.Text;
 using System.Threading.Tasks;
 using App.Gwin.Entities;
 
-namespace StockManagement.BLL
+namespace StockManagement.BAL
 {
-    /// <summary>
-    /// fr : Gestion des Materiels Entrees-Sorties
-    /// en : Materials In-Out Management
-    /// </summary>
     public class MaterialInOutBLO:BaseBLO<MaterialInOut>
     {
+       
+        public MaterialInOutBLO(DbContext context, Type typeDbContext) : base(context, typeDbContext)
+        {
+           
+        }
+
+
+        public MaterialInOutBLO(DbContext context):this(context,null)
+        {
+
+        }
+        public MaterialInOutBLO() : this(null,null) { }
+
+        public MaterialInOutBLO(Type typeDbContext):this(null,typeDbContext)
+        {
+        }
+
+        //
         ModelContext db = new ModelContext();
 
-        public MaterialInOutBLO(DbContext context) : base(context)
+
+        public List<MaterialInOut> GetMIOByMaterial(Material Material)
         {
+            //var query = from mio in db.MaterialsAccessexit
+            //            where mio.Material.Id == Material.Id
+            //            //orderby(mio.DateCreation)
+            //            select mio;
+            //return query.ToList();
+            return db.MaterialsAccessexit.Where(r => r.Material.Id == Material.Id).OrderByDescending(r => r.DateCreation).ToList<MaterialInOut>();
         }
 
-        public MaterialInOutBLO() : base()
-        {
-        }
+       
 
-        //public override int Save(MaterialInOut item)
-        //{
-        //    Material Material = item.Material;
-        //    Material.Service = item.Service;
-        //    Material.Location = item.Location;
-        //    new MaterialBLO(db).Save(Material);
-        //    db.MaterialsAccessexit.Add(item);
-        //    return db.SaveChanges();
-        //}
+
     }
 }

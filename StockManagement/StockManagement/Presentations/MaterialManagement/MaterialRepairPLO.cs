@@ -19,8 +19,6 @@ namespace StockManagement.Presentations.MaterialManagement
     {
         public void FormAfterInit(BaseEntryForm EntryForm)
         {
-            // Location
-            EntryForm.Fields[nameof(MaterialRepair.Location)].Hide();
         }
 
         public void FormBeforInit(BaseEntryForm EntryForm)
@@ -36,34 +34,7 @@ namespace StockManagement.Presentations.MaterialManagement
         ModelContext db = new ModelContext();
         public void ValueChanged(BaseEntryForm EntryForm, object sender)
         {
-            BaseField field = sender as BaseField;
-
-            switch (field.Name)
-            {
-                // Location
-                case nameof(MaterialRepair.Service):
-                    {
-                        ManyToOneField servicefield = field as ManyToOneField;
-
-                        Service service = servicefield.SelectedItem as Service;
-
-                        if (service != null)
-                        {
-                            EntryForm.Fields[nameof(MaterialRepair.Location)].Show();
-
-                            ManyToOneField LocationField = EntryForm.Fields[nameof(MaterialRepair.Location)] as ManyToOneField;
-                            List<Location> lc = new LocationBLO(db).LocationsByService(service);
-                            LocationField.DataSource = lc;
-                        }
-                        else
-                        {
-                            EntryForm.Fields[nameof(MaterialInOut.Location)].Hide();
-                        }
-
-
-                    }
-                    break;
-            }
+           
             }
     }
 }

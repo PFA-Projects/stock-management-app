@@ -18,38 +18,36 @@ namespace StockManagement.Entities
     /// </summary>
     /// 
     [GwinEntity(Localizable = true, DisplayMember = "Reference")]
-    [Menu(Group = "Maintenance")]
+    [Menu(Group = "Operations")]
     [ManagementForm(Width = 800, TitrePageGridView = "repair_Grid", TitreButtonAjouter = "btn_Add_RM")]
     [PresentationLogic(TypePLO = typeof(MaterialRepairPLO))]
     public class MaterialRepair:BaseEntity
     {
         [Relationship(Relation = RelationshipAttribute.Relations.ManyToOne)]
-        [EntryForm(GroupeBox = "Materials_Informations", GroupeBoxOrder = 1)]
+        [EntryForm(GroupeBox = "Materials_Informations", GroupeBoxOrder = 1,isDefaultIsEmpty =true)]
+        [Filter(Ordre = 1)]
+        [DataGrid(Ordre =1)]
         public Material Material { get; set; }
 
-        [Relationship(Relation = RelationshipAttribute.Relations.ManyToOne)]
-        [EntryForm(GroupeBox = "Materials_Informations", GroupeBoxOrder = 1,isDefaultIsEmpty =true)]
-        public Service Service { get; set; }
-
-        [Relationship(Relation = RelationshipAttribute.Relations.ManyToOne)]
-        [EntryForm(GroupeBox = "Materials_Informations", GroupeBoxOrder = 1,isDefaultIsEmpty =true)]
-        public Location Location { get; set; }
-
         [EntryForm(GroupeBox = "repair_Informations", GroupeBoxOrder = 2)]
+        [Filter(Ordre =2)]
+        [DataGrid(Ordre =2)]
         public String Societe { get; set; }
 
         [EntryForm(GroupeBox = "repair_Informations", GroupeBoxOrder = 2,MultiLine =true)]
+        [DataGrid(Ordre =3)]
         public String Description { get; set; }
 
         [EntryForm(GroupeBox = "repair_Informations", GroupeBoxOrder = 2)]
+        [DataGrid(Ordre = 4)]
         public DateTime OutDate { get; set; }
 
         [EntryForm(GroupeBox = "repair_Informations", GroupeBoxOrder = 2)]
+        [DataGrid(Ordre = 5)]
         public DateTime ReturnDate { get; set; }
 
-        // Get This Material Repairs Number 
-        [DataGrid]
-        public int TimesNumber { get; set; }
+        
+        
 
 
         public MaterialRepair()

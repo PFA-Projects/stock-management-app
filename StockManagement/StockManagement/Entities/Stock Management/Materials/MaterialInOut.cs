@@ -14,13 +14,13 @@ namespace StockManagement.Entities
     /// </summary>
     /// 
     [GwinEntity(Localizable = true, DisplayMember = "Reference")]
-    [Menu(Group = "Materiels")]
+    [Menu(Group = "Operations")]
     [PresentationLogic(TypePLO = typeof(MaterialInOutPLO))]
     public class MaterialInOut:BaseEntity
     {
         [EntryForm(GroupeBox ="Material_Informations",GroupeBoxOrder =1,WidthControl = 550,isDefaultIsEmpty =true,Ordre = 1)]
         [Relationship(Relation = RelationshipAttribute.Relations.ManyToOne)]
-        public Material Material { get; set; }
+        public virtual Material Material { get; set; }
 
         // In
         [EntryForm(GroupeBox = "In",GroupeBoxOrder =2,Ordre = 1)]
@@ -37,10 +37,10 @@ namespace StockManagement.Entities
         public String OutReason { get; set; }
         [EntryForm(isDefaultIsEmpty = true, GroupeBox = "Out", GroupeBoxOrder = 3)]
         [Relationship(Relation = RelationshipAttribute.Relations.ManyToOne)]
-        public Service Service { get; set; }
+        public virtual  Service Service { get; set; }
         [EntryForm(isDefaultIsEmpty =true, GroupeBox = "Out", GroupeBoxOrder = 3)]
         [Relationship(Relation = RelationshipAttribute.Relations.ManyToOne)]
-        public Location Location { get; set; }
+        public virtual Location Location { get; set; }
 
         //
         public String Observations { get; set; }

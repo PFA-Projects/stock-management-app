@@ -150,4 +150,7 @@
   <data name="repair_Grid" xml:space="preserve">
     <value>Reparations</value>
   </data>
+  <data name="TimesNumber" xml:space="preserve">
+    <value>Nombre de fois</value>
+  </data>
 </root>

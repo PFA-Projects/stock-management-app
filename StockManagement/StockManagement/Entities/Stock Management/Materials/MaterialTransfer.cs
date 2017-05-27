@@ -17,7 +17,7 @@ namespace StockManagement.Entities
     /// </summary>
     /// 
     [GwinEntity(Localizable = true, DisplayMember = "Reference")]
-    [Menu(Group = "Transfer")]
+    [Menu(Group = "Operations")]
     [ManagementForm(Width = 800, TitrePageGridView = "Tr_Grid", TitreButtonAjouter = "btn_Add_Tr")]
     [PresentationLogic(TypePLO = typeof(MaterialTransferPLO))]
     public class MaterialTransfer:BaseEntity

@@ -3,6 +3,7 @@
 
 using iTextSharp.text;
 using iTextSharp.text.pdf;
+using StockManagement.BAL;
 using StockManagement.DAL;
 using StockManagement.Entities;
 using System;
@@ -64,36 +65,36 @@ namespace StockManagement.BLL.MaterialsManagement
                     HeaderText.Add("NBRE");
                     PdfPTable table = file.CreateHeaderTable(doc, HeaderText);
 
-                    List<Material> MaterialsList = new MaterialBLO(db).GetMaterialsBylocation(Location);
+                   // List<Material> MaterialsList = new  MaterialBLO(db).GetMaterialsBylocation(Location);
 
-                    foreach (var item in MaterialsList)
-                    {
+                    //foreach (var item in MaterialsList)
+                    //{
 
-                        // Designation
-                        PdfPCell DesignationCell = new PdfPCell(new Phrase(item.Designation.French));
-                        DesignationCell.MinimumHeight = 32f;
-                        table.AddCell(DesignationCell);
+                    //    // Designation
+                    //    PdfPCell DesignationCell = new PdfPCell(new Phrase(item.Designation.French));
+                    //    DesignationCell.MinimumHeight = 32f;
+                    //    table.AddCell(DesignationCell);
 
-                        // Inventory Number
-                        PdfPCell InventoryNumberCell = new PdfPCell(new Phrase(item.InventoryNumber));
-                        InventoryNumberCell.MinimumHeight = 32f;
-                        table.AddCell(InventoryNumberCell);
+                    //    // Inventory Number
+                    //    PdfPCell InventoryNumberCell = new PdfPCell(new Phrase(item.InventoryNumber));
+                    //    InventoryNumberCell.MinimumHeight = 32f;
+                    //    table.AddCell(InventoryNumberCell);
 
-                        // Dimension
-                        PdfPCell DimensionCell = new PdfPCell(new Phrase(item.Dimension.ToString()));
-                        DimensionCell.MinimumHeight = 32f;
-                        table.AddCell(DimensionCell);
+                    //    // Dimension
+                    //    PdfPCell DimensionCell = new PdfPCell(new Phrase(item.Dimension.ToString()));
+                    //    DimensionCell.MinimumHeight = 32f;
+                    //    table.AddCell(DimensionCell);
 
-                        // Observation
-                        PdfPCell ObservationCell = new PdfPCell(new Phrase(item.Observation.French));
-                        ObservationCell.MinimumHeight = 32f;
-                        table.AddCell(ObservationCell);
+                    //    // Observation
+                    //    PdfPCell ObservationCell = new PdfPCell(new Phrase(item.Observation.French));
+                    //    ObservationCell.MinimumHeight = 32f;
+                    //    table.AddCell(ObservationCell);
 
-                        //NBRE
-                        PdfPCell NBRECell = new PdfPCell(new Phrase(item.NBRE.ToString()));
-                        NBRECell.MinimumHeight = 32f;
-                        table.AddCell(NBRECell);
-                    }
+                    //    //NBRE
+                    //    PdfPCell NBRECell = new PdfPCell(new Phrase(item.NBRE.ToString()));
+                    //    NBRECell.MinimumHeight = 32f;
+                    //    table.AddCell(NBRECell);
+                    //}
 
 
                     PdfContentByte cb = writer.DirectContent;
