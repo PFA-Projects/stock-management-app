@@ -9,10 +9,12 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>StockManagement</RootNamespace>
     <AssemblyName>StockManagement</AssemblyName>
-    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <TargetFrameworkProfile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -34,11 +36,13 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Castle.Core">
-      <HintPath>..\packages\Gwin Library\Castle.Core.dll</HintPath>
+    <Reference Include="Castle.Core, Version=3.3.0.0, Culture=neutral, PublicKeyToken=407dd0808d44fbdc, processorArchitecture=MSIL">
+      <HintPath>..\packages\Castle.Core.3.3.0\lib\net45\Castle.Core.dll</HintPath>
+      <Private>True</Private>
     </Reference>
-    <Reference Include="Castle.Windsor">
-      <HintPath>..\packages\Gwin Library\Castle.Windsor.dll</HintPath>
+    <Reference Include="Castle.Windsor, Version=3.4.0.0, Culture=neutral, PublicKeyToken=407dd0808d44fbdc, processorArchitecture=MSIL">
+      <HintPath>..\packages\Castle.Windsor.3.4.0\lib\net45\Castle.Windsor.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="EntityFramework">
       <HintPath>..\packages\Gwin Library\EntityFramework.dll</HintPath>
@@ -46,32 +50,29 @@
     <Reference Include="EntityFramework.SqlServer">
       <HintPath>..\packages\Gwin Library\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
-    <Reference Include="GwinApp">
-      <HintPath>..\packages\Gwin Library\GwinApp.dll</HintPath>
+    <Reference Include="FastExcel, Version=1.0.18.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\FastExcel.1.0.18\lib\net45\FastExcel.dll</HintPath>
+      <Private>True</Private>
     </Reference>
-    <Reference Include="itextsharp, Version=5.5.10.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>bin\Debug\itextsharp.dll</HintPath>
+    <Reference Include="GwinApp, Version=0.1.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\GwinApp.0.1.5\lib\net452\GwinApp.dll</HintPath>
+      <Private>True</Private>
     </Reference>
-    <Reference Include="itextsharp.pdfa, Version=5.5.10.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>bin\Debug\itextsharp.pdfa.dll</HintPath>
+    <Reference Include="itextsharp, Version=5.5.11.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\iTextSharp.5.5.11\lib\itextsharp.dll</HintPath>
+      <Private>True</Private>
     </Reference>
-    <Reference Include="itextsharp.xtra, Version=5.5.10.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>bin\Debug\itextsharp.xtra.dll</HintPath>
+    <Reference Include="MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.dll</HintPath>
+      <Private>True</Private>
     </Reference>
-    <Reference Include="LinqKit">
-      <HintPath>..\packages\Gwin Library\LinqKit.dll</HintPath>
+    <Reference Include="MetroFramework.Design, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Design.dll</HintPath>
+      <Private>True</Private>
     </Reference>
-    <Reference Include="MetroFramework">
-      <HintPath>..\packages\Gwin Library\MetroFramework.dll</HintPath>
-    </Reference>
-    <Reference Include="MetroFramework.Design">
-      <HintPath>..\packages\Gwin Library\MetroFramework.Design.dll</HintPath>
-    </Reference>
-    <Reference Include="MetroFramework.Fonts">
-      <HintPath>..\packages\Gwin Library\MetroFramework.Fonts.dll</HintPath>
+    <Reference Include="MetroFramework.Fonts, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Fonts.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="Spire.License">
       <HintPath>..\packages\Spire-Pdf\Spire.License.dll</HintPath>
@@ -86,7 +87,6 @@
     <Reference Include="System.Security" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
     <Reference Include="System.Deployment" />
     <Reference Include="System.Drawing" />
@@ -107,10 +107,24 @@
     <Compile Include="BAL\PrintManagement\PrintPage.cs" />
     <Compile Include="BAL\ServiceBLO.cs" />
     <Compile Include="DAL\ModelContext.cs" />
+    <Compile Include="Entities\ContactInformations\City.cs" />
+    <Compile Include="Entities\ContactInformations\ContactInformation.cs" />
+    <Compile Include="Entities\ContactInformations\Country.cs" />
+    <Compile Include="Entities\ContactInformations\Resources\City\City.ar.Designer.cs" />
+    <Compile Include="Entities\ContactInformations\Resources\City\City.Designer.cs" />
+    <Compile Include="Entities\ContactInformations\Resources\ContactInformationsMenu.Designer.cs" />
+    <Compile Include="Entities\ContactInformations\Resources\ContactInformation\ContactInformation.Designer.cs" />
+    <Compile Include="Entities\ContactInformations\Resources\Country\Country.ar.Designer.cs" />
+    <Compile Include="Entities\ContactInformations\Resources\Country\Country.Designer.cs" />
     <Compile Include="Entities\Mail Management\Arrival.cs" />
     <Compile Include="Entities\Mail Management\Departure.cs" />
     <Compile Include="Entities\Mail Management\MailConfiguration.cs" />
     <Compile Include="Entities\Mail Management\Receiver.cs" />
+    <Compile Include="Entities\Persons\Class1.cs" />
+    <Compile Include="Entities\Persons\Person.cs" />
+    <Compile Include="Entities\Persons\Resources\Person\Person.ar.Designer.cs" />
+    <Compile Include="Entities\Persons\Resources\Person\Person.Designer.cs" />
+    <Compile Include="Entities\Persons\Resources\Person\Person.fr.Designer.cs" />
     <Compile Include="Entities\Resources\Arrival\Arrival.fr.Designer.cs">
       <DependentUpon>Arrival.fr.resx</DependentUpon>
       <AutoGen>True</AutoGen>
@@ -301,6 +315,9 @@
       <DependentUpon>Societe.resx</DependentUpon>
     </Compile>
     <Compile Include="Entities\Stock Management\Societe\Service.cs" />
+    <Compile Include="Entities\TraineeManagement\Group.cs" />
+    <Compile Include="Entities\TraineeManagement\Group\Group.Designer.cs" />
+    <Compile Include="Entities\TraineeManagement\Trainee.cs" />
     <Compile Include="Enumerations\PhysicalState.cs" />
     <Compile Include="Migrations\201705262233572_Create_data.cs" />
     <Compile Include="Migrations\201705262233572_Create_data.Designer.cs">
@@ -310,8 +327,12 @@
     <Compile Include="Migrations\201705262244546_Up_Mr_c1.Designer.cs">
       <DependentUpon>201705262244546_Up_Mr_c1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201705271211148_Update1.cs" />
+    <Compile Include="Migrations\201705271211148_Update1.Designer.cs">
+      <DependentUpon>201705271211148_Update1.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Libs\ITextSharp\PdfFile.cs" />
-    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="DAL\Configuration.cs" />
     <Compile Include="Presentations\MaterialManagement\MaterialInOutPLO.cs" />
     <Compile Include="Presentations\MaterialManagement\MaterialPLO.cs" />
     <Compile Include="Presentations\MaterialManagement\MaterialRepairPLO.cs" />
@@ -338,6 +359,10 @@
     <Compile Include="Presentations\Print Materials List\By Service\FormPrintByService.Designer.cs">
       <DependentUpon>FormPrintByService.cs</DependentUpon>
     </Compile>
+    <Compile Include="Presentation\GwinAppMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\GwinAppMenu.Designer.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Resources\MarocHeaderresx.Designer.cs">
@@ -350,6 +375,21 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>SanteHeader.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Entities\ContactInformations\Resources\City\City.ar.resx" />
+    <EmbeddedResource Include="Entities\ContactInformations\Resources\City\City.fr.resx" />
+    <EmbeddedResource Include="Entities\ContactInformations\Resources\City\City.resx" />
+    <EmbeddedResource Include="Entities\ContactInformations\Resources\ContactInformationsMenu.ar.resx" />
+    <EmbeddedResource Include="Entities\ContactInformations\Resources\ContactInformationsMenu.fr.resx" />
+    <EmbeddedResource Include="Entities\ContactInformations\Resources\ContactInformationsMenu.resx" />
+    <EmbeddedResource Include="Entities\ContactInformations\Resources\ContactInformation\ContactInformation.ar.resx" />
+    <EmbeddedResource Include="Entities\ContactInformations\Resources\ContactInformation\ContactInformation.fr.resx" />
+    <EmbeddedResource Include="Entities\ContactInformations\Resources\ContactInformation\ContactInformation.resx" />
+    <EmbeddedResource Include="Entities\ContactInformations\Resources\Country\Country.ar.resx" />
+    <EmbeddedResource Include="Entities\ContactInformations\Resources\Country\Country.fr.resx" />
+    <EmbeddedResource Include="Entities\ContactInformations\Resources\Country\Country.resx" />
+    <EmbeddedResource Include="Entities\Persons\Resources\Person\Person.ar.resx" />
+    <EmbeddedResource Include="Entities\Persons\Resources\Person\Person.fr.resx" />
+    <EmbeddedResource Include="Entities\Persons\Resources\Person\Person.resx" />
     <EmbeddedResource Include="Entities\Resources\Arrival\Arrival.fr.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Arrival.fr.Designer.cs</LastGenOutput>
@@ -494,12 +534,21 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Societe.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="Entities\TraineeManagement\Group\Group.ar.resx" />
+    <EmbeddedResource Include="Entities\TraineeManagement\Group\Group.fr.resx" />
+    <EmbeddedResource Include="Entities\TraineeManagement\Group\Group.resx" />
+    <EmbeddedResource Include="Entities\TraineeManagement\Trainee\Trainee.ar.resx" />
+    <EmbeddedResource Include="Entities\TraineeManagement\Trainee\Trainee.fr.resx" />
+    <EmbeddedResource Include="Entities\TraineeManagement\Trainee\Trainee.resx" />
     <EmbeddedResource Include="FormMenuApplication.resx" />
     <EmbeddedResource Include="Migrations\201705262233572_Create_data.resx">
       <DependentUpon>201705262233572_Create_data.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201705262244546_Up_Mr_c1.resx">
       <DependentUpon>201705262244546_Up_Mr_c1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705271211148_Update1.resx">
+      <DependentUpon>201705271211148_Update1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentations\MaterialManger\FormAjouterGroupe.resx">
       <DependentUpon>FormAjouterGroupe.cs</DependentUpon>
@@ -510,6 +559,7 @@
     <EmbeddedResource Include="Presentations\Print Materials List\By Service\FormPrintByService.resx">
       <DependentUpon>FormPrintByService.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\GwinAppMenu.resx" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -541,6 +591,7 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="Template.xlsx" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Maroc.jpg" />
@@ -550,6 +601,13 @@
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\packages\GwinApp.0.1.5\build\GwinApp.targets" Condition="Exists('..\packages\GwinApp.0.1.5\build\GwinApp.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>Ce projet fait référence à des packages NuGet qui sont manquants sur cet ordinateur. Utilisez l'option de restauration des packages NuGet pour les télécharger. Pour plus d'informations, consultez http://go.microsoft.com/fwlink/?LinkID=322105. Le fichier manquant est : {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\GwinApp.0.1.5\build\GwinApp.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\GwinApp.0.1.5\build\GwinApp.targets'))" />
+  </Target>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">

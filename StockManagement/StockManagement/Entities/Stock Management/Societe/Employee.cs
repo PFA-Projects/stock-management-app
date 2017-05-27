@@ -3,7 +3,7 @@
 using App.Gwin.Attributes;
 using App.Gwin.Entities;
 using App.Gwin.Entities.MultiLanguage;
-using App.Gwin.Entities.Persons;
+using StockManagement.Entities.Persons;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -20,7 +20,7 @@ namespace StockManagement.Entities
     [GwinEntity(Localizable = true, DisplayMember = "Cin")]
     [Menu(Group = "Societe",Title ="Employe_Management")]
     [ManagementForm(Width = 800, TitrePageGridView = "Employe_Grid_Title", TitreButtonAjouter = "btn_Add_Employe")]
-    public class Employee:Person
+    public class Employee: Person
     {
        
 
