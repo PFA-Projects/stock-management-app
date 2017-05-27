@@ -61,6 +61,15 @@ namespace StockManagement.Entities.Resources.MaterialInOut {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Access To Stock.
+        /// </summary>
+        internal static string In {
+            get {
+                return ResourceManager.GetString("In", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to In Date.
         /// </summary>
         internal static string InDate {
@@ -79,11 +88,29 @@ namespace StockManagement.Entities.Resources.MaterialInOut {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Observation.
+        ///   Looks up a localized string similar to In Stock.
         /// </summary>
-        internal static string Observation {
+        internal static string InStock {
             get {
-                return ResourceManager.GetString("Observation", resourceCulture);
+                return ResourceManager.GetString("InStock", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Material Informations.
+        /// </summary>
+        internal static string Material_Informations {
+            get {
+                return ResourceManager.GetString("Material_Informations", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Exit From Stock.
+        /// </summary>
+        internal static string Out {
+            get {
+                return ResourceManager.GetString("Out", resourceCulture);
             }
         }
         
@@ -106,20 +133,11 @@ namespace StockManagement.Entities.Resources.MaterialInOut {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Materials ls In Out.
+        ///   Looks up a localized string similar to Materials  In Out.
         /// </summary>
         internal static string PluralName {
             get {
                 return ResourceManager.GetString("PluralName", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Reason.
-        /// </summary>
-        internal static string Reason {
-            get {
-                return ResourceManager.GetString("Reason", resourceCulture);
             }
         }
         

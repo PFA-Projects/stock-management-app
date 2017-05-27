@@ -117,28 +117,34 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="In" xml:space="preserve">
+    <value>Entree en Stock</value>
+  </data>
   <data name="InDate" xml:space="preserve">
-    <value>Date d'entree</value>
+    <value>Date Entree</value>
   </data>
   <data name="InReason" xml:space="preserve">
-    <value>Raison d'entree</value>
+    <value>Raison d'Entree</value>
   </data>
-  <data name="Observation" xml:space="preserve">
-    <value>Observation</value>
+  <data name="InStock" xml:space="preserve">
+    <value>Entree Stock</value>
+  </data>
+  <data name="Material_Informations" xml:space="preserve">
+    <value>Informations de Materiel</value>
+  </data>
+  <data name="Out" xml:space="preserve">
+    <value>Sortie de Stock</value>
   </data>
   <data name="OutDate" xml:space="preserve">
-    <value>Date de sortie</value>
+    <value>Date Sortie</value>
   </data>
   <data name="OutReason" xml:space="preserve">
-    <value>Raison de sortie</value>
+    <value>Raison de Sortie</value>
   </data>
   <data name="PluralName" xml:space="preserve">
-    <value>Entree Sorties Materiels</value>
-  </data>
-  <data name="Reason" xml:space="preserve">
-    <value>Raison</value>
+    <value>Entrees-Sorties</value>
   </data>
   <data name="SingularName" xml:space="preserve">
-    <value>Entree Sortie Materiel</value>
+    <value>Entree-Sortie</value>
   </data>
 </root>

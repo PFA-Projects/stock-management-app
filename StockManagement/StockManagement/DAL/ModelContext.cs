@@ -5,10 +5,7 @@ namespace StockManagement.DAL
     using App.Gwin.Entities.Secrurity.Authentication;
     using App.Gwin.Entities.Secrurity.Autorizations;
     using Entities;
-    using Entities.Materials;
-    using System;
     using System.Data.Entity;
-    using System.Linq;
 
     public class ModelContext : DbContext
     {
@@ -56,6 +53,15 @@ namespace StockManagement.DAL
         public virtual DbSet<Employee> Personnes { get; set; }
         public virtual DbSet<Service> Services { get; set; }
         public virtual DbSet<Material> Materials { get; set; }
+        public virtual DbSet<MaterialRepair> MaterialsRepair { get; set; }
+        public virtual DbSet<MaterialTransfer> MaterialTransfers { get; set; }
+        //
+        // Mail Management : Entities
+        public virtual DbSet<MailConfiguration> MailConfigurations { get; set; }
+        public virtual DbSet<Receiver> Receivers { get; set; }
+        public virtual DbSet<Sender> Senders { get; set; }
+        public virtual DbSet<Arrival> Arrivals { get; set; }
+        public virtual DbSet<Departure> Departurs { get; set; }
     }
 
     //public class MyEntity

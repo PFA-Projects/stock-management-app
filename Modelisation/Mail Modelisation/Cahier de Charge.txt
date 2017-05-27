@@ -1,0 +1,13 @@
+Arrivee (date,distinatiare,adresse ,object correspondance , transmission , image )
+depart (numeroorder , date , destinataire, adesse , objectcorres , transmiission , type(fk),designations,nbr , observations , chemin)
+
+type(id , description )
+admin ( Email , Mdp)
+**************************************
+1-Depart : (Rechercher par date / type)
+
+2-arriver :
+
+
+
+arrivee toujours interne

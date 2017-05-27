@@ -79,6 +79,15 @@ namespace StockManagement.Entities.Resources.Material {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Add Material.
+        /// </summary>
+        internal static string btn_add_MG {
+            get {
+                return ResourceManager.GetString("btn_add_MG", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Designation.
         /// </summary>
         internal static string Designation {
@@ -124,6 +133,15 @@ namespace StockManagement.Entities.Resources.Material {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to NBRE.
+        /// </summary>
+        internal static string NBRE {
+            get {
+                return ResourceManager.GetString("NBRE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Observation.
         /// </summary>
         internal static string Observation {
@@ -142,6 +160,15 @@ namespace StockManagement.Entities.Resources.Material {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Physical State Explication.
+        /// </summary>
+        internal static string PhysicalStateExplication {
+            get {
+                return ResourceManager.GetString("PhysicalStateExplication", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Materials.
         /// </summary>
         internal static string PluralName {
@@ -156,6 +183,15 @@ namespace StockManagement.Entities.Resources.Material {
         internal static string SerieNumber {
             get {
                 return ResourceManager.GetString("SerieNumber", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Materials.
+        /// </summary>
+        internal static string Service_Grid_Title {
+            get {
+                return ResourceManager.GetString("Service_Grid_Title", resourceCulture);
             }
         }
         
