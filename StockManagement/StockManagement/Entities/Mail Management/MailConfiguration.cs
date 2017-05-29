@@ -23,5 +23,10 @@ namespace StockManagement.Entities
         [DataGrid(WidthColonne =350)]
         [Filter(WidthControl = 300)]
         public String Adress { get; set; }
+
+
+        [EntryForm(GroupeBox = "Configuration", GroupeBoxOrder = 1, MultiLine = true)]
+        [DataGrid(WidthColonne = 350)]
+        public String Observations { get; set; }
     }
 }

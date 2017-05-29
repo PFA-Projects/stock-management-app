@@ -132,17 +132,23 @@
   <data name="Material_Informations" xml:space="preserve">
     <value>Informations de Materiel</value>
   </data>
+  <data name="Observations" xml:space="preserve">
+    <value>Observations</value>
+  </data>
   <data name="Out" xml:space="preserve">
     <value>Sortie de Stock</value>
   </data>
   <data name="OutDate" xml:space="preserve">
-    <value>Date Sortie</value>
+    <value>Date</value>
   </data>
   <data name="OutReason" xml:space="preserve">
-    <value>Raison de Sortie</value>
+    <value>Raison </value>
   </data>
   <data name="PluralName" xml:space="preserve">
     <value>Entrees-Sorties</value>
+  </data>
+  <data name="Service_Changement" xml:space="preserve">
+    <value>Detaills</value>
   </data>
   <data name="SingularName" xml:space="preserve">
     <value>Entree-Sortie</value>

@@ -18,31 +18,42 @@ namespace StockManagement.Entities
     [PresentationLogic(TypePLO = typeof(MaterialInOutPLO))]
     public class MaterialInOut:BaseEntity
     {
-        [EntryForm(GroupeBox ="Material_Informations",GroupeBoxOrder =1,WidthControl = 550,isDefaultIsEmpty =true,Ordre = 1)]
+        [EntryForm(GroupeBox ="Material_Informations",GroupeBoxOrder =1,isDefaultIsEmpty =true,Ordre = 1)]
         [Relationship(Relation = RelationshipAttribute.Relations.ManyToOne)]
+        [Filter(isDefaultIsEmpty = true,Ordre = 1,WidthControl = 250)]
+        [DataGrid(Ordre =1)]
         public virtual Material Material { get; set; }
 
         // In
-        [EntryForm(GroupeBox = "In",GroupeBoxOrder =2,Ordre = 1)]
+        //[EntryForm(GroupeBox = "In",GroupeBoxOrder =2,Ordre = 1)]
         public bool InStock { get; set; }
-        [EntryForm(GroupeBox = "In", GroupeBoxOrder = 2,Ordre =2)]
+        //[EntryForm(GroupeBox = "In", GroupeBoxOrder = 2,Ordre =2)]
         public DateTime InDate { get; set; }
-        [EntryForm(GroupeBox = "In", GroupeBoxOrder = 2,Ordre = 3, MultiLine =true)]
+        //[EntryForm(GroupeBox = "In", GroupeBoxOrder = 2,Ordre = 3, MultiLine =true)]
         public String InReason { get; set; }
 
         // Out 
-        [EntryForm(GroupeBox = "Out", GroupeBoxOrder = 3)]
+        [DataGrid(Ordre =4)]
+        [EntryForm(GroupeBox = "Service_Changement", GroupeBoxOrder = 2)]
         public DateTime OutDate { get; set; }
-        [EntryForm(GroupeBox = "Out", GroupeBoxOrder = 3,MultiLine =true)]
+
+        [DataGrid(Ordre =5)]
+        [EntryForm(GroupeBox = "Service_Changement", GroupeBoxOrder = 2,MultiLine =true)]
         public String OutReason { get; set; }
-        [EntryForm(isDefaultIsEmpty = true, GroupeBox = "Out", GroupeBoxOrder = 3)]
+
+        [DataGrid(Ordre =2)]
+        [EntryForm(isDefaultIsEmpty = true, GroupeBox = "Service_Changement", GroupeBoxOrder = 2)]
         [Relationship(Relation = RelationshipAttribute.Relations.ManyToOne)]
         public virtual  Service Service { get; set; }
-        [EntryForm(isDefaultIsEmpty =true, GroupeBox = "Out", GroupeBoxOrder = 3)]
+
+        [DataGrid(Ordre =3)]
+        [EntryForm(isDefaultIsEmpty =true, GroupeBox = "Service_Changement", GroupeBoxOrder = 2)]
         [Relationship(Relation = RelationshipAttribute.Relations.ManyToOne)]
         public virtual Location Location { get; set; }
 
         //
+        [EntryForm(GroupeBox = "Service_Changement",GroupeBoxOrder = 2)]
+        [DataGrid(Ordre =6)]
         public String Observations { get; set; }
 
         public MaterialInOut()

@@ -121,10 +121,13 @@
     <value>Date Livraison</value>
   </data>
   <data name="DeliveryReceiptNumber" xml:space="preserve">
-    <value>Nombre Bon Livraison</value>
+    <value>Num BonLivraison</value>
   </data>
   <data name="Market" xml:space="preserve">
     <value>Market</value>
+  </data>
+  <data name="Observations" xml:space="preserve">
+    <value>Observations</value>
   </data>
   <data name="PluralName" xml:space="preserve">
     <value>Livraisons</value>

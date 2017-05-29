@@ -130,9 +130,9 @@
     <value>Configurations</value>
   </data>
   <data name="PluralName" xml:space="preserve">
-    <value>Configuration des Courriers</value>
+    <value>Mail Configurations</value>
   </data>
   <data name="SingularName" xml:space="preserve">
-    <value>Configuration de Courrier</value>
+    <value>Mail Configuration</value>
   </data>
 </root>

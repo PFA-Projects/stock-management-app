@@ -25,12 +25,12 @@ namespace StockManagement.Entities
     {
         [Relationship(Relation = RelationshipAttribute.Relations.ManyToOne)]
         [EntryForm(GroupeBox = "Materials_Informations", GroupeBoxOrder = 1,isDefaultIsEmpty =true)]
-        [Filter(Ordre = 1)]
+        [Filter(Ordre = 1,WidthControl =250)]
         [DataGrid(Ordre =1)]
         public Material Material { get; set; }
 
         [EntryForm(GroupeBox = "repair_Informations", GroupeBoxOrder = 2)]
-        [Filter(Ordre =2)]
+        [Filter(Ordre =2, WidthControl = 250)]
         [DataGrid(Ordre =2)]
         public String Societe { get; set; }
 

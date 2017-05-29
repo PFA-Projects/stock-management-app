@@ -60,38 +60,7 @@ namespace StockManagement.BLL.MaterialsManagement
                     HeaderText.Add("NBRE");
                     PdfPTable table = file.CreateHeaderTable(doc, HeaderText);
 
-
-
-                    //List<Material> MaterialsList = new MaterialBLO(db).GetMaterialsByService(service);
-
-                    //foreach (var item in MaterialsList)
-                    //{
-
-                    //    // Designation
-                    //    PdfPCell DesignationCell = new PdfPCell(new Phrase(item.Designation.French));
-                    //    DesignationCell.MinimumHeight = 32f;
-                    //    table.AddCell(DesignationCell);
-
-                    //    // Inventory Number
-                    //    PdfPCell InventoryNumberCell = new PdfPCell(new Phrase(item.InventoryNumber));
-                    //    InventoryNumberCell.MinimumHeight = 32f;
-                    //    table.AddCell(InventoryNumberCell);
-
-                    //    // Dimension
-                    //    PdfPCell DimensionCell = new PdfPCell(new Phrase(item.Dimension.ToString()));
-                    //    DimensionCell.MinimumHeight = 32f;
-                    //    table.AddCell(DimensionCell);
-
-                    //    // Observation
-                    //    PdfPCell ObservationCell = new PdfPCell(new Phrase(item.Observation.French));
-                    //    ObservationCell.MinimumHeight = 32f;
-                    //    table.AddCell(ObservationCell);
-
-                    //    //NBRE
-                    //    PdfPCell NBRECell = new PdfPCell(new Phrase(item.NBRE.ToString()));
-                    //    NBRECell.MinimumHeight = 32f;
-                    //    table.AddCell(NBRECell);
-                    //}
+                    
                     ///////////////////////////////////////////////
 
                     foreach (var item in db.Materials)
@@ -99,7 +68,7 @@ namespace StockManagement.BLL.MaterialsManagement
                         List<MaterialInOut> InOutMaterial = new MaterialInOutBLO(db).GetMIOByMaterial(item);
                         if(InOutMaterial.Count > 0)
                         {
-                            MaterialInOut MIO = InOutMaterial[InOutMaterial.Count - 1];
+                            MaterialInOut MIO = InOutMaterial[0];
                             if (MIO.Service.Id ==Convert.ToInt32( service.Id))
                             {
                                 // Designation

@@ -15,24 +15,28 @@ namespace StockManagement.Entities
     /// fr : Livraison
     /// </summary>
     /// 
-    [GwinEntity(Localizable = true, DisplayMember = "Reference")]
+    [GwinEntity(Localizable = true, DisplayMember = "DeliveryReceiptNumber")]
     [Menu]
     public class Delivery:BaseEntity
     {
-        [EntryForm]
-        [DataGrid]
+        [EntryForm(Ordre =2)]
+        [DataGrid(Ordre =2)]
         //[Filter]
         public DateTime DeliveryDate { get; set; }
 
-        [EntryForm]
-        [DataGrid]
-        [Filter]
+        [EntryForm(Ordre =3)]
+        [DataGrid(Ordre = 3)]
         public LocalizedString Market { get; set; }
 
-        [EntryForm]
-        [DataGrid]
-       // [Filter]
+        [EntryForm(Ordre =1)]
+        [DataGrid(Ordre =1)]
+       [Filter]
         public int DeliveryReceiptNumber { get; set; }
+
+        [EntryForm(Ordre =4)]
+        [DataGrid(Ordre = 4)]
+        public String Observations { get; set; }
+
         //Initialize dateTime
         public Delivery()
         {

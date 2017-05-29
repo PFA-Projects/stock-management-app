@@ -96,6 +96,6 @@ namespace StockManagement.Entities
         [DataGrid]
         public MaterialCategory Materialcategory { get; set; }
 
-
+        
     }
 }

@@ -54,10 +54,7 @@ C:\Users\DELL\Desktop\stock-management-app\StockManagement\StockManagement\bin\D
 C:\Users\DELL\Desktop\stock-management-app\StockManagement\StockManagement\bin\Debug\ar\StockManagement.resources.dll
 C:\Users\DELL\Desktop\stock-management-app\StockManagement\StockManagement\bin\Debug\Castle.Core.dll
 C:\Users\DELL\Desktop\stock-management-app\StockManagement\StockManagement\bin\Debug\Castle.Windsor.dll
-C:\Users\DELL\Desktop\stock-management-app\StockManagement\StockManagement\bin\Debug\EntityFramework.dll
-C:\Users\DELL\Desktop\stock-management-app\StockManagement\StockManagement\bin\Debug\EntityFramework.SqlServer.dll
 C:\Users\DELL\Desktop\stock-management-app\StockManagement\StockManagement\bin\Debug\GwinApp.dll
-C:\Users\DELL\Desktop\stock-management-app\StockManagement\StockManagement\bin\Debug\LinqKit.dll
 C:\Users\DELL\Desktop\stock-management-app\StockManagement\StockManagement\bin\Debug\MetroFramework.Design.dll
 C:\Users\DELL\Desktop\stock-management-app\StockManagement\StockManagement\bin\Debug\MetroFramework.dll
 C:\Users\DELL\Desktop\stock-management-app\StockManagement\StockManagement\bin\Debug\MetroFramework.Fonts.dll
@@ -69,14 +66,11 @@ C:\Users\DELL\Desktop\stock-management-app\StockManagement\StockManagement\bin\D
 C:\Users\DELL\Desktop\stock-management-app\StockManagement\StockManagement\bin\Debug\Castle.Windsor.xml
 C:\Users\DELL\Desktop\stock-management-app\StockManagement\StockManagement\bin\Debug\EntityFramework.xml
 C:\Users\DELL\Desktop\stock-management-app\StockManagement\StockManagement\bin\Debug\EntityFramework.SqlServer.xml
-C:\Users\DELL\Desktop\stock-management-app\StockManagement\StockManagement\bin\Debug\GwinApp.pdb
 C:\Users\DELL\Desktop\stock-management-app\StockManagement\StockManagement\bin\Debug\fr\EntityFramework.resources.dll
 C:\Users\DELL\Desktop\stock-management-app\StockManagement\StockManagement\bin\Debug\fr\EntityFramework.SqlServer.resources.dll
 C:\Users\DELL\Desktop\stock-management-app\StockManagement\StockManagement\bin\Debug\ar\GwinApp.resources.dll
 C:\Users\DELL\Desktop\stock-management-app\StockManagement\StockManagement\bin\Debug\en\GwinApp.resources.dll
-C:\Users\DELL\Desktop\stock-management-app\StockManagement\StockManagement\bin\Debug\en-GB\GwinApp.resources.dll
 C:\Users\DELL\Desktop\stock-management-app\StockManagement\StockManagement\bin\Debug\fr\GwinApp.resources.dll
-C:\Users\DELL\Desktop\stock-management-app\StockManagement\StockManagement\bin\Debug\fr-FR\GwinApp.resources.dll
 C:\Users\DELL\Desktop\stock-management-app\StockManagement\StockManagement\obj\Debug\StockManagement.Entities.Resources.Arrival.Arrival.resources
 C:\Users\DELL\Desktop\stock-management-app\StockManagement\StockManagement\obj\Debug\StockManagement.Entities.Resources.Delivery.Delivery.resources
 C:\Users\DELL\Desktop\stock-management-app\StockManagement\StockManagement\obj\Debug\StockManagement.Entities.Resources.Departure.Departure.resources
@@ -93,7 +87,6 @@ C:\Users\DELL\Desktop\stock-management-app\StockManagement\StockManagement\obj\D
 C:\Users\DELL\Desktop\stock-management-app\StockManagement\StockManagement\obj\Debug\StockManagement.Entities.Resources.Service.Service.resources
 C:\Users\DELL\Desktop\stock-management-app\StockManagement\StockManagement\obj\Debug\StockManagement.Entities.Resources.Societe.Societe.resources
 C:\Users\DELL\Desktop\stock-management-app\StockManagement\StockManagement\obj\Debug\StockManagement.FormMenuApplication.resources
-C:\Users\DELL\Desktop\stock-management-app\StockManagement\StockManagement\obj\Debug\StockManagement.FormAjouterGroupe.resources
 C:\Users\DELL\Desktop\stock-management-app\StockManagement\StockManagement\obj\Debug\StockManagement.Presentations.Print_Materials_List.By_Location.FormPrintByLocation.resources
 C:\Users\DELL\Desktop\stock-management-app\StockManagement\StockManagement\obj\Debug\StockManagement.Presentations.Print_Materials_List_By_Service.FormPrintByService.resources
 C:\Users\DELL\Desktop\stock-management-app\StockManagement\StockManagement\obj\Debug\StockManagement.Properties.Resources.resources
@@ -180,3 +173,37 @@ C:\Users\ES-SARRAJ Fouad\Documents\GitHub\stock-management-app\StockManagement\S
 C:\Users\ES-SARRAJ Fouad\Documents\GitHub\stock-management-app\StockManagement\StockManagement\bin\Debug\Microsoft.mshtml.dll
 C:\Users\ES-SARRAJ Fouad\Documents\GitHub\stock-management-app\StockManagement\StockManagement\bin\Debug\itextsharp.xml
 C:\Users\ES-SARRAJ Fouad\Documents\GitHub\stock-management-app\StockManagement\StockManagement\obj\Debug\StockManagement.Migrations.Update1.resources
+C:\Users\DELL\Desktop\stock-management-app\StockManagement\StockManagement\bin\Debug\Template.xlsx
+C:\Users\DELL\Desktop\stock-management-app\StockManagement\StockManagement\bin\Debug\itextsharp.dll
+C:\Users\DELL\Desktop\stock-management-app\StockManagement\StockManagement\bin\Debug\itextsharp.xml
+C:\Users\DELL\Desktop\stock-management-app\StockManagement\StockManagement\obj\Debug\StockManagement.Entities.ContactInformations.Resources.City.City.resources
+C:\Users\DELL\Desktop\stock-management-app\StockManagement\StockManagement\obj\Debug\StockManagement.Entities.ContactInformations.Resources.ContactInformationsMenu.resources
+C:\Users\DELL\Desktop\stock-management-app\StockManagement\StockManagement\obj\Debug\StockManagement.Entities.ContactInformations.Resources.ContactInformation.ContactInformation.resources
+C:\Users\DELL\Desktop\stock-management-app\StockManagement\StockManagement\obj\Debug\StockManagement.Entities.ContactInformations.Resources.Country.Country.resources
+C:\Users\DELL\Desktop\stock-management-app\StockManagement\StockManagement\obj\Debug\StockManagement.Entities.Persons.Resources.Person.Person.resources
+C:\Users\DELL\Desktop\stock-management-app\StockManagement\StockManagement\obj\Debug\StockManagement.Entities.TraineeManagement.Group.Group.resources
+C:\Users\DELL\Desktop\stock-management-app\StockManagement\StockManagement\obj\Debug\StockManagement.Entities.TraineeManagement.Trainee.Trainee.resources
+C:\Users\DELL\Desktop\stock-management-app\StockManagement\StockManagement\obj\Debug\StockManagement.Migrations.Update1.resources
+C:\Users\DELL\Desktop\stock-management-app\StockManagement\StockManagement\obj\Debug\StockManagement.Presentation.GwinAppMenu.resources
+C:\Users\DELL\Desktop\stock-management-app\StockManagement\StockManagement\obj\Debug\StockManagement.Entities.ContactInformations.Resources.City.City.ar.resources
+C:\Users\DELL\Desktop\stock-management-app\StockManagement\StockManagement\obj\Debug\StockManagement.Entities.ContactInformations.Resources.City.City.fr.resources
+C:\Users\DELL\Desktop\stock-management-app\StockManagement\StockManagement\obj\Debug\StockManagement.Entities.ContactInformations.Resources.ContactInformationsMenu.ar.resources
+C:\Users\DELL\Desktop\stock-management-app\StockManagement\StockManagement\obj\Debug\StockManagement.Entities.ContactInformations.Resources.ContactInformationsMenu.fr.resources
+C:\Users\DELL\Desktop\stock-management-app\StockManagement\StockManagement\obj\Debug\StockManagement.Entities.ContactInformations.Resources.ContactInformation.ContactInformation.ar.resources
+C:\Users\DELL\Desktop\stock-management-app\StockManagement\StockManagement\obj\Debug\StockManagement.Entities.ContactInformations.Resources.ContactInformation.ContactInformation.fr.resources
+C:\Users\DELL\Desktop\stock-management-app\StockManagement\StockManagement\obj\Debug\StockManagement.Entities.ContactInformations.Resources.Country.Country.ar.resources
+C:\Users\DELL\Desktop\stock-management-app\StockManagement\StockManagement\obj\Debug\StockManagement.Entities.ContactInformations.Resources.Country.Country.fr.resources
+C:\Users\DELL\Desktop\stock-management-app\StockManagement\StockManagement\obj\Debug\StockManagement.Entities.Persons.Resources.Person.Person.ar.resources
+C:\Users\DELL\Desktop\stock-management-app\StockManagement\StockManagement\obj\Debug\StockManagement.Entities.Persons.Resources.Person.Person.fr.resources
+C:\Users\DELL\Desktop\stock-management-app\StockManagement\StockManagement\obj\Debug\StockManagement.Entities.TraineeManagement.Group.Group.ar.resources
+C:\Users\DELL\Desktop\stock-management-app\StockManagement\StockManagement\obj\Debug\StockManagement.Entities.TraineeManagement.Group.Group.fr.resources
+C:\Users\DELL\Desktop\stock-management-app\StockManagement\StockManagement\obj\Debug\StockManagement.Entities.TraineeManagement.Trainee.Trainee.ar.resources
+C:\Users\DELL\Desktop\stock-management-app\StockManagement\StockManagement\obj\Debug\StockManagement.Entities.TraineeManagement.Trainee.Trainee.fr.resources
+C:\Users\DELL\Desktop\stock-management-app\StockManagement\StockManagement\obj\Debug\StockManagement.Migrations.Update_MT_C.resources
+C:\Users\DELL\Desktop\stock-management-app\StockManagement\StockManagement\obj\Debug\StockManagement.Migrations.Update_Delivery_Class.resources
+C:\Users\DELL\Desktop\stock-management-app\StockManagement\StockManagement\obj\Debug\StockManagement.Migrations.Update_Mail_Classes.resources
+C:\Users\DELL\Desktop\stock-management-app\StockManagement\StockManagement\obj\Debug\StockManagement.Migrations.update_Mail_c2.resources
+C:\Users\DELL\Desktop\stock-management-app\StockManagement\StockManagement\obj\Debug\StockManagement.Migrations.Up_Arriv.resources
+C:\Users\DELL\Desktop\stock-management-app\StockManagement\StockManagement\obj\Debug\StockManagement.Migrations.up5.resources
+C:\Users\DELL\Desktop\stock-management-app\StockManagement\StockManagement\obj\Debug\StockManagement.Migrations.Up6.resources
+C:\Users\DELL\Desktop\stock-management-app\StockManagement\StockManagement\obj\Debug\StockManagement.Presentations.Print_BRD_Departure.FormPrintBRD.resources
