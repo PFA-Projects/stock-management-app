@@ -258,16 +258,6 @@ C:\Users\ESSARRAJ-Fouad\Documents\GitHub\stock-management-app\StockManagement\St
 C:\Users\ESSARRAJ-Fouad\Documents\GitHub\stock-management-app\StockManagement\StockManagement\obj\Debug\StockManagement.Entities.TraineeManagement.Group.Group.resources
 C:\Users\ESSARRAJ-Fouad\Documents\GitHub\stock-management-app\StockManagement\StockManagement\obj\Debug\StockManagement.Entities.TraineeManagement.Trainee.Trainee.resources
 C:\Users\ESSARRAJ-Fouad\Documents\GitHub\stock-management-app\StockManagement\StockManagement\obj\Debug\StockManagement.FormMenuApplication.resources
-C:\Users\ESSARRAJ-Fouad\Documents\GitHub\stock-management-app\StockManagement\StockManagement\obj\Debug\StockManagement.Migrations.Create_data.resources
-C:\Users\ESSARRAJ-Fouad\Documents\GitHub\stock-management-app\StockManagement\StockManagement\obj\Debug\StockManagement.Migrations.Up_Mr_c1.resources
-C:\Users\ESSARRAJ-Fouad\Documents\GitHub\stock-management-app\StockManagement\StockManagement\obj\Debug\StockManagement.Migrations.Update1.resources
-C:\Users\ESSARRAJ-Fouad\Documents\GitHub\stock-management-app\StockManagement\StockManagement\obj\Debug\StockManagement.Migrations.Update_MT_C.resources
-C:\Users\ESSARRAJ-Fouad\Documents\GitHub\stock-management-app\StockManagement\StockManagement\obj\Debug\StockManagement.Migrations.Update_Delivery_Class.resources
-C:\Users\ESSARRAJ-Fouad\Documents\GitHub\stock-management-app\StockManagement\StockManagement\obj\Debug\StockManagement.Migrations.Update_Mail_Classes.resources
-C:\Users\ESSARRAJ-Fouad\Documents\GitHub\stock-management-app\StockManagement\StockManagement\obj\Debug\StockManagement.Migrations.update_Mail_c2.resources
-C:\Users\ESSARRAJ-Fouad\Documents\GitHub\stock-management-app\StockManagement\StockManagement\obj\Debug\StockManagement.Migrations.Up_Arriv.resources
-C:\Users\ESSARRAJ-Fouad\Documents\GitHub\stock-management-app\StockManagement\StockManagement\obj\Debug\StockManagement.Migrations.up5.resources
-C:\Users\ESSARRAJ-Fouad\Documents\GitHub\stock-management-app\StockManagement\StockManagement\obj\Debug\StockManagement.Migrations.Up6.resources
 C:\Users\ESSARRAJ-Fouad\Documents\GitHub\stock-management-app\StockManagement\StockManagement\obj\Debug\StockManagement.Presentations.Print_BRD_Departure.FormPrintBRD.resources
 C:\Users\ESSARRAJ-Fouad\Documents\GitHub\stock-management-app\StockManagement\StockManagement\obj\Debug\StockManagement.Presentations.Print_Materials_List.By_Location.FormPrintByLocation.resources
 C:\Users\ESSARRAJ-Fouad\Documents\GitHub\stock-management-app\StockManagement\StockManagement\obj\Debug\StockManagement.Presentations.Print_Materials_List_By_Service.FormPrintByService.resources
@@ -315,3 +305,5 @@ C:\Users\ESSARRAJ-Fouad\Documents\GitHub\stock-management-app\StockManagement\St
 C:\Users\ESSARRAJ-Fouad\Documents\GitHub\stock-management-app\StockManagement\StockManagement\obj\Debug\fr\StockManagement.resources.dll
 C:\Users\ESSARRAJ-Fouad\Documents\GitHub\stock-management-app\StockManagement\StockManagement\obj\Debug\StockManagement.exe
 C:\Users\ESSARRAJ-Fouad\Documents\GitHub\stock-management-app\StockManagement\StockManagement\obj\Debug\StockManagement.pdb
+C:\Users\ESSARRAJ-Fouad\Documents\GitHub\stock-management-app\StockManagement\StockManagement\bin\Debug\EntityFramework.dll
+C:\Users\ESSARRAJ-Fouad\Documents\GitHub\stock-management-app\StockManagement\StockManagement\bin\Debug\EntityFramework.SqlServer.dll
