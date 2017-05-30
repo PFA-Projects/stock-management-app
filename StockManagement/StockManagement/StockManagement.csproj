@@ -361,32 +361,32 @@
     <Compile Include="Migrations\201705282230039_Up6.Designer.cs">
       <DependentUpon>201705282230039_Up6.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\Libs\ITextSharp\PdfFile.cs" />
+    <Compile Include="Libs\ITextSharp\PdfFile.cs" />
     <Compile Include="DAL\Configuration.cs" />
-    <Compile Include="Presentations\MaterialManagement\MaterialInOutPLO.cs" />
-    <Compile Include="Presentations\MaterialManagement\MaterialPLO.cs" />
-    <Compile Include="Presentations\MaterialManagement\MaterialRepairPLO.cs" />
-    <Compile Include="Presentations\MaterialManagement\MaterialTransferPLO.cs" />
+    <Compile Include="Presentation\MaterialManagement\MaterialInOutPLO.cs" />
+    <Compile Include="Presentation\MaterialManagement\MaterialPLO.cs" />
+    <Compile Include="Presentation\MaterialManagement\MaterialRepairPLO.cs" />
+    <Compile Include="Presentation\MaterialManagement\MaterialTransferPLO.cs" />
     <Compile Include="FormMenuApplication.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormMenuApplication.Designer.cs" />
-    <Compile Include="Presentations\Print BRD Departure\FormPrintBRD.cs">
+    <Compile Include="Presentation\Print BRD Departure\FormPrintBRD.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Presentations\Print BRD Departure\FormPrintBRD.Designer.cs">
+    <Compile Include="Presentation\Print BRD Departure\FormPrintBRD.Designer.cs">
       <DependentUpon>FormPrintBRD.cs</DependentUpon>
     </Compile>
-    <Compile Include="Presentations\Print Materials List\By Location\FormPrintByLocation.cs">
+    <Compile Include="Presentation\Print Materials List\By Location\FormPrintByLocation.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Presentations\Print Materials List\By Location\FormPrintByLocation.Designer.cs">
+    <Compile Include="Presentation\Print Materials List\By Location\FormPrintByLocation.Designer.cs">
       <DependentUpon>FormPrintByLocation.cs</DependentUpon>
     </Compile>
-    <Compile Include="Presentations\Print Materials List\By Service\FormPrintByService.cs">
+    <Compile Include="Presentation\Print Materials List\By Service\FormPrintByService.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Presentations\Print Materials List\By Service\FormPrintByService.Designer.cs">
+    <Compile Include="Presentation\Print Materials List\By Service\FormPrintByService.Designer.cs">
       <DependentUpon>FormPrintByService.cs</DependentUpon>
     </Compile>
     <Compile Include="Presentation\GwinAppMenu.cs">
@@ -601,13 +601,13 @@
     <EmbeddedResource Include="Migrations\201705282230039_Up6.resx">
       <DependentUpon>201705282230039_Up6.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Presentations\Print BRD Departure\FormPrintBRD.resx">
+    <EmbeddedResource Include="Presentation\Print BRD Departure\FormPrintBRD.resx">
       <DependentUpon>FormPrintBRD.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Presentations\Print Materials List\By Location\FormPrintByLocation.resx">
+    <EmbeddedResource Include="Presentation\Print Materials List\By Location\FormPrintByLocation.resx">
       <DependentUpon>FormPrintByLocation.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Presentations\Print Materials List\By Service\FormPrintByService.resx">
+    <EmbeddedResource Include="Presentation\Print Materials List\By Service\FormPrintByService.resx">
       <DependentUpon>FormPrintByService.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentation\GwinAppMenu.resx" />
