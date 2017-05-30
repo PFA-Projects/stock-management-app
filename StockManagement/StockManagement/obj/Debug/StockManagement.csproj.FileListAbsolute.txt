@@ -307,3 +307,4 @@ C:\Users\ESSARRAJ-Fouad\Documents\GitHub\stock-management-app\StockManagement\St
 C:\Users\ESSARRAJ-Fouad\Documents\GitHub\stock-management-app\StockManagement\StockManagement\obj\Debug\StockManagement.pdb
 C:\Users\ESSARRAJ-Fouad\Documents\GitHub\stock-management-app\StockManagement\StockManagement\bin\Debug\EntityFramework.dll
 C:\Users\ESSARRAJ-Fouad\Documents\GitHub\stock-management-app\StockManagement\StockManagement\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\ESSARRAJ-Fouad\Documents\GitHub\stock-management-app\StockManagement\StockManagement\obj\Debug\StockManagement.Migrations.DataInit300517.resources
