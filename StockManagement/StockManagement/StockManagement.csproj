@@ -591,6 +591,7 @@
     <Folder Include="Scripts\" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Migrations\Upgrade\201705300711159_Seed.sql" />
     <Content Include="Migrations\Upgrade\201705300711159_DataInit-30-05-17.sql" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

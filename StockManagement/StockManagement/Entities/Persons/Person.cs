@@ -24,6 +24,8 @@ namespace StockManagement.Entities.Persons
             this.DateOfBirth = DateTime.Now.AddYears(-23);
         }
 
+  
+
         // 
         // Civil status
         //
