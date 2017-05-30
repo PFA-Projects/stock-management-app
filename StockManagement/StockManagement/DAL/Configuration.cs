@@ -30,7 +30,7 @@
                         new App.Gwin.Entities.Application.ApplicationName
                         {
                             Reference = "StockManagementSystem",
-                            Name = new App.Gwin.Entities.MultiLanguage.LocalizedString { Arab = "برنامج تدبير المخزون", English = "Stock Management System", French = "Application de gestion de stock" }
+                            Name = new App.Gwin.Entities.MultiLanguage.LocalizedString { Arab = "برنامج التدبير ", English = "Management System", French = "Application de Gestion " }
                         }
 
                       );

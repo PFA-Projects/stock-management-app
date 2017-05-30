@@ -47,8 +47,8 @@ namespace StockManagement.Entities.Persons
         [EntryForm(Ordre = 4, GroupeBox = "Civil status", GroupeBoxOrder = 1, isRequired = true)]
         public DateTime DateOfBirth { set; get; }
 
-        [DisplayProperty(Title = "Sexe")]
-        [EntryForm(Ordre = 5, GroupeBox = "Civil status", GroupeBoxOrder = 1, isRequired = true)]
+        //[DisplayProperty(Title = "Sexe")]
+        //[EntryForm(Ordre = 5, GroupeBox = "Civil status", GroupeBoxOrder = 1, isRequired = true)]
         public bool Sex { set; get; }
        
         public String ProfilePhoto { set; get; }
@@ -67,19 +67,19 @@ namespace StockManagement.Entities.Persons
         [EntryForm(Ordre = 12, MultiLine = true, GroupeBox = "Contact Information", GroupeBoxOrder = 101)]
         public String Address { set; get; }
 
-        [EntryForm(Ordre = 13, GroupeBox = "Contact Information", GroupeBoxOrder = 10,isDefaultIsEmpty = true)]
-        [Filter(isDefaultIsEmpty = true)]
-        [Relationship(Relation = RelationshipAttribute.Relations.ManyToOne)]
-        [SelectionCriteria(typeof(Country))]
+        //[EntryForm(Ordre = 13, GroupeBox = "Contact Information", GroupeBoxOrder = 10,isDefaultIsEmpty = true)]
+       // [Filter(isDefaultIsEmpty = true)]
+       // [Relationship(Relation = RelationshipAttribute.Relations.ManyToOne)]
+       // [SelectionCriteria(typeof(Country))]
         public City City { set; get; }
 
-        [EntryForm(Ordre = 14, GroupeBox = "Contact Information", GroupeBoxOrder = 10)]
+        //[EntryForm(Ordre = 14, GroupeBox = "Contact Information", GroupeBoxOrder = 10)]
         public string Cellphone { set; get; }
 
-        [EntryForm(Ordre = 15, GroupeBox = "Contact Information", GroupeBoxOrder = 10)]
+       // [EntryForm(Ordre = 15, GroupeBox = "Contact Information", GroupeBoxOrder = 10)]
         public string FaceBook { set; get; }
 
-        [EntryForm(Ordre = 16, GroupeBox = "Contact Information", GroupeBoxOrder = 10)]
+        //[EntryForm(Ordre = 16, GroupeBox = "Contact Information", GroupeBoxOrder = 10)]
         public string WebSite { set; get; }
         #endregion
 

@@ -20,8 +20,8 @@ namespace StockManagement.Presentations.MaterialManagement
         public void FormAfterInit(BaseEntryForm EntryForm)
         {
             // In
-            EntryForm.Fields[nameof(MaterialInOut.InDate)].Hide();
-            EntryForm.Fields[nameof(MaterialInOut.InReason)].Hide();
+            //EntryForm.Fields[nameof(MaterialInOut.InDate)].Hide();
+            //EntryForm.Fields[nameof(MaterialInOut.InReason)].Hide();
             // Location
             EntryForm.Fields[nameof(MaterialInOut.Location)].Hide();
         }
@@ -39,17 +39,17 @@ namespace StockManagement.Presentations.MaterialManagement
         ModelContext db = new ModelContext();
         public void ValueChanged(BaseEntryForm EntryForm, object sender)
         {
-            // In
-            if ((bool)EntryForm.Fields[nameof(MaterialInOut.InStock)].Value == true)
-            {
-                EntryForm.Fields[nameof(MaterialInOut.InDate)].Show();
-                EntryForm.Fields[nameof(MaterialInOut.InReason)].Show();
-            }
-            else
-            {
-                EntryForm.Fields[nameof(MaterialInOut.InDate)].Hide();
-                EntryForm.Fields[nameof(MaterialInOut.InReason)].Hide();
-            }
+            //// In
+            //if ((bool)EntryForm.Fields[nameof(MaterialInOut.InStock)].Value == true)
+            //{
+            //    EntryForm.Fields[nameof(MaterialInOut.InDate)].Show();
+            //    EntryForm.Fields[nameof(MaterialInOut.InReason)].Show();
+            //}
+            //else
+            //{
+            //    EntryForm.Fields[nameof(MaterialInOut.InDate)].Hide();
+            //    EntryForm.Fields[nameof(MaterialInOut.InReason)].Hide();
+            //}
 
             // Location
             BaseField field = sender as BaseField;
@@ -63,7 +63,7 @@ namespace StockManagement.Presentations.MaterialManagement
 
                         Service service = servicefield.SelectedItem as Service;
 
-                        if (service != null)
+                        if (service != null && new LocationBLO(db).LocationsByService(service).Count >0)
                         {
                             EntryForm.Fields[nameof(MaterialInOut.Location)].Show();
 

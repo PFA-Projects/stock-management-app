@@ -121,7 +121,7 @@
     <value>Ajouter Depart</value>
   </data>
   <data name="CorrespondanceObject" xml:space="preserve">
-    <value>Objet Correspondance</value>
+    <value>Objet </value>
   </data>
   <data name="DepartureDate" xml:space="preserve">
     <value>Date Depart</value>
@@ -143,5 +143,14 @@
   </data>
   <data name="SingularName" xml:space="preserve">
     <value>Depart</value>
+  </data>
+  <data name="NBRE" xml:space="preserve">
+    <value>NBRE</value>
+  </data>
+  <data name="Type" xml:space="preserve">
+    <value>Type</value>
+  </data>
+  <data name="BRD" xml:space="preserve">
+    <value>Borderau</value>
   </data>
 </root>

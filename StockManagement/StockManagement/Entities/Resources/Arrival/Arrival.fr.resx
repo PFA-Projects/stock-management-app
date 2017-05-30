@@ -147,4 +147,7 @@
   <data name="Type" xml:space="preserve">
     <value>Type</value>
   </data>
+  <data name="Configuration" xml:space="preserve">
+    <value>Adresse </value>
+  </data>
 </root>

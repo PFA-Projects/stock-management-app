@@ -34,7 +34,7 @@ namespace StockManagement.BAL
         }
 
 
-      
+        
        
     }
 }

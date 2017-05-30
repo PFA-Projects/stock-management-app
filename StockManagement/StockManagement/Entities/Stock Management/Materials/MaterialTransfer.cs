@@ -16,7 +16,7 @@ namespace StockManagement.Entities
     /// fr : Transfert des Materiels
     /// </summary>
     /// 
-    [GwinEntity(Localizable = true, DisplayMember = "Reference")]
+    [GwinEntity(Localizable = true, DisplayMember = "TransferDate")]
     [Menu(Group = "Operations")]
     [ManagementForm(Width = 800, TitrePageGridView = "Tr_Grid", TitreButtonAjouter = "btn_Add_Tr")]
     [PresentationLogic(TypePLO = typeof(MaterialTransferPLO))]
@@ -24,23 +24,23 @@ namespace StockManagement.Entities
     {
         [Relationship(Relation = RelationshipAttribute.Relations.ManyToOne)]
         [EntryForm(GroupeBox = "Material_Informations", GroupeBoxOrder = 1, isDefaultIsEmpty = true)]
+        [DataGrid]
+        [Filter(WidthControl =250)]
         public Material Material { get; set; }
 
-        [Relationship(Relation = RelationshipAttribute.Relations.ManyToOne)]
-        [EntryForm(GroupeBox = "Material_Informations", GroupeBoxOrder = 1, isDefaultIsEmpty = true)]
-        public Service Service { get; set; }
-
-        [Relationship(Relation = RelationshipAttribute.Relations.ManyToOne)]
-        [EntryForm(GroupeBox = "Material_Informations", GroupeBoxOrder = 1, isDefaultIsEmpty = true)]
-        public Location Location { get; set; }
-
         [EntryForm(GroupeBox = "Transfer_Informations", GroupeBoxOrder = 2)]
+        [DataGrid]
+        [Filter(WidthControl = 250)]
         public String Recipient { get; set; }
 
         [EntryForm(GroupeBox = "Transfer_Informations", GroupeBoxOrder = 2)]
+        [DataGrid]
         public DateTime TransferDate { get; set; }
 
         [EntryForm(GroupeBox = "Transfer_Informations", GroupeBoxOrder = 2)]
+        [DataGrid]
         public String Observations { get; set; }
+
+
     }
 }

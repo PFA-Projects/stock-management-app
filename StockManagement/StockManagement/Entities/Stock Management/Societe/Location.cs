@@ -36,7 +36,7 @@ namespace StockManagement.Entities
         // Relations
         [EntryForm(Ordre = 3, WidthControl = 350)]
         [DataGrid(WidthColonne = 100, Ordre = 3)]
-        [Filter]
+        [Filter(isDefaultIsEmpty =true)]
         [Relationship(Relation = RelationshipAttribute.Relations.ManyToOne)]
         public Service Service { get; set; }
     }

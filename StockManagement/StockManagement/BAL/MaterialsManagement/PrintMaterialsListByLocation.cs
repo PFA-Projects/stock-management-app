@@ -65,7 +65,7 @@ namespace StockManagement.BLL.MaterialsManagement
                     HeaderText.Add("NBRE");
                     PdfPTable table = file.CreateHeaderTable(doc, HeaderText);
 
-                   // List<Material> MaterialsList = new  MaterialBLO(db).GetMaterialsBylocation(Location);
+                    // List<Material> MaterialsList = new  MaterialBLO(db).GetMaterialsBylocation(Location);
 
                     //foreach (var item in MaterialsList)
                     //{
@@ -95,7 +95,43 @@ namespace StockManagement.BLL.MaterialsManagement
                     //    NBRECell.MinimumHeight = 32f;
                     //    table.AddCell(NBRECell);
                     //}
+                    //////////////////////////////////////////////////
 
+                    foreach (var item in db.Materials)
+                    {
+                        List<MaterialInOut> MaterialInOutList = new MaterialInOutBLO(db).GetMIOByMaterial(item);
+                        if(MaterialInOutList.Count > 0)
+                        {
+                            MaterialInOut MIO = MaterialInOutList[0];
+                            if(MIO.Location.Id == Convert.ToInt32(Location.Id))
+                            {
+                                // Designation
+                                PdfPCell DesignationCell = new PdfPCell(new Phrase(MIO.Material.Designation.French));
+                                DesignationCell.MinimumHeight = 32f;
+                                table.AddCell(DesignationCell);
+
+                                // Inventory Number
+                                PdfPCell InventoryNumberCell = new PdfPCell(new Phrase(MIO.Material.InventoryNumber));
+                                InventoryNumberCell.MinimumHeight = 32f;
+                                table.AddCell(InventoryNumberCell);
+
+                                // Dimension
+                                PdfPCell DimensionCell = new PdfPCell(new Phrase(MIO.Material.Dimension.ToString()));
+                                DimensionCell.MinimumHeight = 32f;
+                                table.AddCell(DimensionCell);
+
+                                // Observation
+                                PdfPCell ObservationCell = new PdfPCell(new Phrase(MIO.Material.Observation.French));
+                                ObservationCell.MinimumHeight = 32f;
+                                table.AddCell(ObservationCell);
+
+                                //NBRE
+                                PdfPCell NBRECell = new PdfPCell(new Phrase(MIO.Material.NBRE.ToString()));
+                                NBRECell.MinimumHeight = 32f;
+                                table.AddCell(NBRECell);
+                            }
+                        }
+                    }
 
                     PdfContentByte cb = writer.DirectContent;
                     table.TotalWidth = 500f;
