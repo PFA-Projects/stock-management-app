@@ -23,9 +23,13 @@ namespace StockManagement.DAL
         //}
 
         // (LocalDb)\MSSQLLocalDB
-        public ModelContext() : base(@"data source=(LocalDb)\MSSQLLocalDB;initial catalog=StockManagement;integrated security=True;MultipleActiveResultSets=True;App=EntityFramework")
+        public ModelContext() : base(@"data source=.\SQLEXPRESS;initial catalog=StockManagement;integrated security=True;MultipleActiveResultSets=True;App=EntityFramework")
+        // public ModelContext() : base(@"data source=(LocalDb)\MSSQLLocalDB;initial catalog=StockManagement;integrated security=True;MultipleActiveResultSets=True;App=EntityFramework")
         {
             //  Database.SetInitializer<ModelContext>(new CreateDatabaseIfNotExists<ModelContext>());
+           
+            // Disable automatic migrations 
+            Database.SetInitializer<ModelContext>(null);
 
         }
 
