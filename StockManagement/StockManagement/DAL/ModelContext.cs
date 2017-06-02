@@ -21,17 +21,29 @@ namespace StockManagement.DAL
         //{
 
         //}
+        //public ModelContext()
+        //    : base("name=ModelContext")
+        //{
+
+        //}
 
         // (LocalDb)\MSSQLLocalDB
-        public ModelContext() : base(@"data source=.\SQLEXPRESS;initial catalog=StockManagement;integrated security=True;MultipleActiveResultSets=True;App=EntityFramework")
-        // public ModelContext() : base(@"data source=(LocalDb)\MSSQLLocalDB;initial catalog=StockManagement;integrated security=True;MultipleActiveResultSets=True;App=EntityFramework")
+        public ModelContext() : base(@"data source=.\SQLEXPRESS;initial catalog=StockManagement;integrated security = true;MultipleActiveResultSets=True;App=EntityFramework")
         {
-            //  Database.SetInitializer<ModelContext>(new CreateDatabaseIfNotExists<ModelContext>());
-           
-            // Disable automatic migrations 
-            Database.SetInitializer<ModelContext>(null);
+            
+                // public ModelContext() : base(@"data source=(LocalDb)\MSSQLLocalDB;initial catalog=StockManagement;integrated security=True;MultipleActiveResultSets=True;App=EntityFramework")
 
+                //  Database.SetInitializer<ModelContext>(new CreateDatabaseIfNotExists<ModelContext>());
+
+                // Disable automatic migrations 
+                Database.SetInitializer<ModelContext>(null);
+          
         }
+
+           
+        
+
+       
 
         // Add a DbSet for each entity type that you want to include in your model. For more information 
         // on configuring and using a Code First model, see http://go.microsoft.com/fwlink/?LinkId=390109.

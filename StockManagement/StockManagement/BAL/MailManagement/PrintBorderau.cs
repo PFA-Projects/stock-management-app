@@ -70,16 +70,16 @@ namespace StockManagement.BAL.MailManagement
                     NBRECell.MinimumHeight = 32f;
                     table.AddCell(NBRECell);
                     //Observations
-                    PdfPCell ObsCell = new PdfPCell(new Phrase(Departure.Observations.French));
+                    PdfPCell ObsCell = new PdfPCell(new Phrase(Departure.Observations+ "\n\n\n\n\n"+ "Le Directeur de l'Hopital"+"\n\n"));
                     ObsCell.MinimumHeight = 32f;
                     table.AddCell(ObsCell);
 
 
                     PdfContentByte cb = writer.DirectContent;
-                    table.TotalWidth = 500f;
-                    table.WriteSelectedRows(0, -1, 50, doc.PageSize.Width / 2 +80, cb);
+                    table.TotalWidth = 500f;//80
+                    table.WriteSelectedRows(0, -1, 50, doc.PageSize.Width / 2 + 200, cb);
 
-                    page.BRDFooter(file, doc, writer);
+                    //page.BRDFooter(file, doc, writer);
 
                     // Step 6: Closing the Document
                     doc.Close();

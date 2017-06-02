@@ -28,5 +28,7 @@ namespace StockManagement.Entities
         [EntryForm(GroupeBox = "Configuration", GroupeBoxOrder = 1, MultiLine = true)]
         [DataGrid(WidthColonne = 350)]
         public String Observations { get; set; }
+
+
     }
 }

@@ -150,4 +150,7 @@
   <data name="Configuration" xml:space="preserve">
     <value>Adresse </value>
   </data>
+  <data name="String1" xml:space="preserve">
+    <value>Count </value>
+  </data>
 </root>

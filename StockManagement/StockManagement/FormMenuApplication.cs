@@ -4,11 +4,13 @@ using App.Gwin.Entities.Secrurity.Authentication;
 using StockManagement.BAL;
 using StockManagement.DAL;
 using System;
+using System.Windows.Forms;
 
 namespace GenericWinForm.Demo
 {
     public partial class FormMenuApplication : FormApplication
     {
+
         public FormMenuApplication()
         {
            // GwinApp.Loading_Status("Creating Application Menu...");
@@ -43,6 +45,6 @@ namespace GenericWinForm.Demo
             languageToolStripMenuItem1.Visible = false;
         }
 
-
+       
     }
 }

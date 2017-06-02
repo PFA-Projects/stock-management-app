@@ -3,7 +3,7 @@ namespace StockManagement.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class DataInit300517 : DbMigration
+    public partial class Update_Arrival_class : DbMigration
     {
         public override void Up()
         {
@@ -30,6 +30,7 @@ namespace StockManagement.Migrations
                 c => new
                     {
                         Id = c.Long(nullable: false, identity: true),
+                        number = c.Long(nullable: false),
                         ArrivalDate = c.DateTime(nullable: false),
                         Object_French = c.String(),
                         Object_English = c.String(),
@@ -37,7 +38,6 @@ namespace StockManagement.Migrations
                         Designation_French = c.String(),
                         Designation_English = c.String(),
                         Designation_Arab = c.String(),
-                        Number = c.Int(nullable: false),
                         Observations_French = c.String(),
                         Observations_English = c.String(),
                         Observations_Arab = c.String(),

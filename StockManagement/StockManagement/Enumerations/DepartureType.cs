@@ -11,6 +11,7 @@ namespace StockManagement.Enumerations
 {
     public enum DepartureType
     {
+        ___________,
         Externe,
         Interne
     }
