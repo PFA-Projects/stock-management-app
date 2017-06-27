@@ -117,31 +117,8 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="btn_add_Delivery" xml:space="preserve">
-    <value>Ajouter une livraison</value>
-  </data>
-  <data name="DeliveryDate" xml:space="preserve">
-    <value>Date Livraison</value>
-  </data>
-  <data name="DeliveryReceiptNumber" xml:space="preserve">
-    <value>Num Bon Livraison</value>
-  </data>
-  <data name="Delivery_Grid_Title" xml:space="preserve">
-    <value>Livraisons</value>
-  </data>
-  <data name="Market" xml:space="preserve">
-    <value>Marche</value>
-  </data>
-  <data name="Observations" xml:space="preserve">
-    <value>Observations</value>
-  </data>
-  <data name="PluralName" xml:space="preserve">
-    <value>Livraisons</value>
-  </data>
-  <data name="SingularName" xml:space="preserve">
-    <value>Livraison</value>
-  </data>
-  <data name="Societe" xml:space="preserve">
-    <value>Societe</value>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="Capture" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Capture.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

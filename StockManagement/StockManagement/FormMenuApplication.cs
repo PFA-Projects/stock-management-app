@@ -1,10 +1,13 @@
 ﻿using App.Gwin;
 using App.Gwin.Application.Presentation.MainForm;
 using App.Gwin.Entities.Secrurity.Authentication;
+using StockManagement;
 using StockManagement.BAL;
 using StockManagement.DAL;
+using StockManagement.Properties;
 using System;
 using System.Windows.Forms;
+using vtts.Presentation.PrintOrderMission;
 
 namespace GenericWinForm.Demo
 {
@@ -30,6 +33,8 @@ namespace GenericWinForm.Demo
             
             // Start Gwin Application with Authentification
             GwinApp.Start(typeof(ModelContext), typeof(BaseBLO<>), this, user);
+
+         
         }
 
         

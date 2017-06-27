@@ -30,14 +30,14 @@ namespace StockManagement.DAL
         // (LocalDb)\MSSQLLocalDB
         public ModelContext() : base(@"data source=.\SQLEXPRESS;initial catalog=StockManagement;integrated security = true;MultipleActiveResultSets=True;App=EntityFramework")
         {
-            
-                // public ModelContext() : base(@"data source=(LocalDb)\MSSQLLocalDB;initial catalog=StockManagement;integrated security=True;MultipleActiveResultSets=True;App=EntityFramework")
 
-                //  Database.SetInitializer<ModelContext>(new CreateDatabaseIfNotExists<ModelContext>());
+            // public ModelContext() : base(@"data source=(LocalDb)\MSSQLLocalDB;initial catalog=StockManagement;integrated security=True;MultipleActiveResultSets=True;App=EntityFramework")
 
-                // Disable automatic migrations 
-                Database.SetInitializer<ModelContext>(null);
-          
+            //  Database.SetInitializer<ModelContext>(new CreateDatabaseIfNotExists<ModelContext>());
+
+            // Disable automatic migrations 
+            Database.SetInitializer<ModelContext>(null); 
+
         }
 
            
@@ -74,8 +74,6 @@ namespace StockManagement.DAL
         //
         // Mail Management : Entities
         public virtual DbSet<MailConfiguration> MailConfigurations { get; set; }
-        public virtual DbSet<Receiver> Receivers { get; set; }
-        public virtual DbSet<Sender> Senders { get; set; }
         public virtual DbSet<Arrival> Arrivals { get; set; }
         public virtual DbSet<Departure> Departurs { get; set; }
     }

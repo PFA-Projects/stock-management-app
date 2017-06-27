@@ -237,18 +237,7 @@
             RoleAdmin.Authorizations.Add(MailConfigurationAuthorizations);
             RHRole.Authorizations.Add(MailConfigurationAuthorizations);
             DirRole.Authorizations.Add(MailConfigurationAuthorizations);
-            // Receiver
-            Authorization ReceiverAuthorizations = new Authorization();
-            ReceiverAuthorizations.BusinessEntity = typeof(Receiver).FullName;
-            RoleAdmin.Authorizations.Add(ReceiverAuthorizations);
-            RHRole.Authorizations.Add(ReceiverAuthorizations);
-            DirRole.Authorizations.Add(ReceiverAuthorizations);
-            // Sender
-            Authorization SenderAuthorizations = new Authorization();
-            SenderAuthorizations.BusinessEntity = typeof(Sender).FullName;
-            RoleAdmin.Authorizations.Add(SenderAuthorizations);
-            RHRole.Authorizations.Add(SenderAuthorizations);
-            DirRole.Authorizations.Add(SenderAuthorizations);
+            
             // Arrival
             Authorization ArrivalAuthorizations = new Authorization();
             ArrivalAuthorizations.BusinessEntity = typeof(Arrival).FullName;

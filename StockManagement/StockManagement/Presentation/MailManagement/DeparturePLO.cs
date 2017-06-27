@@ -47,6 +47,7 @@ namespace StockManagement.Presentation.MailManagement
                         if (DepartureType == DepartureType.Externe)
                         {
                             EntryForm.Fields[nameof(Departure.Observations)].Hide();
+                           
                         }
                         else
                         {

@@ -37,7 +37,7 @@ namespace StockManagement.Entities
         [DataGrid]
         public DateTime TransferDate { get; set; }
 
-        [EntryForm(GroupeBox = "Transfer_Informations", GroupeBoxOrder = 2)]
+        [EntryForm(GroupeBox = "Transfer_Informations", GroupeBoxOrder = 2,MultiLine =true)]
         [DataGrid]
         public String Observations { get; set; }
 

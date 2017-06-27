@@ -129,9 +129,6 @@
   <data name="Designation" xml:space="preserve">
     <value>Designation</value>
   </data>
-  <data name="Number" xml:space="preserve">
-    <value>NBRE</value>
-  </data>
   <data name="Object" xml:space="preserve">
     <value>Object</value>
   </data>
@@ -152,5 +149,8 @@
   </data>
   <data name="String1" xml:space="preserve">
     <value>Count </value>
+  </data>
+  <data name="number" xml:space="preserve">
+    <value>N°</value>
   </data>
 </root>

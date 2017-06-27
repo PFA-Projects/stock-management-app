@@ -28,7 +28,7 @@ namespace StockManagement.Entities
     [PresentationLogic(TypePLO = typeof(DeparturePLO))]
     public class Departure:BaseEntity
     {
-        [EntryForm(Enable = false,isShowDefaultValueWhenAdd =true,Ordre = 2)]
+        [EntryForm(isShowDefaultValueWhenAdd =true,Ordre = 1,Enable =false)]
         public long number { get; set; }
 
         [EntryForm(Ordre =3)]
@@ -72,10 +72,11 @@ namespace StockManagement.Entities
 
         // Relations
         [Relationship(Relation = RelationshipAttribute.Relations.ManyToOne)]
-        [EntryForm(isDefaultIsEmpty = true,Ordre =7)]
+        [EntryForm(isDefaultIsEmpty = true,Ordre =7,isFormulaire =true)]
         [DataGrid]
         public MailConfiguration Configuration { get; set; }
 
-
+        // Files
+        public Byte[] DepartureFile { get; set; }
     }
 }
