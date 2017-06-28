@@ -117,6 +117,8 @@
   <ItemGroup>
     <Compile Include="BAL\ArrivalBLO.cs" />
     <Compile Include="BAL\BaseBLO.cs" />
+    <Compile Include="BAL\DepartureBLO.cs" />
+    <Compile Include="BAL\DepartureFileBLO.cs" />
     <Compile Include="BAL\LocationBLO.cs" />
     <Compile Include="BAL\MailManagement\PrintBorderau.cs" />
     <Compile Include="BAL\MaterialBLO.cs" />
@@ -140,6 +142,7 @@
     <Compile Include="Entities\ContactInformations\Resources\Country\Country.Designer.cs" />
     <Compile Include="Entities\Mail Management\Arrival.cs" />
     <Compile Include="Entities\Mail Management\Departure.cs" />
+    <Compile Include="Entities\Mail Management\DepartureFile.cs" />
     <Compile Include="Entities\Mail Management\MailConfiguration.cs" />
     <Compile Include="Entities\Persons\Class1.cs" />
     <Compile Include="Entities\Persons\Person.cs" />
@@ -155,6 +158,16 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Arrival.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\Resources\DepartureFile\DepartureFile.fr.Designer.cs">
+      <DependentUpon>DepartureFile.fr.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Entities\Resources\DepartureFile\DepartureFile.Designer.cs">
+      <DependentUpon>DepartureFile.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
     </Compile>
     <Compile Include="Entities\Resources\Departure\Departure.fr.Designer.cs">
       <DependentUpon>Departure.fr.resx</DependentUpon>
@@ -366,11 +379,9 @@
     <Compile Include="Migrations\201706271519410_Upd.Designer.cs">
       <DependentUpon>201706271519410_Upd.cs</DependentUpon>
     </Compile>
-    <Compile Include="Presentation\Load Files\LoadDepartureFile.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Presentation\Load Files\LoadDepartureFile.Designer.cs">
-      <DependentUpon>LoadDepartureFile.cs</DependentUpon>
+    <Compile Include="Migrations\201706281339346_Create_Departure_file_Class.cs" />
+    <Compile Include="Migrations\201706281339346_Create_Departure_file_Class.Designer.cs">
+      <DependentUpon>201706281339346_Create_Departure_file_Class.cs</DependentUpon>
     </Compile>
     <Compile Include="Presentation\MailManagement\DeparturePLO.cs" />
     <Compile Include="Presentation\MaterialManagement\MaterialInOutPLO.cs" />
@@ -454,6 +465,14 @@
     <EmbeddedResource Include="Entities\Resources\Delivery\Delivery.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Delivery.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Entities\Resources\DepartureFile\DepartureFile.fr.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>DepartureFile.fr.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Entities\Resources\DepartureFile\DepartureFile.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>DepartureFile.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Entities\Resources\Departure\Departure.fr.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -604,8 +623,8 @@
     <EmbeddedResource Include="Migrations\201706271519410_Upd.resx">
       <DependentUpon>201706271519410_Upd.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Presentation\Load Files\LoadDepartureFile.resx">
-      <DependentUpon>LoadDepartureFile.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201706281339346_Create_Departure_file_Class.resx">
+      <DependentUpon>201706281339346_Create_Departure_file_Class.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentation\Print BRD Departure\FormPrintBRD.resx">
       <DependentUpon>FormPrintBRD.cs</DependentUpon>

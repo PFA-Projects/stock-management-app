@@ -8,6 +8,7 @@ using StockManagement.DAL;
 using StockManagement.Entities;
 using StockManagement.Enumerations;
 using StockManagement.Presentation.MailManagement;
+using StockManagement.Presentation.Save_Departure_Files;
 using StockManagement.Presentations.Print_BRD_Departure;
 using System;
 using System.Collections.Generic;
@@ -22,6 +23,7 @@ namespace StockManagement.Entities
     /// </summary>
     /// 
     [GwinEntity(Localizable = true, DisplayMember = "CorrespondanceObject")]
+    // we can't set duplicate datagridviewSelectedAction ?!!
     [DataGridSelectedAction(Title = "BRD", Description = "Print_Departure_BRD", TypeOfForm = typeof(FormPrintBRD))]
     [ManagementForm(TitrePageGridView = "Departure_DGV", TitreButtonAjouter = "btn_add_Departure", Height = 580, Width = 1050)]
     [Menu(Group = "Operations")]
@@ -77,6 +79,6 @@ namespace StockManagement.Entities
         public MailConfiguration Configuration { get; set; }
 
         // Files
-        public Byte[] DepartureFile { get; set; }
+        
     }
 }
