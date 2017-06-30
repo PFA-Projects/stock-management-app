@@ -117,25 +117,13 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="FichiersArrivee" xml:space="preserve">
+    <value>Fichiers d'arrivee</value>
+  </data>
   <data name="PluralName" xml:space="preserve">
-    <value>Fichiers de Departs</value>
+    <value>Fichiers d'arrivee</value>
   </data>
   <data name="SingularName" xml:space="preserve">
-    <value>Fichier Depart</value>
-  </data>
-  <data name="btn_add_DepartureFile" xml:space="preserve">
-    <value>Ajouter Fichier</value>
-  </data>
-  <data name="Departure" xml:space="preserve">
-    <value>Depart</value>
-  </data>
-  <data name="Departure_Files_DGV" xml:space="preserve">
-    <value>Departs</value>
-  </data>
-  <data name="File" xml:space="preserve">
-    <value>Fichier</value>
-  </data>
-  <data name="FichiersDepart" xml:space="preserve">
-    <value>Fichiers de Departs</value>
+    <value>Fichier d'arrivee</value>
   </data>
 </root>

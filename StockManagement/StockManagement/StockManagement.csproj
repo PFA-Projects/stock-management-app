@@ -116,6 +116,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BAL\ArrivalBLO.cs" />
+    <Compile Include="BAL\ArrivalFileBLO.cs" />
     <Compile Include="BAL\BaseBLO.cs" />
     <Compile Include="BAL\DepartureBLO.cs" />
     <Compile Include="BAL\DepartureFileBLO.cs" />
@@ -141,6 +142,7 @@
     <Compile Include="Entities\ContactInformations\Resources\Country\Country.ar.Designer.cs" />
     <Compile Include="Entities\ContactInformations\Resources\Country\Country.Designer.cs" />
     <Compile Include="Entities\Mail Management\Arrival.cs" />
+    <Compile Include="Entities\Mail Management\ArrivalFile.cs" />
     <Compile Include="Entities\Mail Management\Departure.cs" />
     <Compile Include="Entities\Mail Management\DepartureFile.cs" />
     <Compile Include="Entities\Mail Management\MailConfiguration.cs" />
@@ -383,6 +385,42 @@
     <Compile Include="Migrations\201706281339346_Create_Departure_file_Class.Designer.cs">
       <DependentUpon>201706281339346_Create_Departure_file_Class.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201706281542232_Update_Seed.cs" />
+    <Compile Include="Migrations\201706281542232_Update_Seed.Designer.cs">
+      <DependentUpon>201706281542232_Update_Seed.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201706281627429_update_mailClasses.cs" />
+    <Compile Include="Migrations\201706281627429_update_mailClasses.Designer.cs">
+      <DependentUpon>201706281627429_update_mailClasses.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201706282130196_Create_DepartureFile_class.cs" />
+    <Compile Include="Migrations\201706282130196_Create_DepartureFile_class.Designer.cs">
+      <DependentUpon>201706282130196_Create_DepartureFile_class.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201706291507386_Update_DepFiles.cs" />
+    <Compile Include="Migrations\201706291507386_Update_DepFiles.Designer.cs">
+      <DependentUpon>201706291507386_Update_DepFiles.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201706301610116_Create_DepFiles.cs" />
+    <Compile Include="Migrations\201706301610116_Create_DepFiles.Designer.cs">
+      <DependentUpon>201706301610116_Create_DepFiles.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201706302211554_Create_ArrivalFile_Class.cs" />
+    <Compile Include="Migrations\201706302211554_Create_ArrivalFile_Class.Designer.cs">
+      <DependentUpon>201706302211554_Create_ArrivalFile_Class.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\ArrivalFiles\FormArrivalFiles.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\ArrivalFiles\FormArrivalFiles.Designer.cs">
+      <DependentUpon>FormArrivalFiles.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\DepartureFiles\FormDepartureFiles.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\DepartureFiles\FormDepartureFiles.Designer.cs">
+      <DependentUpon>FormDepartureFiles.cs</DependentUpon>
+    </Compile>
     <Compile Include="Presentation\MailManagement\DeparturePLO.cs" />
     <Compile Include="Presentation\MaterialManagement\MaterialInOutPLO.cs" />
     <Compile Include="Presentation\MaterialManagement\MaterialPLO.cs" />
@@ -446,6 +484,8 @@
     <EmbeddedResource Include="Entities\Persons\Resources\Person\Person.ar.resx" />
     <EmbeddedResource Include="Entities\Persons\Resources\Person\Person.fr.resx" />
     <EmbeddedResource Include="Entities\Persons\Resources\Person\Person.resx" />
+    <EmbeddedResource Include="Entities\Resources\ArrivalFile\ArrivalFile.resx" />
+    <EmbeddedResource Include="Entities\Resources\ArrivalFile\ArrivalFile.fr.resx" />
     <EmbeddedResource Include="Entities\Resources\Arrival\Arrival.fr.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Arrival.fr.Designer.cs</LastGenOutput>
@@ -625,6 +665,30 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201706281339346_Create_Departure_file_Class.resx">
       <DependentUpon>201706281339346_Create_Departure_file_Class.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201706281542232_Update_Seed.resx">
+      <DependentUpon>201706281542232_Update_Seed.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201706281627429_update_mailClasses.resx">
+      <DependentUpon>201706281627429_update_mailClasses.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201706282130196_Create_DepartureFile_class.resx">
+      <DependentUpon>201706282130196_Create_DepartureFile_class.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201706291507386_Update_DepFiles.resx">
+      <DependentUpon>201706291507386_Update_DepFiles.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201706301610116_Create_DepFiles.resx">
+      <DependentUpon>201706301610116_Create_DepFiles.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201706302211554_Create_ArrivalFile_Class.resx">
+      <DependentUpon>201706302211554_Create_ArrivalFile_Class.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\ArrivalFiles\FormArrivalFiles.resx">
+      <DependentUpon>FormArrivalFiles.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\DepartureFiles\FormDepartureFiles.resx">
+      <DependentUpon>FormDepartureFiles.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentation\Print BRD Departure\FormPrintBRD.resx">
       <DependentUpon>FormPrintBRD.cs</DependentUpon>

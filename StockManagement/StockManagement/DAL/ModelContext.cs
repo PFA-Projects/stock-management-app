@@ -78,6 +78,7 @@ namespace StockManagement.DAL
         public virtual DbSet<Arrival> Arrivals { get; set; }
         public virtual DbSet<Departure> Departurs { get; set; }
         public virtual DbSet<DepartureFile> DepartureFiles { get; set; }
+        public virtual DbSet<ArrivalFile> ArrivalFiles { get; set; }
     }
 
     //public class MyEntity

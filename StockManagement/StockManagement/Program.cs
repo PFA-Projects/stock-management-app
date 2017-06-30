@@ -1,5 +1,5 @@
 ﻿using GenericWinForm.Demo;
-using StockManagement.Presentation.Load_Files;
+using StockManagement.Presentation.DepartureFiles;
 using System;
 using System.Windows.Forms;
 
@@ -16,7 +16,7 @@ namespace StockManagement
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new LoadDepartureFile());
+            Application.Run(new FormMenuApplication());
         }
     }
 }

@@ -12,10 +12,10 @@ using System.Threading.Tasks;
 namespace StockManagement.Entities.Mail_Management
 {
     [GwinEntity(Localizable = true, DisplayMember = "Reference")]
-    public class DepartureFile:BaseEntity
+    public class ArrivalFile:BaseEntity
     {
-        public Byte[] File { get; set; }
+        public byte[] File { get; set; }
 
-        public Departure Departure { get; set; }
+        public Arrival Arrival { get; set; }
     }
 }

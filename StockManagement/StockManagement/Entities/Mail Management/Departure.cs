@@ -5,16 +5,11 @@ using App.Gwin.Attributes;
 using App.Gwin.Entities;
 using App.Gwin.Entities.MultiLanguage;
 using StockManagement.DAL;
-using StockManagement.Entities;
 using StockManagement.Enumerations;
 using StockManagement.Presentation.MailManagement;
-using StockManagement.Presentation.Save_Departure_Files;
 using StockManagement.Presentations.Print_BRD_Departure;
 using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace StockManagement.Entities
 {
@@ -78,7 +73,6 @@ namespace StockManagement.Entities
         [DataGrid]
         public MailConfiguration Configuration { get; set; }
 
-        // Files
         
     }
 }

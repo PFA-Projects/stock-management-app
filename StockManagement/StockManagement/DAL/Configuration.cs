@@ -6,6 +6,7 @@
     using App.Gwin.Entities.Secrurity.Authentication;
     using App.Gwin.Entities.Secrurity.Autorizations;
     using Entities;
+    using Entities.Mail_Management;
     using System.Collections.Generic;
     using System.Data.Entity.Migrations;
     using System.Linq;
@@ -207,7 +208,7 @@
             MaterialTransferAuthorizations.BusinessEntity = typeof(MaterialTransfer).FullName;
             RoleAdmin.Authorizations.Add(MaterialTransferAuthorizations);
             MaterialRole.Authorizations.Add(MaterialTransferAuthorizations);
-
+            
 
 
             //
@@ -250,8 +251,21 @@
             RoleAdmin.Authorizations.Add(DepartureAuthorizations);
             RHRole.Authorizations.Add(DepartureAuthorizations);
             DirRole.Authorizations.Add(DepartureAuthorizations);
+            //Departure File
+            Authorization DepartureFileAuthorizations = new Authorization();
+            DepartureFileAuthorizations.BusinessEntity = typeof(DepartureFile).FullName;
+            RoleAdmin.Authorizations.Add(DepartureFileAuthorizations);
+            RHRole.Authorizations.Add(DepartureFileAuthorizations);
+            DirRole.Authorizations.Add(DepartureFileAuthorizations);
+            //Arrival File
+            Authorization ArrivalFileAuthorizations = new Authorization();
+            ArrivalFileAuthorizations.BusinessEntity = typeof(ArrivalFile).FullName;
+            RoleAdmin.Authorizations.Add(ArrivalFileAuthorizations);
+            RHRole.Authorizations.Add(ArrivalFileAuthorizations);
+            DirRole.Authorizations.Add(ArrivalFileAuthorizations);
 
-            context.SaveChanges();
+
+
 
         }
     }
