@@ -45,9 +45,9 @@
             this.tableLayoutPanel1.Location = new System.Drawing.Point(20, 60);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 2;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 21.73913F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 78.26087F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(908, 276);
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10.17316F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 89.82684F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(908, 462);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // Print_MetroTile
@@ -55,7 +55,7 @@
             this.Print_MetroTile.ActiveControl = null;
             this.Print_MetroTile.Location = new System.Drawing.Point(3, 3);
             this.Print_MetroTile.Name = "Print_MetroTile";
-            this.Print_MetroTile.Size = new System.Drawing.Size(202, 53);
+            this.Print_MetroTile.Size = new System.Drawing.Size(159, 41);
             this.Print_MetroTile.TabIndex = 0;
             this.Print_MetroTile.Text = "Print";
             this.Print_MetroTile.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -66,9 +66,9 @@
             // 
             this.printPreviewControl1.AutoZoom = false;
             this.printPreviewControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.printPreviewControl1.Location = new System.Drawing.Point(3, 62);
+            this.printPreviewControl1.Location = new System.Drawing.Point(3, 50);
             this.printPreviewControl1.Name = "printPreviewControl1";
-            this.printPreviewControl1.Size = new System.Drawing.Size(902, 211);
+            this.printPreviewControl1.Size = new System.Drawing.Size(902, 409);
             this.printPreviewControl1.TabIndex = 1;
             this.printPreviewControl1.Zoom = 1D;
             // 
@@ -76,7 +76,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(948, 356);
+            this.ClientSize = new System.Drawing.Size(948, 542);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "FormPrintBRD";
             this.Text = "Borderau";

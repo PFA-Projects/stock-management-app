@@ -6,6 +6,7 @@
     using App.Gwin.Entities.Secrurity.Authentication;
     using App.Gwin.Entities.Secrurity.Autorizations;
     using Entities;
+    using Entities.Mail_Management;
     using System.Collections.Generic;
     using System.Data.Entity.Migrations;
     using System.Linq;
@@ -207,7 +208,7 @@
             MaterialTransferAuthorizations.BusinessEntity = typeof(MaterialTransfer).FullName;
             RoleAdmin.Authorizations.Add(MaterialTransferAuthorizations);
             MaterialRole.Authorizations.Add(MaterialTransferAuthorizations);
-
+            
 
 
             //
@@ -237,18 +238,7 @@
             RoleAdmin.Authorizations.Add(MailConfigurationAuthorizations);
             RHRole.Authorizations.Add(MailConfigurationAuthorizations);
             DirRole.Authorizations.Add(MailConfigurationAuthorizations);
-            // Receiver
-            Authorization ReceiverAuthorizations = new Authorization();
-            ReceiverAuthorizations.BusinessEntity = typeof(Receiver).FullName;
-            RoleAdmin.Authorizations.Add(ReceiverAuthorizations);
-            RHRole.Authorizations.Add(ReceiverAuthorizations);
-            DirRole.Authorizations.Add(ReceiverAuthorizations);
-            // Sender
-            Authorization SenderAuthorizations = new Authorization();
-            SenderAuthorizations.BusinessEntity = typeof(Sender).FullName;
-            RoleAdmin.Authorizations.Add(SenderAuthorizations);
-            RHRole.Authorizations.Add(SenderAuthorizations);
-            DirRole.Authorizations.Add(SenderAuthorizations);
+            
             // Arrival
             Authorization ArrivalAuthorizations = new Authorization();
             ArrivalAuthorizations.BusinessEntity = typeof(Arrival).FullName;
@@ -261,8 +251,21 @@
             RoleAdmin.Authorizations.Add(DepartureAuthorizations);
             RHRole.Authorizations.Add(DepartureAuthorizations);
             DirRole.Authorizations.Add(DepartureAuthorizations);
+            //Departure File
+            Authorization DepartureFileAuthorizations = new Authorization();
+            DepartureFileAuthorizations.BusinessEntity = typeof(DepartureFile).FullName;
+            RoleAdmin.Authorizations.Add(DepartureFileAuthorizations);
+            RHRole.Authorizations.Add(DepartureFileAuthorizations);
+            DirRole.Authorizations.Add(DepartureFileAuthorizations);
+            //Arrival File
+            Authorization ArrivalFileAuthorizations = new Authorization();
+            ArrivalFileAuthorizations.BusinessEntity = typeof(ArrivalFile).FullName;
+            RoleAdmin.Authorizations.Add(ArrivalFileAuthorizations);
+            RHRole.Authorizations.Add(ArrivalFileAuthorizations);
+            DirRole.Authorizations.Add(ArrivalFileAuthorizations);
 
-            context.SaveChanges();
+
+
 
         }
     }

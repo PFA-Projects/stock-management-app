@@ -4,6 +4,7 @@
 using App.Gwin.Attributes;
 using App.Gwin.Entities;
 using App.Gwin.Entities.MultiLanguage;
+using StockManagement.DAL;
 using StockManagement.Entities;
 using StockManagement.Enumerations;
 using System;
@@ -23,6 +24,16 @@ namespace StockManagement.Entities
     [Menu(Group = "Operations")]
     public class Arrival:BaseEntity
     {
+        [EntryForm(Enable = false,isShowDefaultValueWhenAdd = true)]
+        public long number { get; set; }
+
+        //
+        ModelContext db = new ModelContext();
+        public Arrival()
+        {
+            number = db.Arrivals.Count() + 1;
+            ArrivalDate = DateTime.Now;
+        }
         [EntryForm]
         [DataGrid]
         public DateTime ArrivalDate { get; set; }
@@ -39,19 +50,13 @@ namespace StockManagement.Entities
         [Filter]
         public LocalizedString Designation { get; set; }
 
-        [EntryForm]
-        [DataGrid]
-        public int Number { get; set; }
+        
 
         [EntryForm(MultiLine = true)]
         [DataGrid]
         public LocalizedString Observations { get; set; }
 
 
-        public Arrival()
-        {
-            ArrivalDate = DateTime.Now;
-        }
 
         // Relations
         [Relationship(Relation = RelationshipAttribute.Relations.ManyToOne)]

@@ -35,6 +35,26 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="Castle.Core, Version=3.3.0.0, Culture=neutral, PublicKeyToken=407dd0808d44fbdc, processorArchitecture=MSIL">
       <HintPath>..\packages\Castle.Core.3.3.0\lib\net45\Castle.Core.dll</HintPath>
@@ -45,10 +65,10 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="EntityFramework">
-      <HintPath>..\..\..\GwinApp\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <HintPath>..\..\..\sport-club-ms\packages\Gwin Library\EntityFramework.dll</HintPath>
     </Reference>
     <Reference Include="EntityFramework.SqlServer">
-      <HintPath>..\..\..\GwinApp\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <HintPath>..\..\..\sport-club-ms\packages\Gwin Library\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
     <Reference Include="FastExcel, Version=1.0.18.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\FastExcel.1.0.18\lib\net45\FastExcel.dll</HintPath>
@@ -95,7 +115,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BAL\ArrivalBLO.cs" />
+    <Compile Include="BAL\ArrivalFileBLO.cs" />
     <Compile Include="BAL\BaseBLO.cs" />
+    <Compile Include="BAL\DepartureBLO.cs" />
+    <Compile Include="BAL\DepartureFileBLO.cs" />
     <Compile Include="BAL\LocationBLO.cs" />
     <Compile Include="BAL\MailManagement\PrintBorderau.cs" />
     <Compile Include="BAL\MaterialBLO.cs" />
@@ -118,9 +142,10 @@
     <Compile Include="Entities\ContactInformations\Resources\Country\Country.ar.Designer.cs" />
     <Compile Include="Entities\ContactInformations\Resources\Country\Country.Designer.cs" />
     <Compile Include="Entities\Mail Management\Arrival.cs" />
+    <Compile Include="Entities\Mail Management\ArrivalFile.cs" />
     <Compile Include="Entities\Mail Management\Departure.cs" />
+    <Compile Include="Entities\Mail Management\DepartureFile.cs" />
     <Compile Include="Entities\Mail Management\MailConfiguration.cs" />
-    <Compile Include="Entities\Mail Management\Receiver.cs" />
     <Compile Include="Entities\Persons\Class1.cs" />
     <Compile Include="Entities\Persons\Person.cs" />
     <Compile Include="Entities\Persons\Resources\Person\Person.ar.Designer.cs" />
@@ -135,6 +160,16 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Arrival.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\Resources\DepartureFile\DepartureFile.fr.Designer.cs">
+      <DependentUpon>DepartureFile.fr.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Entities\Resources\DepartureFile\DepartureFile.Designer.cs">
+      <DependentUpon>DepartureFile.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
     </Compile>
     <Compile Include="Entities\Resources\Departure\Departure.fr.Designer.cs">
       <DependentUpon>Departure.fr.resx</DependentUpon>
@@ -176,7 +211,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Sender.resx</DependentUpon>
     </Compile>
-    <Compile Include="Entities\Mail Management\Sender.cs" />
     <Compile Include="Entities\Stock Management\Delivery\Delivery.cs" />
     <Compile Include="Entities\Stock Management\Materials\MaterialRepair.cs" />
     <Compile Include="Entities\Stock Management\Materials\Material.cs" />
@@ -323,10 +357,71 @@
     <Compile Include="Enumerations\PhysicalState.cs" />
     <Compile Include="Libs\ITextSharp\PdfFile.cs" />
     <Compile Include="DAL\Configuration.cs" />
-    <Compile Include="Migrations\201705300711159_DataInit-30-05-17.cs" />
-    <Compile Include="Migrations\201705300711159_DataInit-30-05-17.Designer.cs">
-      <DependentUpon>201705300711159_DataInit-30-05-17.cs</DependentUpon>
+    <Compile Include="Migrations\201706012228006_Update_Arrival_class.cs" />
+    <Compile Include="Migrations\201706012228006_Update_Arrival_class.Designer.cs">
+      <DependentUpon>201706012228006_Update_Arrival_class.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201706012244528_Update_Departure_Class.cs" />
+    <Compile Include="Migrations\201706012244528_Update_Departure_Class.Designer.cs">
+      <DependentUpon>201706012244528_Update_Departure_Class.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201706020003369_Update_Departure_Class2.cs" />
+    <Compile Include="Migrations\201706020003369_Update_Departure_Class2.Designer.cs">
+      <DependentUpon>201706020003369_Update_Departure_Class2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201706241652165_Update_Delivery_Class.cs" />
+    <Compile Include="Migrations\201706241652165_Update_Delivery_Class.Designer.cs">
+      <DependentUpon>201706241652165_Update_Delivery_Class.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201706271350203_Delete_Tables.cs" />
+    <Compile Include="Migrations\201706271350203_Delete_Tables.Designer.cs">
+      <DependentUpon>201706271350203_Delete_Tables.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201706271519410_Upd.cs" />
+    <Compile Include="Migrations\201706271519410_Upd.Designer.cs">
+      <DependentUpon>201706271519410_Upd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201706281339346_Create_Departure_file_Class.cs" />
+    <Compile Include="Migrations\201706281339346_Create_Departure_file_Class.Designer.cs">
+      <DependentUpon>201706281339346_Create_Departure_file_Class.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201706281542232_Update_Seed.cs" />
+    <Compile Include="Migrations\201706281542232_Update_Seed.Designer.cs">
+      <DependentUpon>201706281542232_Update_Seed.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201706281627429_update_mailClasses.cs" />
+    <Compile Include="Migrations\201706281627429_update_mailClasses.Designer.cs">
+      <DependentUpon>201706281627429_update_mailClasses.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201706282130196_Create_DepartureFile_class.cs" />
+    <Compile Include="Migrations\201706282130196_Create_DepartureFile_class.Designer.cs">
+      <DependentUpon>201706282130196_Create_DepartureFile_class.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201706291507386_Update_DepFiles.cs" />
+    <Compile Include="Migrations\201706291507386_Update_DepFiles.Designer.cs">
+      <DependentUpon>201706291507386_Update_DepFiles.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201706301610116_Create_DepFiles.cs" />
+    <Compile Include="Migrations\201706301610116_Create_DepFiles.Designer.cs">
+      <DependentUpon>201706301610116_Create_DepFiles.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201706302211554_Create_ArrivalFile_Class.cs" />
+    <Compile Include="Migrations\201706302211554_Create_ArrivalFile_Class.Designer.cs">
+      <DependentUpon>201706302211554_Create_ArrivalFile_Class.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\ArrivalFiles\FormArrivalFiles.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\ArrivalFiles\FormArrivalFiles.Designer.cs">
+      <DependentUpon>FormArrivalFiles.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\DepartureFiles\FormDepartureFiles.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\DepartureFiles\FormDepartureFiles.Designer.cs">
+      <DependentUpon>FormDepartureFiles.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\MailManagement\DeparturePLO.cs" />
     <Compile Include="Presentation\MaterialManagement\MaterialInOutPLO.cs" />
     <Compile Include="Presentation\MaterialManagement\MaterialPLO.cs" />
     <Compile Include="Presentation\MaterialManagement\MaterialRepairPLO.cs" />
@@ -359,6 +454,11 @@
     <Compile Include="Presentation\GwinAppMenu.Designer.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Resources\icone.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>icone.resx</DependentUpon>
+    </Compile>
     <Compile Include="Resources\MarocHeaderresx.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -384,6 +484,8 @@
     <EmbeddedResource Include="Entities\Persons\Resources\Person\Person.ar.resx" />
     <EmbeddedResource Include="Entities\Persons\Resources\Person\Person.fr.resx" />
     <EmbeddedResource Include="Entities\Persons\Resources\Person\Person.resx" />
+    <EmbeddedResource Include="Entities\Resources\ArrivalFile\ArrivalFile.resx" />
+    <EmbeddedResource Include="Entities\Resources\ArrivalFile\ArrivalFile.fr.resx" />
     <EmbeddedResource Include="Entities\Resources\Arrival\Arrival.fr.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Arrival.fr.Designer.cs</LastGenOutput>
@@ -403,6 +505,14 @@
     <EmbeddedResource Include="Entities\Resources\Delivery\Delivery.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Delivery.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Entities\Resources\DepartureFile\DepartureFile.fr.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>DepartureFile.fr.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Entities\Resources\DepartureFile\DepartureFile.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>DepartureFile.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Entities\Resources\Departure\Departure.fr.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -535,8 +645,50 @@
     <EmbeddedResource Include="Entities\TraineeManagement\Trainee\Trainee.fr.resx" />
     <EmbeddedResource Include="Entities\TraineeManagement\Trainee\Trainee.resx" />
     <EmbeddedResource Include="FormMenuApplication.resx" />
-    <EmbeddedResource Include="Migrations\201705300711159_DataInit-30-05-17.resx">
-      <DependentUpon>201705300711159_DataInit-30-05-17.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201706012228006_Update_Arrival_class.resx">
+      <DependentUpon>201706012228006_Update_Arrival_class.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201706012244528_Update_Departure_Class.resx">
+      <DependentUpon>201706012244528_Update_Departure_Class.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201706020003369_Update_Departure_Class2.resx">
+      <DependentUpon>201706020003369_Update_Departure_Class2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201706241652165_Update_Delivery_Class.resx">
+      <DependentUpon>201706241652165_Update_Delivery_Class.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201706271350203_Delete_Tables.resx">
+      <DependentUpon>201706271350203_Delete_Tables.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201706271519410_Upd.resx">
+      <DependentUpon>201706271519410_Upd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201706281339346_Create_Departure_file_Class.resx">
+      <DependentUpon>201706281339346_Create_Departure_file_Class.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201706281542232_Update_Seed.resx">
+      <DependentUpon>201706281542232_Update_Seed.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201706281627429_update_mailClasses.resx">
+      <DependentUpon>201706281627429_update_mailClasses.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201706282130196_Create_DepartureFile_class.resx">
+      <DependentUpon>201706282130196_Create_DepartureFile_class.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201706291507386_Update_DepFiles.resx">
+      <DependentUpon>201706291507386_Update_DepFiles.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201706301610116_Create_DepFiles.resx">
+      <DependentUpon>201706301610116_Create_DepFiles.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201706302211554_Create_ArrivalFile_Class.resx">
+      <DependentUpon>201706302211554_Create_ArrivalFile_Class.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\ArrivalFiles\FormArrivalFiles.resx">
+      <DependentUpon>FormArrivalFiles.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\DepartureFiles\FormDepartureFiles.resx">
+      <DependentUpon>FormDepartureFiles.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentation\Print BRD Departure\FormPrintBRD.resx">
       <DependentUpon>FormPrintBRD.cs</DependentUpon>
@@ -558,6 +710,10 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Resources\icone.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>icone.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="Resources\MarocHeaderresx.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>MarocHeaderresx.Designer.cs</LastGenOutput>
@@ -591,8 +747,7 @@
     <Folder Include="Scripts\" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Migrations\Upgrade\201705300711159_Seed.sql" />
-    <Content Include="Migrations\Upgrade\201705300711159_DataInit-30-05-17.sql" />
+    <None Include="Resources\Capture.PNG" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\GwinApp.0.1.5\build\GwinApp.targets" Condition="Exists('..\packages\GwinApp.0.1.5\build\GwinApp.targets')" />

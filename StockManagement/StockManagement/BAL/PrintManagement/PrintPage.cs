@@ -50,11 +50,14 @@ namespace StockManagement.BLL.PrintManagement
             file.CreateText(doc, writer, "LE MEDECIN DIRECTEUR DE L'HOPITAL", doc.PageSize.Width / 2 - 85, doc.PageSize.Height / 2 + 250, false, true);
             file.CreateText(doc, writer, "MOHAMMED VI", doc.PageSize.Width / 2 - 15, doc.PageSize.Height / 2 + 230, false, true);
             file.CreateText(doc, writer, "Tanger", doc.PageSize.Width / 2 +5, doc.PageSize.Height / 2 + 210, false, true);
-            if(Departure.Configuration.Adress != null)
-            {
-                file.CreateText(doc, writer, Departure.Configuration.Adress, doc.PageSize.Width / 2-2, doc.PageSize.Height / 2 + 170, false, true);
-            }
-            file.CreateText(doc, writer,"BORDERAU D'ENVOI", doc.PageSize.Width / 2 -35, doc.PageSize.Height / 2 + 130, true, false);
+           
+            file.CreateText(doc, writer, Departure.Configuration.Adress.ToString(), doc.PageSize.Width / 2 - 2, doc.PageSize.Height / 2 + 170, false, true);
+            file.CreateText(doc, writer, "BORDERAU D'ENVOI", doc.PageSize.Width / 2 - 35, doc.PageSize.Height / 2 + 130, true, false);
+           
+            
+            
+            //}
+            
         }
 
 

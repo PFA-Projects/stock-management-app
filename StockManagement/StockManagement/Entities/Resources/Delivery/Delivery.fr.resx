@@ -117,14 +117,20 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="btn_add_Delivery" xml:space="preserve">
+    <value>Ajouter une livraison</value>
+  </data>
   <data name="DeliveryDate" xml:space="preserve">
     <value>Date Livraison</value>
   </data>
   <data name="DeliveryReceiptNumber" xml:space="preserve">
-    <value>Num BonLivraison</value>
+    <value>Num Bon Livraison</value>
+  </data>
+  <data name="Delivery_Grid_Title" xml:space="preserve">
+    <value>Livraisons</value>
   </data>
   <data name="Market" xml:space="preserve">
-    <value>Market</value>
+    <value>Marche</value>
   </data>
   <data name="Observations" xml:space="preserve">
     <value>Observations</value>
@@ -133,7 +139,7 @@
     <value>Livraisons</value>
   </data>
   <data name="SingularName" xml:space="preserve">
-    <value>Delivery</value>
+    <value>Livraison</value>
   </data>
   <data name="Societe" xml:space="preserve">
     <value>Societe</value>

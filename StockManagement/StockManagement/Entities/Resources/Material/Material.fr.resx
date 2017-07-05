@@ -151,7 +151,7 @@
     <value>L'Etat Physique</value>
   </data>
   <data name="PhysicalStateExplication" xml:space="preserve">
-    <value>Autre Etat Physique </value>
+    <value>Autre Etat Physique</value>
   </data>
   <data name="PluralName" xml:space="preserve">
     <value>Materiels</value>
@@ -167,5 +167,14 @@
   </data>
   <data name="UpdateServiceDate" xml:space="preserve">
     <value>Date de mise à jour de service</value>
+  </data>
+  <data name="Detaills" xml:space="preserve">
+    <value>Detaills</value>
+  </data>
+  <data name="Informations" xml:space="preserve">
+    <value>Informations</value>
+  </data>
+  <data name="Provider" xml:space="preserve">
+    <value>Fournisseur</value>
   </data>
 </root>

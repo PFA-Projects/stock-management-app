@@ -17,6 +17,7 @@ namespace StockManagement.Entities
     /// 
     [GwinEntity(Localizable = true, DisplayMember = "DeliveryReceiptNumber")]
     [Menu]
+    [ManagementForm(Width = 800, TitrePageGridView = "Delivery_Grid_Title", TitreButtonAjouter = "btn_add_Delivery")]
     public class Delivery:BaseEntity
     {
         [EntryForm(Ordre =2)]
@@ -26,14 +27,16 @@ namespace StockManagement.Entities
 
         [EntryForm(Ordre =3)]
         [DataGrid(Ordre = 3)]
+        [Filter]
         public LocalizedString Market { get; set; }
 
         [EntryForm(Ordre =1)]
         [DataGrid(Ordre =1)]
-       [Filter]
-        public int DeliveryReceiptNumber { get; set; }
+        [Filter]
+        public String DeliveryReceiptNumber { get; set; }
 
-        [EntryForm(Ordre =4)]
+        // Observations Multiline doesn 't work !
+        [EntryForm(Ordre =4,MultiLine = true)]
         [DataGrid(Ordre = 4)]
         public String Observations { get; set; }
 
